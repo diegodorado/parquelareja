@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/config
+END
+propel.ini
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/config/propel.ini
+END
+databases.yml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/config/databases.yml
+END
+ProjectConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/config/ProjectConfiguration.class.php
+END
+filters.yml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/config/filters.yml
+END
+properties.ini
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/config/properties.ini
+END
+view.yml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/config/view.yml
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/parquelareja/!svn/ver/42/plugins/sfWebBrowserPlugin/lib
+END
+sfSocketsAdapter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/parquelareja/!svn/ver/42/plugins/sfWebBrowserPlugin/lib/sfSocketsAdapter.class.php
+END
+sfWebBrowser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/parquelareja/!svn/ver/42/plugins/sfWebBrowserPlugin/lib/sfWebBrowser.class.php
+END
+sfCurlAdapter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/parquelareja/!svn/ver/42/plugins/sfWebBrowserPlugin/lib/sfCurlAdapter.class.php
+END
+sfWebBrowserInvalidResponseException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/42/plugins/sfWebBrowserPlugin/lib/sfWebBrowserInvalidResponseException.class.php
+END
+sfFopenAdapter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/42/plugins/sfWebBrowserPlugin/lib/sfFopenAdapter.class.php
+END

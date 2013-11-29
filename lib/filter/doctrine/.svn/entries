@@ -1,0 +1,77 @@
+10
+
+dir
+51
+http://cooph.com.ar/svn/parquelareja/lib/filter/doctrine
+http://cooph.com.ar/svn/parquelareja
+
+
+
+2011-07-13T07:56:49.972857Z
+34
+diego
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a5eebfaf-1be1-4f2f-b83e-4b96bb572873
+
+sfDoctrineGuardPlugin
+dir
+
+sfDoctrineActAsTaggablePlugin
+dir
+
+apostrophePlugin
+dir
+
+BaseFormFilterDoctrine.class.php
+file
+
+
+
+
+2011-07-13T03:15:19.000000Z
+f7baacc4a0b55b1a2dad2e1a92442bf5
+2010-08-03T03:41:13.652822Z
+4
+diego
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+281
+
+apostropheBlogPlugin
+dir
+
+base
+dir
+

@@ -1,0 +1,29 @@
+@import reset
+@import base
+@import dft
+@import blog
+@import slideshow
+@import fsnapshot
+@import forms
+@import calendar
+@import fullcalendar
+@import layouts
+@import materiales
+
+#footer
+  clear: both
+  text-align: center
+  background-color: #203245
+  color: #FFFFFF
+  font-size: 10px
+  height: 14px
+  line-height: 14px
+  padding: 5px 0 7px
+
+/*EDITOR*/
+
+.icon.fsnapshot.alt
+  background-image: url(/apostrophePlugin/images/a-icon-alt-photo.png)
+
+.a-form-row .a-form-field .radio_list li
+  clear: both

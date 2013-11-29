@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Soap
+END
+Wsdl.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Soap/Wsdl.php
+END
+Client.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Soap/Client.php
+END
+Server.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Soap/Server.php
+END
+AutoDiscover.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Soap/AutoDiscover.php
+END

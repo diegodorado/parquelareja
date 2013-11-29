@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/OpenId
+END
+Provider.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/OpenId/Provider.php
+END
+Consumer.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/OpenId/Consumer.php
+END
+Extension.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/OpenId/Extension.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/OpenId/Exception.php
+END

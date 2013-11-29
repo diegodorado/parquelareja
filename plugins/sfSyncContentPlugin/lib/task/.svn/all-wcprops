@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/parquelareja/!svn/ver/42/plugins/sfSyncContentPlugin/lib/task
+END
+mysqlloadTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/parquelareja/!svn/ver/42/plugins/sfSyncContentPlugin/lib/task/mysqlloadTask.class.php
+END
+synccontentTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/parquelareja/!svn/ver/42/plugins/sfSyncContentPlugin/lib/task/synccontentTask.class.php
+END
+mysqldumpTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/parquelareja/!svn/ver/42/plugins/sfSyncContentPlugin/lib/task/mysqldumpTask.class.php
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin/LICENSE
+END
+package.xml.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin/package.xml.tmpl
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin/README
+END

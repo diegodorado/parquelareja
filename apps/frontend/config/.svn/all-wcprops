@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/parquelareja/!svn/ver/51/apps/frontend/config
+END
+factories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/parquelareja/!svn/ver/3/apps/frontend/config/factories.yml
+END
+app.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/parquelareja/!svn/ver/61/apps/frontend/config/app.yml
+END
+settings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/parquelareja/!svn/ver/36/apps/frontend/config/settings.yml
+END
+frontendConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/parquelareja/!svn/ver/15/apps/frontend/config/frontendConfiguration.class.php
+END
+cache.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/parquelareja/!svn/ver/3/apps/frontend/config/cache.yml
+END
+routing.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/parquelareja/!svn/ver/47/apps/frontend/config/routing.yml
+END
+security.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/parquelareja/!svn/ver/3/apps/frontend/config/security.yml
+END
+filters.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/parquelareja/!svn/ver/35/apps/frontend/config/filters.yml
+END
+view.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/parquelareja/!svn/ver/61/apps/frontend/config/view.yml
+END

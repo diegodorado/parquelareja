@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task
+END
+apostropheImportFilesTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/apostropheImportFilesTask.class.php
+END
+repairtreeTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/repairtreeTask.class.php
+END
+aToolkitDeployTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/aToolkitDeployTask.class.php
+END
+toolkitSshTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/toolkitSshTask.class.php
+END
+csscolorsreportTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/csscolorsreportTask.class.php
+END
+aUpdateLinkedAccountsTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/aUpdateLinkedAccountsTask.class.php
+END
+apostropheMigratedatafrompkcontextcmsTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/apostropheMigratedatafrompkcontextcmsTask.class.php
+END
+updateluceneTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/updateluceneTask.class.php
+END
+aDemoFixturesTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/aDemoFixturesTask.class.php
+END
+apostropheOptimizeSearchIndexTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/apostropheOptimizeSearchIndexTask.class.php
+END
+apostrophePublishAllPagesTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/apostrophePublishAllPagesTask.class.php
+END
+apostropheMigratefrompkcontextcmsTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/apostropheMigratefrompkcontextcmsTask.class.php
+END
+toolkitRebuildIndexTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/toolkitRebuildIndexTask.class.php
+END
+aToolkitAfterdeployTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/aToolkitAfterdeployTask.class.php
+END
+apostropheCascadeEditPermissionsTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/apostropheCascadeEditPermissionsTask.class.php
+END
+apostropheMigrateTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/apostropheMigrateTask.class.php
+END
+aRefreshTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/aRefreshTask.class.php
+END
+aGenerateSlotTypeTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/aGenerateSlotTypeTask.class.php
+END
+aImportSiteTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/task/aImportSiteTask.class.php
+END

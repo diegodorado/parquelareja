@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing
+END
+ProjectComponent.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/ProjectComponent.php
+END
+BuildLogger.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/BuildLogger.php
+END
+IntrospectionHelper.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/IntrospectionHelper.php
+END
+BuildEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/BuildEvent.php
+END
+Task.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/Task.php
+END
+TaskAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/TaskAdapter.php
+END
+RuntimeConfigurable.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/RuntimeConfigurable.php
+END
+TaskContainer.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/TaskContainer.php
+END
+Phing.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/Phing.php
+END
+BuildListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/BuildListener.php
+END
+Project.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/Project.php
+END
+UnknownElement.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/UnknownElement.php
+END
+BuildException.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/BuildException.php
+END
+Target.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/Target.php
+END
+ConfigurationException.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/ConfigurationException.php
+END

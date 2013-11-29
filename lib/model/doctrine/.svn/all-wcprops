@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/parquelareja/!svn/ver/48/lib/model/doctrine
+END
+fParkSlot.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/fParkSlot.class.php
+END
+fSnapShotSlot.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/fSnapShotSlot.class.php
+END
+fParkSlotTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/fParkSlotTable.class.php
+END
+fSnapShotSlotTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/fSnapShotSlotTable.class.php
+END

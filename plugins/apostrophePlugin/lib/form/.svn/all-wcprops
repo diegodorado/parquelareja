@@ -1,0 +1,287 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form
+END
+aMediaUploadMultipleForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaUploadMultipleForm.class.php
+END
+aMediaBrowseForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaBrowseForm.class.php
+END
+BaseaRenameForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaRenameForm.class.php
+END
+BaseaSmartSlideshowForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaSmartSlideshowForm.class.php
+END
+BaseaMediaPdfForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaPdfForm.class.php
+END
+BaseaMediaSearchServicesForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaSearchServicesForm.class.php
+END
+BaseaMediaUploadImagesForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaUploadImagesForm.class.php
+END
+aMediaSearchForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaSearchForm.class.php
+END
+aRenameForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aRenameForm.class.php
+END
+aSmartSlideshowForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aSmartSlideshowForm.class.php
+END
+aAudioSlotEditForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aAudioSlotEditForm.class.php
+END
+aEngineCategoriesForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aEngineCategoriesForm.class.php
+END
+aRawHTMLForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aRawHTMLForm.class.php
+END
+BaseaMediaUploadForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaUploadForm.class.php
+END
+BaseaMediaUploadImageForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaUploadImageForm.class.php
+END
+PluginaMediaEngineForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/PluginaMediaEngineForm.class.php
+END
+aMediaEditForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaEditForm.class.php
+END
+BaseaRichTextForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaRichTextForm.class.php
+END
+aFormSignin.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aFormSignin.class.php
+END
+aMediaUploadImageForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaUploadImageForm.class.php
+END
+BaseaPageSettingsForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaPageSettingsForm.class.php
+END
+aRichTextForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aRichTextForm.class.php
+END
+BaseaMediaUploadMultipleForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaUploadMultipleForm.class.php
+END
+BaseaMediaBrowseForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaBrowseForm.class.php
+END
+aPageSettingsForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aPageSettingsForm.class.php
+END
+BaseaFeedForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaFeedForm.class.php
+END
+BaseaMediaSearchForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaSearchForm.class.php
+END
+aMediaEditMultipleForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaEditMultipleForm.class.php
+END
+BaseaMediaVideoForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaVideoForm.class.php
+END
+aFeedForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aFeedForm.class.php
+END
+aMediaEngineForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaEngineForm.class.php
+END
+aMediaPdfForm.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaPdfForm.php
+END
+BaseaButtonForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaButtonForm.class.php
+END
+aMediaVideoForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaVideoForm.class.php
+END
+BaseaRawHTMLForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaRawHTMLForm.class.php
+END
+aMediaSearchServicesForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaSearchServicesForm.class.php
+END
+aMediaUploadImagesForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaUploadImagesForm.class.php
+END
+aButtonForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aButtonForm.class.php
+END
+aTagForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aTagForm.class.php
+END
+aPageForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aPageForm.class.php
+END
+BaseaLanguageForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaLanguageForm.class.php
+END
+BaseaTextForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaTextForm.class.php
+END
+BaseaMediaEditForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaEditForm.class.php
+END
+aLanguageForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aLanguageForm.class.php
+END
+aMediaUploadForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aMediaUploadForm.class.php
+END
+aTextForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/aTextForm.class.php
+END
+BaseaMediaEditMultipleForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/BaseaMediaEditMultipleForm.class.php
+END

@@ -1,0 +1,134 @@
+/* Basic Layout ===========================================*/
+
+.a-slot
+  margin-bottom: 10px
+
+.a-area
+  margin: 0 0 10px
+  
+/* Top Navigation ===========================================*/
+
+
+.a-nav-main
+  margin: 0
+  background: #203245
+  .a-nav-item
+    float: left
+    display: inline
+    &.a-current-page a, a:hover
+      text-decoration: underline
+      background-color: inherit
+      color: #ffffff
+    a
+      height: 20px
+      line-height: 20px
+      color: #FFFFFF
+      font-weight: bold
+      width: 110px
+      padding: 3px 5px
+      display: block
+      text-decoration: none
+      text-align: center
+
+
+/* Subnav ===========================================*/
+
+.a-nav-subnav .a-nav-item
+  .a-drag
+    position: absolute
+    right: 0
+    background-color: transparent
+    *
+      background-color: transparent
+  float: left
+  width: 100%
+  clear: both
+  position: relative
+  line-height: 20px
+  margin-bottom: 5px
+  &.last
+    margin-bottom: 0
+  a
+    float: left
+    display: inline
+    clear: both
+    color: #336
+    width: 155px
+    height: 100%
+    padding: 0 20px 0 5px
+    &:hover
+      color: #333
+      background: #fff
+      text-decoration: none
+
+
+.a-subnav-wrapper
+  position: relative
+  width: auto
+  margin: 0
+  &.blog
+    h4
+      float: left
+      width: 100%
+      clear: both
+      display: inline
+      position: relative
+      font-size: 14px
+    .a-blog-filter-options
+      float: left
+      width: 100%
+      clear: both
+      display: inline
+      position: relative
+      line-height: 20px
+  &.media .a-media-filter-options a, &.blog .a-blog-filter-options a
+    float: left
+    clear: both
+    display: inline
+    width: auto
+    padding: 0 5px
+  a
+    font-weight: bold
+
+  .a-subnav-inner
+    clear: both
+    position: relative
+    width: auto
+    padding: 0
+
+/* Breadcrumb Component ===========================================*/
+
+#a-breadcrumb-component
+  font-size: 12px
+  border-bottom: 1px solid #EEEEEE
+  li
+    float: left
+    margin: 5px 0 5px 10px
+    .a-breadcrumb-separator    
+      margin-left: 10px
+
+#a-wrapper
+  width: 960px
+  margin: 10px auto
+  background: #fff
+  
+
+#header
+  position: relative
+  .a-area
+    margin: 0
+    .a-slot
+      margin: 0
+      .a-button-image img
+        display: block
+
+#a-global-toolbar
+  position: relative
+  width: 100%
+  border-bottom: 1px solid #ddd
+  padding: 5px 0 2px 0
+  margin-bottom: 5px
+  clear: both
+  z-index: 999
+  background: #fff
+  min-height: 24px

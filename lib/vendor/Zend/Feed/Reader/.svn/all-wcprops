@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Reader
+END
+FeedSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Reader/FeedSet.php
+END
+EntryInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Reader/EntryInterface.php
+END
+FeedInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Reader/FeedInterface.php
+END
+EntryAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Reader/EntryAbstract.php
+END
+FeedAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Reader/FeedAbstract.php
+END

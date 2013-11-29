@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/test/unit/fixtures
+END
+schema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/test/unit/fixtures/schema.xml
+END
+schema.yml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/test/unit/fixtures/schema.yml
+END
+new_schema.yml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/test/unit/fixtures/new_schema.yml
+END

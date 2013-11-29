@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator
+END
+MinLengthValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/MinLengthValidator.php
+END
+UniqueValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/UniqueValidator.php
+END
+MaxLengthValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/MaxLengthValidator.php
+END
+ValidationFailed.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/ValidationFailed.php
+END
+MatchValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/MatchValidator.php
+END
+NotMatchValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/NotMatchValidator.php
+END
+ValidValuesValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/ValidValuesValidator.php
+END
+MinValueValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/MinValueValidator.php
+END
+RequiredValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/RequiredValidator.php
+END
+BasicValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/BasicValidator.php
+END
+TypeValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/TypeValidator.php
+END
+MaxValueValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/validator/MaxValueValidator.php
+END

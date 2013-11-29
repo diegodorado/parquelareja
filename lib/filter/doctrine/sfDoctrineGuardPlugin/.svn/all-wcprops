@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/parquelareja/!svn/ver/33/lib/filter/doctrine/sfDoctrineGuardPlugin
+END
+sfGuardGroupPermissionFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/parquelareja/!svn/ver/4/lib/filter/doctrine/sfDoctrineGuardPlugin/sfGuardGroupPermissionFormFilter.class.php
+END
+sfGuardRememberKeyFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/parquelareja/!svn/ver/4/lib/filter/doctrine/sfDoctrineGuardPlugin/sfGuardRememberKeyFormFilter.class.php
+END
+sfGuardUserPermissionFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/parquelareja/!svn/ver/4/lib/filter/doctrine/sfDoctrineGuardPlugin/sfGuardUserPermissionFormFilter.class.php
+END
+sfGuardPermissionFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/parquelareja/!svn/ver/4/lib/filter/doctrine/sfDoctrineGuardPlugin/sfGuardPermissionFormFilter.class.php
+END
+sfGuardUserGroupFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/4/lib/filter/doctrine/sfDoctrineGuardPlugin/sfGuardUserGroupFormFilter.class.php
+END
+sfGuardGroupFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/4/lib/filter/doctrine/sfDoctrineGuardPlugin/sfGuardGroupFormFilter.class.php
+END
+sfGuardUserFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/4/lib/filter/doctrine/sfDoctrineGuardPlugin/sfGuardUserFormFilter.class.php
+END

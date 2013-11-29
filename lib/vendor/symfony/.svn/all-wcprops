@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/LICENSE
+END
+package.xml.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/package.xml.tmpl
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/CHANGELOG
+END
+COPYRIGHT
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/COPYRIGHT
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/README
+END

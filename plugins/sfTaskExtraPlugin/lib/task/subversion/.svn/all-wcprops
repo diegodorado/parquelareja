@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin/lib/task/subversion
+END
+sfSubversionSetPropsTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin/lib/task/subversion/sfSubversionSetPropsTask.class.php
+END
+sfTaskExtraSubversionBaseTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin/lib/task/subversion/sfTaskExtraSubversionBaseTask.class.php
+END

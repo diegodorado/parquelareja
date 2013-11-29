@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Mail
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Mail/Exception.php
+END
+Message.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Mail/Message.php
+END
+Storage.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Mail/Storage.php
+END
+Part.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Mail/Part.php
+END

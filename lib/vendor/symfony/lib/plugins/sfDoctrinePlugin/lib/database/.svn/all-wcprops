@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/database
+END
+sfDoctrineDatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/database/sfDoctrineDatabase.class.php
+END
+sfDoctrineConnectionListener.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/database/sfDoctrineConnectionListener.class.php
+END
+sfDoctrineConnectionProfiler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/database/sfDoctrineConnectionProfiler.class.php
+END

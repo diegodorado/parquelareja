@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/plugins/sfAutoloadPlugin/lib/vendor
+END
+ExcludedFromAutoload.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/plugins/sfAutoloadPlugin/lib/vendor/ExcludedFromAutoload.class.php
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/simpletest
+END
+SimpleTestSummaryResultFormatter.php
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/simpletest/SimpleTestSummaryResultFormatter.php
+END
+SimpleTestResultFormatter.php
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/simpletest/SimpleTestResultFormatter.php
+END
+SimpleTestTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/simpletest/SimpleTestTask.php
+END
+SimpleTestPlainResultFormatter.php
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/simpletest/SimpleTestPlainResultFormatter.php
+END
+SimpleTestCountResultFormatter.php
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/simpletest/SimpleTestCountResultFormatter.php
+END
+SimpleTestFormatterElement.php
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/simpletest/SimpleTestFormatterElement.php
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/filter
+END
+aPageFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/filter/aPageFormFilter.class.php
+END
+aGroupAdminFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/filter/aGroupAdminFilter.class.php
+END
+aUserAdminFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/filter/aUserAdminFilter.class.php
+END

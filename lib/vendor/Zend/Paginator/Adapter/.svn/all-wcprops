@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Paginator/Adapter
+END
+Iterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Paginator/Adapter/Iterator.php
+END
+Null.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Paginator/Adapter/Null.php
+END
+DbTableSelect.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Paginator/Adapter/DbTableSelect.php
+END
+Array.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Paginator/Adapter/Array.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Paginator/Adapter/Interface.php
+END
+DbSelect.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Paginator/Adapter/DbSelect.php
+END

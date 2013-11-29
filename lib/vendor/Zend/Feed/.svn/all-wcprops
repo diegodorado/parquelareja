@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed
+END
+Element.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Element.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Exception.php
+END
+Atom.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Atom.php
+END
+Reader.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Reader.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Abstract.php
+END
+Builder.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Builder.php
+END
+Rss.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Feed/Rss.php
+END

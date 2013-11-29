@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/task/test
+END
+sfTestBaseTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/task/test/sfTestBaseTask.class.php
+END
+sfTestCoverageTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/task/test/sfTestCoverageTask.class.php
+END
+sfTestUnitTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/task/test/sfTestUnitTask.class.php
+END
+sfTestFunctionalTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/task/test/sfTestFunctionalTask.class.php
+END
+sfLimeHarness.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/task/test/sfLimeHarness.class.php
+END
+sfTestAllTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/task/test/sfTestAllTask.class.php
+END

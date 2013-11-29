@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Queue/Adapter/Db
+END
+postgresql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Queue/Adapter/Db/postgresql.sql
+END
+mysql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Queue/Adapter/Db/mysql.sql
+END
+Message.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Queue/Adapter/Db/Message.php
+END
+Queue.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Queue/Adapter/Db/Queue.php
+END
+queue_sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Queue/Adapter/Db/queue_sqlite.php
+END

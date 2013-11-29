@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/adapter/MSSQL
+END
+MssqlDebugPDO.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/adapter/MSSQL/MssqlDebugPDO.php
+END
+MssqlDateTime.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/adapter/MSSQL/MssqlDateTime.class.php
+END
+MssqlPropelPDO.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/propel/adapter/MSSQL/MssqlPropelPDO.php
+END

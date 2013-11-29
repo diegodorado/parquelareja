@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Auth/Storage
+END
+NonPersistent.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Auth/Storage/NonPersistent.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Auth/Storage/Exception.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Auth/Storage/Interface.php
+END
+Session.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Auth/Storage/Session.php
+END

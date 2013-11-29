@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/doctrine
+END
+PluginaRedirectForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/doctrine/PluginaRedirectForm.class.php
+END
+PluginaEmbedMediaAccountForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/doctrine/PluginaEmbedMediaAccountForm.class.php
+END
+PluginaCategoryGroupForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/doctrine/PluginaCategoryGroupForm.class.php
+END
+PluginaSmartSlideshowSlotForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/doctrine/PluginaSmartSlideshowSlotForm.class.php
+END
+PluginaCategoryUserForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/doctrine/PluginaCategoryUserForm.class.php
+END
+PluginaPageForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/doctrine/PluginaPageForm.class.php
+END
+PluginaCategoryForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/doctrine/PluginaCategoryForm.class.php
+END
+PluginaMediaCategoryForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/doctrine/PluginaMediaCategoryForm.class.php
+END
+PluginaMediaItemForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/form/doctrine/PluginaMediaItemForm.class.php
+END

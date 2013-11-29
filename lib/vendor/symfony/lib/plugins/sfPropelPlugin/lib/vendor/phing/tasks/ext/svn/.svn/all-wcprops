@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/svn
+END
+SvnExportTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/svn/SvnExportTask.php
+END
+SvnLastRevisionTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/svn/SvnLastRevisionTask.php
+END
+SvnUpdateTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/svn/SvnUpdateTask.php
+END
+SvnCheckoutTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/svn/SvnCheckoutTask.php
+END
+SvnBaseTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/svn/SvnBaseTask.php
+END

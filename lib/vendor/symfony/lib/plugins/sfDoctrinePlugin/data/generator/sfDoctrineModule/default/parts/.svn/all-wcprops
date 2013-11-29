@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/parts
+END
+showAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/parts/showAction.php
+END
+deleteAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/parts/deleteAction.php
+END
+processFormAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/parts/processFormAction.php
+END
+updateAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/parts/updateAction.php
+END
+createAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/parts/createAction.php
+END
+editAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/parts/editAction.php
+END
+indexAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/parts/indexAction.php
+END
+newAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/parts/newAction.php
+END

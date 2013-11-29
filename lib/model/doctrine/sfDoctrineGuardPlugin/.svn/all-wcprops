@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/parquelareja/!svn/ver/34/lib/model/doctrine/sfDoctrineGuardPlugin
+END
+sfGuardGroupPermissionTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardGroupPermissionTable.class.php
+END
+sfGuardUser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardUser.class.php
+END
+sfGuardRememberKeyTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardRememberKeyTable.class.php
+END
+sfGuardForgotPassword.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/34/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardForgotPassword.class.php
+END
+sfGuardUserTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/parquelareja/!svn/ver/64/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardUserTable.class.php
+END
+sfGuardUserPermission.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardUserPermission.class.php
+END
+sfGuardPermission.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardPermission.class.php
+END
+sfGuardUserGroup.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardUserGroup.class.php
+END
+sfGuardForgotPasswordTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/34/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardForgotPasswordTable.class.php
+END
+sfGuardGroup.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardGroup.class.php
+END
+sfGuardUserPermissionTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardUserPermissionTable.class.php
+END
+sfGuardPermissionTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardPermissionTable.class.php
+END
+sfGuardUserGroupTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardUserGroupTable.class.php
+END
+sfGuardGroupTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardGroupTable.class.php
+END
+sfGuardGroupPermission.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardGroupPermission.class.php
+END
+sfGuardRememberKey.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/parquelareja/!svn/ver/4/lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardRememberKey.class.php
+END

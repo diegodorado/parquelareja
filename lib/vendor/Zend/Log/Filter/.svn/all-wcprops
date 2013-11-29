@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Log/Filter
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Log/Filter/Interface.php
+END
+Priority.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Log/Filter/Priority.php
+END
+Message.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Log/Filter/Message.php
+END
+Suppress.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Log/Filter/Suppress.php
+END

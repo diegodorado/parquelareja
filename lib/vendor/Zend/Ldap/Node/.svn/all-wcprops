@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Ldap/Node
+END
+Collection.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Ldap/Node/Collection.php
+END
+RootDse.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Ldap/Node/RootDse.php
+END
+Schema.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Ldap/Node/Schema.php
+END
+ChildrenIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Ldap/Node/ChildrenIterator.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Ldap/Node/Abstract.php
+END

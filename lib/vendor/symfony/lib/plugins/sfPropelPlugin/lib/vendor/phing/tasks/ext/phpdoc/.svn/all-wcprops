@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpdoc
+END
+PhpDocumentorTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpdoc/PhpDocumentorTask.php
+END
+PhpDocumentorExternalTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpdoc/PhpDocumentorExternalTask.php
+END
+PhingPhpDocumentorSetup.php
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpdoc/PhingPhpDocumentorSetup.php
+END

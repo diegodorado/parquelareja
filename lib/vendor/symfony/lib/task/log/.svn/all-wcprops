@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/task/log
+END
+sfLogRotateTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/task/log/sfLogRotateTask.class.php
+END
+sfLogClearTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/task/log/sfLogClearTask.class.php
+END

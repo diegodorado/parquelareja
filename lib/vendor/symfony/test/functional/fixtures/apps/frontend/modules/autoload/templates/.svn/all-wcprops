@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/modules/autoload/templates
+END
+indexSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/modules/autoload/templates/indexSuccess.php
+END
+myAutoloadSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/modules/autoload/templates/myAutoloadSuccess.php
+END

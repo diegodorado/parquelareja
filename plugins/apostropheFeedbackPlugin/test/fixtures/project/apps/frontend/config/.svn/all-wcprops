@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/parquelareja/!svn/ver/42/plugins/apostropheFeedbackPlugin/test/fixtures/project/apps/frontend/config
+END
+factories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/parquelareja/!svn/ver/42/plugins/apostropheFeedbackPlugin/test/fixtures/project/apps/frontend/config/factories.yml
+END
+app.yml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/parquelareja/!svn/ver/42/plugins/apostropheFeedbackPlugin/test/fixtures/project/apps/frontend/config/app.yml
+END
+settings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/parquelareja/!svn/ver/42/plugins/apostropheFeedbackPlugin/test/fixtures/project/apps/frontend/config/settings.yml
+END
+frontendConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/parquelareja/!svn/ver/42/plugins/apostropheFeedbackPlugin/test/fixtures/project/apps/frontend/config/frontendConfiguration.class.php
+END
+cache.yml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/parquelareja/!svn/ver/42/plugins/apostropheFeedbackPlugin/test/fixtures/project/apps/frontend/config/cache.yml
+END
+routing.yml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/parquelareja/!svn/ver/42/plugins/apostropheFeedbackPlugin/test/fixtures/project/apps/frontend/config/routing.yml
+END
+security.yml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/parquelareja/!svn/ver/42/plugins/apostropheFeedbackPlugin/test/fixtures/project/apps/frontend/config/security.yml
+END
+filters.yml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/parquelareja/!svn/ver/42/plugins/apostropheFeedbackPlugin/test/fixtures/project/apps/frontend/config/filters.yml
+END
+view.yml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/parquelareja/!svn/ver/42/plugins/apostropheFeedbackPlugin/test/fixtures/project/apps/frontend/config/view.yml
+END

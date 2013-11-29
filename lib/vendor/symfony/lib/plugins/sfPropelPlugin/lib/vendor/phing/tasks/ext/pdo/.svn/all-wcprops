@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/pdo
+END
+PlainPDOResultFormatter.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/pdo/PlainPDOResultFormatter.php
+END
+PDOSQLExecTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/pdo/PDOSQLExecTask.php
+END
+PDOResultFormatter.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/pdo/PDOResultFormatter.php
+END
+PDOSQLExecFormatterElement.php
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/pdo/PDOSQLExecFormatterElement.php
+END
+PDOTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/pdo/PDOTask.php
+END
+XMLPDOResultFormatter.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/pdo/XMLPDOResultFormatter.php
+END

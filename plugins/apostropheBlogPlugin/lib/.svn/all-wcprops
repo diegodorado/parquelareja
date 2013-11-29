@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib
+END
+aBlogImporter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/aBlogImporter.class.php
+END
+aBlogEvents.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/aBlogEvents.class.php
+END
+aBlogToolkit.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/aBlogToolkit.class.php
+END
+EventCalendar.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/EventCalendar.class.php
+END

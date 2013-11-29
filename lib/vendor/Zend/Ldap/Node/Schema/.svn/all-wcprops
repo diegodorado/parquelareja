@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Ldap/Node/Schema
+END
+Item.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Ldap/Node/Schema/Item.php
+END
+ActiveDirectory.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Ldap/Node/Schema/ActiveDirectory.php
+END
+OpenLdap.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Ldap/Node/Schema/OpenLdap.php
+END

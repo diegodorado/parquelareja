@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Cache
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Cache/Exception.php
+END
+Backend.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Cache/Backend.php
+END
+Core.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Cache/Core.php
+END

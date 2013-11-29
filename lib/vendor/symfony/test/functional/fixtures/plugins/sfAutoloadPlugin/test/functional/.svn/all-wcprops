@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/plugins/sfAutoloadPlugin/test/functional
+END
+FooFunctionalTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/plugins/sfAutoloadPlugin/test/functional/FooFunctionalTest.php
+END
+BarFunctionalTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/plugins/sfAutoloadPlugin/test/functional/BarFunctionalTest.php
+END

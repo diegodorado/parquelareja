@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/database
+END
+sfDatabaseManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/database/sfDatabaseManager.class.php
+END
+sfMySQLiDatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/database/sfMySQLiDatabase.class.php
+END
+sfDatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/database/sfDatabase.class.php
+END
+sfPDODatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/database/sfPDODatabase.class.php
+END
+sfPostgreSQLDatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/database/sfPostgreSQLDatabase.class.php
+END
+sfMySQLDatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/database/sfMySQLDatabase.class.php
+END

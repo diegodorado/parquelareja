@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpunit
+END
+PHPUnitTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpunit/PHPUnitTask.php
+END
+FormatterElement.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpunit/FormatterElement.php
+END
+BatchTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpunit/BatchTest.php
+END
+PHPUnitTestRunner.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpunit/PHPUnitTestRunner.php
+END
+PHPUnitUtil.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpunit/PHPUnitUtil.php
+END
+PHPUnitReportTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/phpunit/PHPUnitReportTask.php
+END

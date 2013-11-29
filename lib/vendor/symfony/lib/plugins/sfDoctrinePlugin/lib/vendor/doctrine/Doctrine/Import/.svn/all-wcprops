@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Import
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Import/Exception.php
+END
+Mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Import/Mssql.php
+END
+Schema.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Import/Schema.php
+END
+Sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Import/Sqlite.php
+END
+Mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Import/Mysql.php
+END
+Oracle.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Import/Oracle.php
+END
+Builder.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Import/Builder.php
+END
+Pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Import/Pgsql.php
+END

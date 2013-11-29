@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Queue/Stomp/Client
+END
+Connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Queue/Stomp/Client/Connection.php
+END
+ConnectionInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Queue/Stomp/Client/ConnectionInterface.php
+END

@@ -1,0 +1,32 @@
+/backups/
+/cache/
+/log/
+/web/sf/
+/web/uploads/
+/data/a_writable/
+/data/sql/
+/data/campus/
+/config/databases.yml
+/web/apostrophe*
+/web/sf*
+/web/fourmi*
+/web/images/images/*
+
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+#apache logs
+error.log
+access.log
+.vagrant

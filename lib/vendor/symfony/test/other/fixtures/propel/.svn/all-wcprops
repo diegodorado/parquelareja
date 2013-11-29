@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/other/fixtures/propel
+END
+propel.ini
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/other/fixtures/propel/propel.ini
+END
+schema.yml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/other/fixtures/propel/schema.yml
+END
+Category.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/other/fixtures/propel/Category.php
+END
+databases.yml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/other/fixtures/propel/databases.yml
+END

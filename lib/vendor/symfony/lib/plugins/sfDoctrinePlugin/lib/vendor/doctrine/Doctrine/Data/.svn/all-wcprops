@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Data
+END
+Import.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Data/Import.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Data/Exception.php
+END
+Export.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Data/Export.php
+END

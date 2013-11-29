@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/validator
+END
+aValidatorFilePersistent.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/validator/aValidatorFilePersistent.class.php
+END
+aValidatorUrl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/validator/aValidatorUrl.class.php
+END
+aValidatedFile.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/validator/aValidatedFile.class.php
+END
+aValidatorSlug.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/validator/aValidatorSlug.class.php
+END
+sfValidatorHtml.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/validator/sfValidatorHtml.class.php
+END

@@ -1,0 +1,124 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000334}}
+body {
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000344}}
+* html body legend {
+  margin: 0px -8px 16px 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000348}}
+html > body p code {
+  *white-space: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000360}}
+.container {
+  text-align: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000362}}
+sup {
+  vertical-align: text-top;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000364}}
+sub {
+  vertical-align: text-bottom;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000366}}
+hr {
+  margin: -8px auto 11px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000368}}
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000370}}
+fieldset {
+  padding-top: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000372}}
+legend {
+  margin-top: -0.2em;
+  margin-bottom: 1em;
+  margin-left: -0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000376}}
+fieldset, #IE8#HACK {
+  padding-top: 1.4em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000377}}
+legend, #IE8#HACK {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000378}}
+textarea {
+  overflow: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000380}}
+label {
+  position: relative;
+  top: -0.25em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000384}}
+input.text {
+  margin: 0.5em 0;
+  background-color: white;
+  border: 1px solid #bbbbbb;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000388}}
+input.text:focus {
+  border: 1px solid #666666;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000390}}
+input.title {
+  margin: 0.5em 0;
+  background-color: white;
+  border: 1px solid #bbbbbb;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000394}}
+input.title:focus {
+  border: 1px solid #666666;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000396}}
+input.checkbox {
+  position: relative;
+  top: 0.25em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\0000399}}
+input.radio {
+  position: relative;
+  top: 0.25em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\00003102}}
+input.button {
+  position: relative;
+  top: 0.25em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\00003105}}
+textarea {
+  margin: 0.5em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\00003107}}
+select {
+  margin: 0.5em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/diego\/\.rvm\/gems\/ruby-1\.9\.2-p136\/gems\/compass-0\.11\.5\/frameworks\/blueprint\/stylesheets\/blueprint\/_ie\.scss}line{font-family:\00003109}}
+button {
+  position: relative;
+  top: 0.25em;
+}

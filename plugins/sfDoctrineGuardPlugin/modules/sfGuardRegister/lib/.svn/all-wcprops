@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/parquelareja/!svn/ver/42/plugins/sfDoctrineGuardPlugin/modules/sfGuardRegister/lib
+END
+BasesfGuardRegisterActions.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/parquelareja/!svn/ver/42/plugins/sfDoctrineGuardPlugin/modules/sfGuardRegister/lib/BasesfGuardRegisterActions.class.php
+END
+BasesfGuardRegisterComponents.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/parquelareja/!svn/ver/42/plugins/sfDoctrineGuardPlugin/modules/sfGuardRegister/lib/BasesfGuardRegisterComponents.class.php
+END

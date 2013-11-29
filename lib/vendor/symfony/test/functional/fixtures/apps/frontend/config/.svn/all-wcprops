@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/config
+END
+factories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/config/factories.yml
+END
+app.yml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/config/app.yml
+END
+settings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/config/settings.yml
+END
+frontendConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/config/frontendConfiguration.class.php
+END
+cache.yml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/config/cache.yml
+END
+routing.yml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/config/routing.yml
+END
+security.yml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/config/security.yml
+END
+filters.yml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/config/filters.yml
+END
+view.yml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/test/functional/fixtures/apps/frontend/config/view.yml
+END

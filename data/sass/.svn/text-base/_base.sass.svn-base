@@ -1,0 +1,7 @@
+$blueprint_grid_columns : 8
+$blueprint_grid_width   : 110px
+$blueprint_grid_margin  : 10px
+@import "blueprint"
+//@import compass/reset.sass
+@import "compass/typography/lists/bullets"
+

@@ -1,0 +1,111 @@
+body
+  background: #6E8093
+  color: #333333
+  font: 12px/1.4 arial,sans-serif
+
+  a
+    &:hover
+      color: #990000
+      font-weight: bolder
+      text-decoration: underline
+    color: #333366
+    font-size: 12px
+    font-weight: bold
+    text-decoration: none
+
+  h3
+    color: #999999
+    font-size: 14px
+    font-weight: bold
+    letter-spacing: 2px
+    margin: 11px 0 6px
+    padding: 0
+
+
+h1
+  font-size: 30px
+
+h2
+  font-size: 24px
+  margin: 0 0 10px 0
+
+h3
+  font-size: 18px
+  color: #666
+
+h4, h5, h6
+  font-size: 14px
+  color: #666
+
+br.c
+  clear: both
+  margin: 10px 0
+
+//**************************//    
+
+html, body
+  margin: 0
+  padding: 0
+  border: 0
+  font-weight: inherit
+  font-style: inherit
+  vertical-align: baseline
+
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, abbr, acronym, address, code, del, dfn, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr
+  margin: 0
+  padding: 0
+  border: 0
+  font-weight: inherit
+  font-style: inherit
+  font-size: 100%
+  font-family: inherit
+  vertical-align: baseline
+
+blockquote, q
+  margin: 0
+  padding: 0
+  border: 0
+  font-weight: inherit
+  font-style: inherit
+  font-size: 100%
+  font-family: inherit
+  vertical-align: baseline
+  quotes: "" ""
+
+blockquote:before, q:before, blockquote:after, q:after
+  content: ""
+
+th, td, caption
+  margin: 0
+  padding: 0
+  border: 0
+  font-weight: inherit
+  font-style: inherit
+  font-size: 100%
+  font-family: inherit
+  vertical-align: baseline
+  text-align: left
+  font-weight: normal
+  vertical-align: middle
+
+table
+  margin: 0
+  padding: 0
+  border: 0
+  font-weight: inherit
+  font-style: inherit
+  font-size: 100%
+  font-family: inherit
+  vertical-align: baseline
+  border-collapse: separate
+  border-spacing: 0
+  vertical-align: middle
+a
+  text-decoration: none
+  color: inherit
+  &:hover
+    text-decoration: underline
+ul
+  list-style: none
+body *
+  outline: 0

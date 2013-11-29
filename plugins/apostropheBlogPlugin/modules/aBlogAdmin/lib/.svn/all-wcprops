@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/modules/aBlogAdmin/lib
+END
+BaseaBlogAdminActions.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/modules/aBlogAdmin/lib/BaseaBlogAdminActions.class.php
+END
+aBlogAdminGeneratorConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/modules/aBlogAdmin/lib/aBlogAdminGeneratorConfiguration.class.php
+END
+BaseaBlogAdminComponents.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/modules/aBlogAdmin/lib/BaseaBlogAdminComponents.class.php
+END
+aBlogAdminGeneratorHelper.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/modules/aBlogAdmin/lib/aBlogAdminGeneratorHelper.class.php
+END

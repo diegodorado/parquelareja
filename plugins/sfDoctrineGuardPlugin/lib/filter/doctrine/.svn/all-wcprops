@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/parquelareja/!svn/ver/42/plugins/sfDoctrineGuardPlugin/lib/filter/doctrine
+END
+PluginsfGuardPermissionFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/parquelareja/!svn/ver/42/plugins/sfDoctrineGuardPlugin/lib/filter/doctrine/PluginsfGuardPermissionFormFilter.class.php
+END
+PluginsfGuardGroupFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/parquelareja/!svn/ver/42/plugins/sfDoctrineGuardPlugin/lib/filter/doctrine/PluginsfGuardGroupFormFilter.class.php
+END
+PluginsfGuardUserFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/parquelareja/!svn/ver/42/plugins/sfDoctrineGuardPlugin/lib/filter/doctrine/PluginsfGuardUserFormFilter.class.php
+END

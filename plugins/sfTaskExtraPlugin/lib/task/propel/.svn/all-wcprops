@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin/lib/task/propel
+END
+sfPropelBuildAppFormsTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin/lib/task/propel/sfPropelBuildAppFormsTask.class.php
+END
+sfPropelBuildAppFiltersTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin/lib/task/propel/sfPropelBuildAppFiltersTask.class.php
+END
+sfTaskExtraPropelBaseTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/parquelareja/!svn/ver/42/plugins/sfTaskExtraPlugin/lib/task/propel/sfTaskExtraPropelBaseTask.class.php
+END

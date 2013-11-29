@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/dbdeploy
+END
+DbmsSyntax.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/dbdeploy/DbmsSyntax.php
+END
+DbmsSyntaxMsSql.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/dbdeploy/DbmsSyntaxMsSql.php
+END
+DbmsSyntaxSQLite.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/dbdeploy/DbmsSyntaxSQLite.php
+END
+DbmsSyntaxMysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/dbdeploy/DbmsSyntaxMysql.php
+END
+DbmsSyntaxFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/dbdeploy/DbmsSyntaxFactory.php
+END
+DbDeployTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor/phing/tasks/ext/dbdeploy/DbDeployTask.php
+END

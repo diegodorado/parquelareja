@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/form/doctrine
+END
+PluginaEventForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/form/doctrine/PluginaEventForm.class.php
+END
+PluginaBlogItemForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/form/doctrine/PluginaBlogItemForm.class.php
+END
+PluginaBlogItemToCategoryForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/form/doctrine/PluginaBlogItemToCategoryForm.class.php
+END
+PluginaBlogPostForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/form/doctrine/PluginaBlogPostForm.class.php
+END
+PluginaBlogEditorForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/form/doctrine/PluginaBlogEditorForm.class.php
+END
+PluginaBlogItemCategoryForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/form/doctrine/PluginaBlogItemCategoryForm.class.php
+END

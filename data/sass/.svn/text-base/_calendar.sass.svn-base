@@ -1,0 +1,117 @@
+body.calendario
+  #content
+
+    h3
+      margin-bottom: 10px
+    p
+      margin-bottom: 10px
+    #calendar_filters
+      overflow: hidden
+      margin-bottom: 20px
+      h5
+        color: #000
+        cursor: pointer
+        float: left
+        font-weight: bold
+        margin: 3px
+        padding: 5px 8px
+        width: 120px  
+        border: 3px solid transparent
+        &.selected
+          border: 3px dashed #ccc
+        &.all
+          background: #fff000
+        &.cde
+          background: #69c
+        &.cdt
+          background: #f60
+        &.taller
+          background: #69B322
+        &:hover
+          border: 3px dashed #000
+
+    #calendar_details
+      #calendar_details_content
+        background: #fff
+        :border 1px dashed #666
+        :padding 10px
+        :margin 3px
+        :font-size 11px
+        h4
+          :color #ff6633
+          :font-weight bold
+          :margin 0 0 5px
+    #calendar
+      overflow: hidden
+      .month_content
+        display: inline
+        float: left
+        margin-right: 5px
+        width: 265px
+        :padding 3px 10px
+        :font-size 11px
+        :height 144px
+        h4
+          :color #ff6633
+          :font-size 11px
+          :font-weight bold
+          :margin 4px 0
+        .day
+          :height 12px
+          :line-height 12px
+          :font-size 11px
+          :font-weight bold
+          :text-align center
+          :display block
+          :float left
+          :border 1px solid #ffffff
+          :width 29px
+        a.day
+          :padding 3px 0 0 2px
+          :margin 0px 2px
+          :cursor pointer
+
+        span.header
+          :background-color #d9e6f2
+          :padding 3px
+        .prefix
+          :width 37px
+          :float left
+          :height 16px
+
+    #calendar
+      a.cde_p,
+      a.cdt_p,
+      a.taller_p
+        opacity: 0.5
+
+    #calendar
+      a.cde_t,
+      a.cdt_t,
+      a.taller_t
+        opacity: 1
+
+
+    #calendar.all
+      a.cde_p,
+      a.cde_t,
+      a.cdt_p,
+      a.cdt_t,
+      a.taller_p,
+      a.taller_t
+        background-color: #fff000
+        
+    #calendar.cde
+      a.cde_p,
+      a.cde_t
+        background-color: #69c
+    #calendar.cdt
+      a.cdt_p,
+      a.cdt_t
+        background-color: #f60
+
+    #calendar.taller
+      a.taller_p,
+      a.taller_t
+        background-color: #69B322
+        

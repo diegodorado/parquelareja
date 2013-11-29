@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Mime
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Mime/Exception.php
+END
+Decode.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Mime/Decode.php
+END
+Message.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Mime/Message.php
+END
+Part.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Mime/Part.php
+END

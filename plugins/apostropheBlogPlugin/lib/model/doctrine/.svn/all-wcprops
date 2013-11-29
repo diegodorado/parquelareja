@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine
+END
+PluginaBlogItemTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogItemTable.class.php
+END
+PluginaBlogItemToCategoryTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogItemToCategoryTable.class.php
+END
+PluginaEvent.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaEvent.class.php
+END
+PluginaEventSlot.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaEventSlot.class.php
+END
+PluginaEventSingleSlot.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaEventSingleSlot.class.php
+END
+PluginaBlogSlot.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogSlot.class.php
+END
+PluginaBlogSingleSlot.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogSingleSlot.class.php
+END
+PluginaBlogPost.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogPost.class.php
+END
+PluginaEventTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaEventTable.class.php
+END
+PluginaBlogEditor.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogEditor.class.php
+END
+PluginaEventSlotTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaEventSlotTable.class.php
+END
+PluginaEventSingleSlotTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaEventSingleSlotTable.class.php
+END
+PluginaBlogSlotTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogSlotTable.class.php
+END
+PluginaBlogSingleSlotTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogSingleSlotTable.class.php
+END
+PluginaBlogPostTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogPostTable.class.php
+END
+PluginaBlogItem.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogItem.class.php
+END
+PluginaBlogEditorTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogEditorTable.class.php
+END
+PluginaBlogItemToCategory.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/parquelareja/!svn/ver/42/plugins/apostropheBlogPlugin/lib/model/doctrine/PluginaBlogItemToCategory.class.php
+END

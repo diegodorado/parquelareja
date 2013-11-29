@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Search/Lucene/Search/Query/Preprocessing
+END
+Phrase.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Search/Lucene/Search/Query/Preprocessing/Phrase.php
+END
+Fuzzy.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Search/Lucene/Search/Query/Preprocessing/Fuzzy.php
+END
+Term.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Search/Lucene/Search/Query/Preprocessing/Term.php
+END

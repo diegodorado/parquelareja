@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/minify/Minify/Controller
+END
+Base.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/minify/Minify/Controller/Base.php
+END
+Page.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/minify/Minify/Controller/Page.php
+END
+Groups.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/minify/Minify/Controller/Groups.php
+END
+Files.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/minify/Minify/Controller/Files.php
+END
+MinApp.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/minify/Minify/Controller/MinApp.php
+END
+Version1.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/parquelareja/!svn/ver/42/plugins/apostrophePlugin/lib/minify/Minify/Controller/Version1.php
+END

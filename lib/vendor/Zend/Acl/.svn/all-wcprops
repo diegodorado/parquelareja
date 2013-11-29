@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Acl
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Acl/Exception.php
+END
+Role.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Acl/Role.php
+END
+Resource.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/parquelareja/!svn/ver/4/lib/vendor/Zend/Acl/Resource.php
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/test/unit
+END
+sfDoctrineColumnTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/test/unit/sfDoctrineColumnTest.php
+END
+sfDoctrineDatabaseTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/parquelareja/!svn/ver/4/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/test/unit/sfDoctrineDatabaseTest.php
+END

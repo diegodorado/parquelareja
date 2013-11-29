@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib
+END
+sfRss10Feed.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib/sfRss10Feed.class.php
+END
+sfRss201Feed.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib/sfRss201Feed.class.php
+END
+sfFeedPeer.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib/sfFeedPeer.class.php
+END
+sfFeedItem.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib/sfFeedItem.class.php
+END
+sfFeed.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib/sfFeed.class.php
+END
+sfFeedEnclosure.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib/sfFeedEnclosure.class.php
+END
+sfAtom1Feed.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib/sfAtom1Feed.class.php
+END
+sfRss091Feed.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib/sfRss091Feed.class.php
+END
+sfFeedImage.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib/sfFeedImage.class.php
+END
+sfRssFeed.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/parquelareja/!svn/ver/41/plugins/sfFeed2Plugin/lib/sfRssFeed.class.php
+END
