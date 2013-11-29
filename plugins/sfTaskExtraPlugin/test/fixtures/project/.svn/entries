@@ -1,89 +1,0 @@
-10
-
-dir
-51
-http://cooph.com.ar/svn/parquelareja/plugins/sfTaskExtraPlugin/test/fixtures/project
-http://cooph.com.ar/svn/parquelareja
-
-
-
-2011-07-13T19:27:38.079076Z
-42
-diego
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a5eebfaf-1be1-4f2f-b83e-4b96bb572873
-
-test
-dir
-
-log
-dir
-
-plugins
-dir
-
-cache
-dir
-
-apps
-dir
-
-symfony
-file
-
-
-
-
-2008-11-04T14:43:36.000000Z
-36073c1914105fb3bbb4f1ce4965b4d2
-2011-07-13T19:27:38.079076Z
-42
-diego
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-482
-
-config
-dir
-
-lib
-dir
-
-data
-dir
-
-web
-dir
-

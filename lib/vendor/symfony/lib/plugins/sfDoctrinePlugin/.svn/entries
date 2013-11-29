@@ -1,80 +1,0 @@
-10
-
-dir
-51
-http://cooph.com.ar/svn/parquelareja/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin
-http://cooph.com.ar/svn/parquelareja
-
-
-
-2010-08-03T03:41:13.652822Z
-4
-diego
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a5eebfaf-1be1-4f2f-b83e-4b96bb572873
-
-i18n
-dir
-
-test
-dir
-
-LICENSE
-file
-
-
-
-
-2010-06-29T05:38:27.000000Z
-80471cf84254400024258aca8bbce630
-2010-08-03T03:41:13.652822Z
-4
-diego
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1064
-
-config
-dir
-
-lib
-dir
-
-data
-dir
-
-web
-dir
-

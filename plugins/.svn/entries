@@ -1,58 +1,0 @@
-10
-
-dir
-51
-http://cooph.com.ar/svn/parquelareja/plugins
-http://cooph.com.ar/svn/parquelareja
-
-
-
-2011-07-13T20:02:01.280232Z
-43
-diego
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a5eebfaf-1be1-4f2f-b83e-4b96bb572873
-
-sfSyncContentPlugin
-dir
-
-sfDoctrineActAsTaggablePlugin
-dir
-
-sfDoctrineGuardPlugin
-dir
-
-apostrophePlugin
-dir
-
-apostropheBlogPlugin
-dir
-
-apostropheFeedbackPlugin
-dir
-
-sfWebBrowserPlugin
-dir
-
-apostropheExtraSlotsPlugin
-dir
-
-sfFeed2Plugin
-dir
-
-sfTaskExtraPlugin
-dir
-

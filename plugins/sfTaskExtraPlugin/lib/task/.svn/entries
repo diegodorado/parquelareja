@@ -1,83 +1,0 @@
-10
-
-dir
-51
-http://cooph.com.ar/svn/parquelareja/plugins/sfTaskExtraPlugin/lib/task
-http://cooph.com.ar/svn/parquelareja
-
-
-
-2011-07-13T19:27:38.079076Z
-42
-diego
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a5eebfaf-1be1-4f2f-b83e-4b96bb572873
-
-subversion
-dir
-
-test
-dir
-
-propel
-dir
-
-addon
-dir
-
-generator
-dir
-
-sfTaskExtraBaseTask.class.php
-file
-
-
-
-
-2009-12-07T19:45:39.000000Z
-a1539136e06acee3a50f0e907335c45a
-2011-07-13T19:27:38.079076Z
-42
-diego
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1450
-
-doctrine
-dir
-
-plugin
-dir
-

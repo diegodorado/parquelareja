@@ -1,9 +1,0 @@
-rendering: ~
-security:  ~
-
-# insert your own filters here
-aCache:
-  class: aCacheFilter
-
-cache:     ~
-execution: ~
