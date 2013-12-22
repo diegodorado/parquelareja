@@ -74,3 +74,12 @@ namespace :database do
   end  
   
 end
+
+
+namespace :symfony do
+  namespace :doctrine do
+    task :build_classes do
+      #run "#{try_sudo} sh -c 'cd #{latest_release} && #{php_bin} ./symfony doctrine:build --all-classes --env=#{symfony_env_prod}'"
+    end
+  end
+end
