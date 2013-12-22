@@ -3,22 +3,16 @@ Dir['plugins/*/lib/recipes/*.rb'].each { |plugin| load(plugin) }
 
 load Gem.find_files('capifony_symfony1.rb').first.to_s
 
-
-=begin
-set :application, "fundacion-sancor"
-set :domain,      "fsancor.cooph.com.ar"
-set :deploy_to,   "/home/hormigon/#{application}"
-set :use_sudo, false
-set :user, 'hormigon'
-=end
-
 set :application, "parquelareja"
-set :domain,      "190.210.151.78"
-set :deploy_to,   "/home/ddorado/#{application}"
+set :domain,      "201.235.255.14"
+#set :domain,      "parquelareja.org"
+set :user, 'parqaa7'
+set :deploy_to,   "/home/#{user}/#{application}"
 set :use_sudo, false
-set :user, 'ddorado'
 
-set :deploy_via, :remote_cache
+ssh_options[:port] = 9022
+
+set :deploy_via, :copy
 
 set :repository,  "git://github.com/diegodorado/#{application}.git"
 set :scm,         :git
@@ -28,6 +22,7 @@ role :app,        domain                         # This may be the same as your 
 role :db,         domain, :primary => true       # This is where symfony migrations will run
 
 set  :keep_releases,  3
+set :web_path,           "web"
 
 before "deploy:create_symlink" do
   run "mv #{latest_release}/web/frontend_prod.php  #{latest_release}/web/index.php"
