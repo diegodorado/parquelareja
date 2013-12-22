@@ -7,14 +7,14 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 443, host: 3001
 
   config.vm.provider :virtualbox do |virtualbox|
-    virtualbox.customize ["modifyvm", :id, "--name", "plareja-box"]
     virtualbox.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     virtualbox.customize ["modifyvm", :id, "--memory", "512"]
     virtualbox.customize ["setextradata", :id, "--VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
   end
 
+  config.vm.provision :shell, :path => "vm/reset_mysql_password.sh", :args => "root 1234"
   config.vm.provision :shell, :path => "vm/setup.sh"
-  config.ssh.shell = "bash -l"
+
 
 end
 

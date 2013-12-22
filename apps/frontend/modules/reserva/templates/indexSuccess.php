@@ -7,6 +7,36 @@
   <h3>Reserva</h3>
   <form id="form_reserva" action="<?=url_for('@reserva_index') ?>" method="post">
     <?=$form?>
+    <div class="form-row">
+
+			<table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Centro de Estudios</th>
+            <th>Centro de Trabajo</th>
+          </tr>
+        </thead>
+        <tbody>
+					<? for($i=1;$i<=16;$i++):?>
+	          <tr>
+	            <td><?=$i?></td>
+		          <td>
+								<input type="text" name="alojados_cde[]" />
+							</td>
+		          <td>
+								<?if($i<=15):?>
+									<input type="text" name="alojados_cdt[]" />
+								<?endif?>
+							</td>
+	          </tr>
+					<? endfor?>					
+        </tbody>
+      </table>
+    
+    </div>
+
+
     <div class="form-row botones">
       <input id="reserva_submit" class="submit" value="Reservar" name="enviar" type="submit" />
     </div>
@@ -23,3 +53,5 @@
     'width' => $game['width'],
     'height' => $game['height'] 
   )) */?>
+
+
