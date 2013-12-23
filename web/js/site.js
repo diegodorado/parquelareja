@@ -28,7 +28,12 @@ function larejaConstructor()
             break;
         }
     });
+
+		/*codigo js que es llamado en la vista reserva/templates/indexSuccess.php con <?php a_js_call('lareja.reservaInit()') ?> */
+
+
 	};
+	
 	this.calendarInit = function(options)
 	{
 		$('#calendar_filters h5').click(function(e){
