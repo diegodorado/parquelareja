@@ -21,16 +21,7 @@
   </div>
 </div>
 
-<script type='text/javascript'>
-	$(document).ready(function() {
-		$('#calendar_filters h5').click(function(e){
-  		$('#calendar_filters h5').removeClass('selected');
-  		$(this).addClass('selected');
-  		$('#calendar').attr('class','');
-  		$('#calendar').addClass($(this).attr('data-type'));
-		});
-	});
-</script>
+<?php a_js_call('lareja.calendarInit()') ?>
 
 <div></div>
 

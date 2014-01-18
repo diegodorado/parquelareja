@@ -18,9 +18,13 @@ class reservaActions extends aEngineActions
   public function executeIndex(sfWebRequest $request)
   {
     $this->form = new ReservaForm;  
-    
+    $this->titulo = "papapapapapap";
+
     if ($request->isMethod('post'))
     {
+    
+    
+    
       //$this->getUser()->setFlash('aCacheInvalid', true);    
       $this->form->bind($request->getParameter('reserva'));
       if ($this->form->isValid())
