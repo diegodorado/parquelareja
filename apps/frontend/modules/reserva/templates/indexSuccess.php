@@ -17,12 +17,34 @@
                    <div class="column denominacion">
                         <label>Tipo de solicitante</label>
                    </div>
-                   <div class="column valor" name="solicitante">
-                        <select class="input tipo_solicitante">
+                   <div class="column valor">
+                        <select class="input tipo_solicitante" name="solicitante">
                             <option value="maestro">Maestro</option>
                             <option value="organismo">Organismo</option>
                             <option value="mensaje">Mensaje de silo</option>
                         </select>
+                   </div>
+                </div>
+                <div class="field organismo particular">
+                   <div class="column denominacion">
+                        <label>Organismo</label>
+                   </div>
+                   <div class="column valor">
+                        <select class="input tipo_solicitante" name="organismo">
+                            <option value="cdh">La comunidad para el desarrollo humano</option>
+                            <option value="ph">Partido humanista</option>
+                            <option value="ceh">Centro de estudios humanistas</option>
+                            <option value="msg">Mundo sin guerras</option>
+                            <option value="cc">Convergencia de las culturas</option>
+                        </select>
+                   </div>
+                </div>
+                <div class="field comunidad particular">
+                   <div class="column denominacion">
+                        <label>Comunidad</label>
+                   </div>
+                   <div class="column valor">
+						<input type="text" name="comunidad" value="">
                    </div>
                 </div>
             </div>

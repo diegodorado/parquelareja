@@ -11,21 +11,16 @@ function larejaConstructor()
 	this.reservaInit = function(options)
 	{
 	
-        $('#reserva_comunidad').parent().hide();
+        $('.field.particular').hide();
         $('#reserva_organismo').parent().hide();
-        $('#reserva_solicitante').change( function(){
-            $('#reserva_comunidad').parent().hide();
-            $('#reserva_organismo').parent().hide();
-            $('#reserva_nombre').parent().hide();
+        $('.field.solicitante select').change( function(){
+			$('.field.particular').hide();
             switch(this.value) {
               case 'organismo':
-                $('#reserva_organismo').parent().show();
+                $('.field.particular.organismo').show();
                 break;
-              case 'comunidad':
-                $('#reserva_comunidad').parent().show();
-                break;
-              case 'maestro':
-                $('#reserva_nombre').parent().show();
+              case 'mensaje':
+                $('.field.particular.comunidad').show();
                 break;
             }
         });
