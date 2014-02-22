@@ -44,7 +44,7 @@
                         <label>Comunidad</label>
                    </div>
                    <div class="column valor">
-						<input type="text" name="comunidad" value="">
+						<input type="text" name="comunidad" value="" class="wide">
                    </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                             <label>Nombre y apellido</label>
                        </div>
                        <div class="column valor">
-                            <input type="text" class="input nombre" name="responsable">
+                            <input type="text" class="input nombre wide" name="responsable">
                        </div>
                        <div class="error_message nombre required">
                         <label>Este campo es obligatorio</label>
@@ -68,7 +68,7 @@
                             <label>Teléfono</label>
                        </div>
                        <div class="column valor">
-                            <input type="text" class="input telefono" name="telefono">
+                            <input type="text" class="input telefono wide" name="telefono">
                        </div>
                        <div class="error_message telefono required">
                         <label>Este campo es obligatorio</label>
@@ -82,7 +82,7 @@
                             <label>E-mail</label>
                        </div>
                        <div class="column valor">
-                            <input type="text" class="input email" name="email">
+                            <input type="text" class="input email wide" name="email">
                        </div>
                        <div class="error_message email">
                         <label>Este campo es obligatorio</label>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="area_desplegable">
                     <div class="leyenda">
-                        <label>El taller solo se puede reservar por personas, 
+                        <label>El taller solo puede ser reservado por personas, 
                         el horario de atención es de 9 a 16:30, se aceptan ticket canasta.</label>
                     </div>
                     <div class="field_set">               
@@ -130,8 +130,8 @@
                             </div>
                             <div class="column valor">
                                 <label class="day">Fecha</label>
-                                <input type="text" name="cdt[shifts][0][day]" class="day" id="day_1">
-                                <label class="hour_from">&nbsp;&nbsp;&nbsp;De</label>
+                                <input type="text" name="cdt[shifts][0][day]" class="day">
+                                <label class="hour_from">&emsp;&emsp;&emsp;De</label>
                                 <select name="taller[shifts][0][hour_from]" class="hour from">
                                     <?php for($i=0;$i<24;$i++) { ?>
                                         <?php
@@ -158,10 +158,10 @@
                                     <?php } ?>
                                 </select>
                                 <label>hs</label>
-                                &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
+                                &emsp;&emsp;&emsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
-                        <div><input type="button" class="new_shift" value="Nuevo horario"></div>
+                        <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
                     </div>
                 </div>
               </div>
@@ -173,7 +173,7 @@
                 </div>
                 <div class="area_desplegable">
                     <div class="leyenda">
-                        <label>El salón solo se puede reservar por personas, 
+                        <label>El salón solo puede ser reservado por personas, 
                         el horario de atención es de 9 a 16:30, se aceptan ticket canasta.</label>
                     </div>
                     <div class="field_set">               
@@ -196,8 +196,8 @@
                             </div>
                             <div class="column valor">
                                 <label class="day">Fecha</label>
-                                <input type="text" name="cdt[shifts][0][day]" class="day" id="day_1">
-                                <label class="hour_from">&nbsp;&nbsp;&nbsp;De</label>
+                                <input type="text" name="cdt[shifts][0][day]" class="day">
+                                <label class="hour_from">&emsp;&emsp;&emsp;De</label>
                                 <select name="taller[shifts][0][hour_from]" class="hour from">
                                     <?php for($i=0;$i<24;$i++) { ?>
                                         <?php
@@ -224,10 +224,10 @@
                                     <?php } ?>
                                 </select>
                                 <label>hs</label>
-                                &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
+                                &emsp;&emsp;&emsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
-                        <div><input type="button" class="new_shift" value="Nuevo horario"></div>
+                        <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
                     </div>
                 </div>
               </div>
@@ -239,7 +239,7 @@
                 </div>
                 <div class="area_desplegable">
                     <div class="leyenda">
-                        <label>La multiuso solo se puede reservar por personas, 
+                        <label>La multiuso solo puede ser reservada por personas, 
                         el horario de atención es de 9 a 16:30, se aceptan ticket canasta.</label>
                     </div>
                     <div class="field_set">               
@@ -262,8 +262,8 @@
                             </div>
                             <div class="column valor">
                                 <label class="day">Fecha</label>
-                                <input type="text" name="cdt[shifts][0][day]" class="day" id="day_1">
-                                <label class="hour_from">&nbsp;&nbsp;&nbsp;De</label>
+                                <input type="text" name="cdt[shifts][0][day]" class="day">
+                                <label class="hour_from">&emsp;&emsp;&emsp;De</label>
                                 <select name="taller[shifts][0][hour_from]" class="hour from">
                                     <?php for($i=0;$i<24;$i++) { ?>
                                         <?php
@@ -290,25 +290,51 @@
                                     <?php } ?>
                                 </select>
                                 <label>hs</label>
-                                &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
+                                &emsp;&emsp;&emsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
-                        <div><input type="button" class="new_shift" value="Nuevo horario"></div>
+                        <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
                     </div>
                 </div>
               </div>
           </div>
      </div>  
      <div class="area alojamiento">
-          <div class="titulo_area">
-               <label>ALOJAMIENTO</label>
-          </div>        
-          <div class="area_content">
-          </div>
+		<div class="titulo_area">
+		   <label>ALOJAMIENTO</label>
+		</div>        
+		<div class="area_content">
+			<div class="ambito cde">		
+				<input type="hidden" class="nombre_ambito" value="cde">
+				<div class="titulo_ambito">
+					<div class="column checkbox"><input type="checkbox"></div>
+					<div class="column text"><label>Centro de estudio</label></div>
+				</div>
+                <div class="area_desplegable">
+					<div class="field_set">               
+						<div class="titulo_set">
+							<label>1 Huesped</label>               
+						</div>  
+						<div class="field persona 1">
+						   <div class="column denominacion">
+								<label>Huesped 1</label>
+						   </div>
+							<div class="column valor">
+								<label class="guest_name">Nombre y apellido</label>
+								<input type="text" name="guests[0][name]" class="guest_name">
+								<label class="guest_from">Desde</label>
+								<input type="text" name="guests[0][from]" class="date guest_from">				
+								<label class="guest_to">Hasta</label>
+								<input type="text" name="guests[0][to]" class="date guest_to">
+							</div>
+						</div>
+						<div><input type="button" class="new_guest button" value="Nuevo huesped"></div>				
+					</div>    
+				</div>
+			</div>
+		</div>
      </div>  
      
-     
-
     <div class="form-row botones">
       <input id="reserva_submit" class="submit" value="Reservar" name="enviar" type="submit" />
     </div>

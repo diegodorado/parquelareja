@@ -26,7 +26,6 @@ function larejaConstructor()
         });
         
         $('.ambito .checkbox input').click(function(){
-        
             $ambito = $(this).parent().parent().parent();
             if ($(this).attr('checked')){
                 $ambito.find('.area_desplegable').show();

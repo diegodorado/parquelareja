@@ -1258,7 +1258,7 @@ margin-bottom: 2px;
     width: 170px;
     vertical-align: top;  
 }
-.reserva .field .column.valor input, .reserva .field .column.valor select{
+.reserva .field .column.valor input.wide, .reserva .field .column.valor select.wide{
     width: 300px;
 }
 .reserva .field_set{
@@ -1289,7 +1289,7 @@ margin-bottom: 2px;
     color: #002EB8;
     font-weight: bold;
 }
-.reserva .ambito .field.horario .valor input{
+.reserva .ambito .field.horario .valor input
     width: 100px;
 }
 .reserva .ambito .field.horario .valor select.hour{
@@ -1310,4 +1310,17 @@ margin-bottom: 2px;
     color: #7A95FF;
     vertical-align: middle;
 
+}
+.reserva .alojamiento input.date{
+	width: 100px;
+}
+.reserva .alojamiento input.guest_name{
+	width: 240px;
+}
+.reserva input.button{
+	border:0px;
+	border-bottom: 1px solid #7A95FF;
+	border-right: 1px solid #7A95FF;
+	padding: 10px;
+	cursor: pointer;
 }
