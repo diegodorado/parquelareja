@@ -19,6 +19,26 @@ class reservaActions extends aEngineActions
   {
     $this->form = new ReservaForm;  
     $this->titulo = "papapapapapap";
+	
+	
+	if (!empty($_POST)){
+		echo '<pre>'; var_dump($_POST['guests']); echo '</pre>'; die();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
     if ($request->isMethod('post'))
     {

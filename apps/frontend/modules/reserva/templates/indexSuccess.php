@@ -5,7 +5,8 @@
 
 <div class="center">
   <h3>Reserva</h3>
-  <form id="form_reserva" action="<?=url_for('@reserva_index') ?>" method="post">
+  <!--<form id="form_reserva" action="<?=url_for('@reserva_index') ?>" method="post">-->
+  <form id="form_reserva" action="" method="post">
   
      <div class="area general">
           <div class="titulo_area">
@@ -44,7 +45,10 @@
                         <label>Comunidad</label>
                    </div>
                    <div class="column valor">
-						<input type="text" name="comunidad" value="" class="wide">
+						<input type="text" name="comunidad" value="" class="wide required">
+						   <div class="error_message comunidad required">
+								<label>Este campo es obligatorio</label>
+						   </div>
                    </div>
                 </div>
             </div>
@@ -57,7 +61,7 @@
                             <label>Nombre y apellido</label>
                        </div>
                        <div class="column valor">
-                            <input type="text" class="input nombre wide" name="responsable">
+                           <input type="text" class="input nombre wide required" name="responsable">
 						   <div class="error_message nombre required">
 								<label>Este campo es obligatorio</label>
 						   </div>
@@ -68,7 +72,7 @@
                             <label>Teléfono</label>
                        </div>
                        <div class="column valor">
-							<input type="text" class="input telefono wide" name="telefono">
+							<input type="text" class="input telefono wide required" name="telefono">
 							<div class="error_message telefono required">
 								<label>Este campo es obligatorio</label>
 							</div>
@@ -82,11 +86,11 @@
                             <label>E-mail</label>
                        </div>
                        <div class="column valor">
-                            <input type="text" class="input email wide" name="email">
-							<div class="error_message email">
+                            <input type="text" class="input email wide required" name="email">
+							<div class="error_message email required">
 								<label>Este campo es obligatorio</label>
 							</div>
-							<div class="error_message format">
+							<div class="error_message email format">
 								<label>Debe ingresar una dirección de correo válida</label>
 							</div>
                        </div>
@@ -116,16 +120,16 @@
 						   </div>
 							<div class="column valor">
 								<label class="guest_name">Nombre y apellido</label>
-								<input type="text" name="guests[cde][0][name]" class="guest_name">
+								<input type="text" name="guests[cde][0][name]" class="guest_name required">
 								<label class="guest_from">Desde</label>
-								<input type="text" name="guests[cde][0][from]" class="date guest_from" id="cde_1_to">				
+								<input type="text" name="guests[cde][0][from]" class="date guest_from required" id="cde_1_to">				
 								<label class="guest_to">Hasta</label>
-								<input type="text" name="guests[cde][0][to]" class="date guest_to" id="cde_1_from">
+								<input type="text" name="guests[cde][0][to]" class="date guest_to required" id="cde_1_from">
 								&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
 
 							</div>
 						</div>
-						<div class="error_message cde">
+						<div class="error_message lodging cde">
 							<label>Hay campos sin completar. Complete todos los campos o elimine los huéspedes que estén de más</label>
 						</div>						
 						<div><input type="button" class="new_guest button" value="Nuevo huesped"></div>				
@@ -149,16 +153,16 @@
 						   </div>
 							<div class="column valor">
 								<label class="guest_name">Nombre y apellido</label>
-								<input type="text" name="guests[cdt][0][name]" class="guest_name">
+								<input type="text" name="guests[cdt][0][name]" class="guest_name required">
 								<label class="guest_from">Desde</label>
-								<input type="text" name="guests[cdt][0][from]" class="date guest_from" id="cdt_1_to">				
+								<input type="text" name="guests[cdt][0][from]" class="date guest_from required" id="cdt_1_to">				
 								<label class="guest_to">Hasta</label>
-								<input type="text" name="guests[cdt][0][to]" class="date guest_to" id="cdt_1_from">
+								<input type="text" name="guests[cdt][0][to]" class="date guest_to required" id="cdt_1_from">
 								&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
 
 							</div>
 						</div>
-						<div class="error_message cdt">
+						<div class="error_message lodging cdt">
 							<label>Hay campos sin completar. Complete todos los campos o elimine los huéspedes que estén de más</label>
 						</div>						
 						<div><input type="button" class="new_guest button" value="Nuevo huesped"></div>				
@@ -203,7 +207,7 @@
                             </div>
                             <div class="column valor">
                                 <label class="day">Fecha</label>
-                                <input type="text" name="cdt[shifts][0][day]" class="day">
+                                <input type="text" name="cdt[shifts][0][day]" class="day required">
                                 <label class="hour_from">&nbsp;&nbsp;&nbsp;De</label>
                                 <select name="taller[shifts][0][hour_from]" class="hour from">
                                     <?php for($i=0;$i<24;$i++) { ?>
@@ -234,8 +238,11 @@
                                 &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
-						<div class="error_message taller">
-							<label>Complete todos los campos. Revise que los horarios sean posibles</label>
+						<div class="error_message taller date">
+							<label>Complete todos los campos de fecha.</label>
+						</div>						
+						<div class="error_message taller time">
+							<label>Revise que todos los horarios sean posibles</label>
 						</div>						
                         <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
                     </div>
@@ -272,7 +279,7 @@
                             </div>
                             <div class="column valor">
                                 <label class="day">Fecha</label>
-                                <input type="text" name="cdt[shifts][0][day]" class="day">
+                                <input type="text" name="cdt[shifts][0][day]" class="day required">
                                 <label class="hour_from">&nbsp;&nbsp;&nbsp;De</label>
                                 <select name="taller[shifts][0][hour_from]" class="hour from">
                                     <?php for($i=0;$i<24;$i++) { ?>
@@ -303,8 +310,11 @@
                                 &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
-						<div class="error_message salon">
-							<label>Complete todos los campos. Revise que los horarios sean posibles</label>
+						<div class="error_message salon date">
+							<label>Complete todos los campos de fecha.</label>
+						</div>						
+						<div class="error_message salon time">
+							<label>Revise que todos los horarios sean posibles</label>
 						</div>						
                         <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
                     </div>
@@ -341,7 +351,7 @@
                             </div>
                             <div class="column valor">
                                 <label class="day">Fecha</label>
-                                <input type="text" name="cdt[shifts][0][day]" class="day">
+                                <input type="text" name="cdt[shifts][0][day]" class="day required">
                                 <label class="hour_from">&nbsp;&nbsp;&nbsp;De</label>
                                 <select name="taller[shifts][0][hour_from]" class="hour from">
                                     <?php for($i=0;$i<24;$i++) { ?>
@@ -372,8 +382,11 @@
                                 &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
-						<div class="error_message multiuso">
-							<label>Complete todos los campos. Revise que los horarios sean posibles</label>
+						<div class="error_message multiuso date">
+							<label>Complete todos los campos de fecha.</label>
+						</div>						
+						<div class="error_message multiuso time">
+							<label>Revise que todos los horarios sean posibles</label>
 						</div>						
                         <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
                     </div>
@@ -386,7 +399,7 @@
 	</div>
 
     <div class="form-row botones">
-		<input id="reserva_submit" class="submit" value="Reservar" name="enviar" type="submit" />
+		<input id="reserva_submit" class="" value="Reservar" name="enviar" type="button" />
     </div>
   </form>
 </div>
@@ -396,5 +409,6 @@
 <?php a_js_call('lareja.reservaInit(?)', array(
     'test' => $titulo
   )) ?>
+<?php a_js_call('lareja.validate()') ?>
 
 

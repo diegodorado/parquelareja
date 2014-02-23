@@ -13,6 +13,30 @@ function larejaConstructor()
 	
         $('.field.particular').hide();
         $('#reserva_organismo').parent().hide();
+		
+        initShifts('taller');
+        initShifts('salon');
+        initShifts('multiuso');
+		initGuests('cde');
+		initGuests('cdt');		
+        $('.ambito .checkbox input').each(function(){
+            $ambito = $(this).parent().parent().parent();
+            if ($(this).attr('checked')){
+                $ambito.find('.area_desplegable').show();
+            }
+            else{
+                $ambito.find('.area_desplegable').hide();              
+            }
+        });
+		switch($('.field.solicitante select').val()){
+              case 'organismo':
+                $('.field.particular.organismo').show();
+                break;
+              case 'mensaje':
+                $('.field.particular.comunidad').show();
+                break;
+		}
+		
         $('.field.solicitante select').change( function(){
 			$('.field.particular').hide();
             switch(this.value) {
@@ -25,7 +49,7 @@ function larejaConstructor()
             }
         });
         
-        $('.ambito .checkbox input').click(function(){
+        $('.titulo_ambito .checkbox input').click(function(){
             $ambito = $(this).parent().parent().parent();
             if ($(this).attr('checked')){
                 $ambito.find('.area_desplegable').show();
@@ -74,27 +98,11 @@ function larejaConstructor()
         }
         
         
-        initShifts('taller');
-        initShifts('salon');
-        initShifts('multiuso');
-    
-        $('.ambito .checkbox input').each(function(){
-        
-            $ambito = $(this).parent().parent().parent();
-            if ($(this).attr('checked')){
-                $ambito.find('.area_desplegable').show();
-            }
-            else{
-                $ambito.find('.area_desplegable').hide();              
-            }
-        });
         
          
 		/*codigo js que es llamado en la vista reserva/templates/indexSuccess.php con <?php a_js_call('lareja.reservaInit()') ?> */
 
 
-		initGuests('cde');
-		initGuests('cdt');
 		
 		$('.alojamiento .new_guest').click(function(){
 			$ambito_name = $(this).parent().parent().parent().parent().find('.nombre_ambito').val();
@@ -205,7 +213,67 @@ function larejaConstructor()
 		swfobject.embedSWF(swf, id, w, h, "9.0.0");
 	};
 	
+	this.validate = function(){
 	
+		
+		$('#reserva_submit').click(function(){
+			
+			$('.error_message').hide();
+			$all_ok = true;
+			
+			$('.area.general input.required:visible').each(function(){
+				if ( $(this).val() == "" ){
+					$all_ok = false;
+					$(this).parent().find('.error_message.required').show();
+				}
+			});
+			if ($('input.email').val() != ""){
+				$re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				if (!$re.test($('input.email').val())){
+					$all_ok = false;
+					$('.error_message.email.format').show();
+				}
+			}
+			if ($all_ok){
+				$none_checked = true;
+				$('.titulo_ambito .checkbox input').each(function(){
+					if ($(this).attr('checked')){
+						$none_checked = false;
+						$all_complete = true;
+						$ambito = $(this).parent().parent().parent();
+						$ambito.find('input.required').each(function(){
+							if ($(this).val() == ""){
+								$all_complete = false;
+								$ambito.find('.error_message.date').show();
+							}
+						});
+						$ambito.find('select.hour.from').each(function(){
+							$fromValue = parseInt($(this).val());
+							$toValue   = parseInt($(this).parent().find('.hour.to').val());
+							if (!($toValue>$fromValue)){
+								$all_complete = false;
+								$ambito.find('.error_message.time').show();
+							}
+						});
+						if (!$all_complete){
+							$all_ok = false;
+							$ambito.find('.error_message.lodging').show();
+						}
+					}
+				});			
+				if ($none_checked){
+					$all_ok = false;
+					$('.error_message.nada_reservado').show();
+				}
+			}
+			if($all_ok){
+				//alert('submit');
+				$('div:hidden input,div:hidden select,div:hidden textarea').removeAttr('name');
+				$('#form_reserva').submit();
+			}
+		});
+	
+	}
 	
 	
 }

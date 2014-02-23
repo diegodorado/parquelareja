@@ -1228,7 +1228,7 @@ body #content.has-subnav > .middle > .right {
     color: #2E5CB8;
 }
 .reserva .error_message{
-    display:block;
+    display: none;
     border: 1px dotted red;
     background-color: #FFB3B3;
     color: red;
@@ -1328,6 +1328,10 @@ margin-bottom: 2px;
 	padding: 10px;
 	cursor: pointer;
 }
+.reserva input.button:active{
+	border:none;
+}
+
 .reserva .remove_shift, .reserva .remove_guest{
 	cursor: pointer;
 } 
@@ -1335,5 +1339,16 @@ margin-bottom: 2px;
 	text-decoration: none;
 }
 #reserva_submit{
+
+	padding: 10px;
 	cursor:pointer;
+	background-color: #E0E8FF!important;
+	border: none!important;
+	border-bottom: 1px solid #7A95FF!important;
+	border-right: 1px solid #7A95FF!important;
+
+}
+
+#reserva_submit:active{
+	border: none!important;
 }
