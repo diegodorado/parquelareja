@@ -125,6 +125,9 @@
 
 							</div>
 						</div>
+						<div class="error_message cde">
+							<label>Hay campos sin completar. Complete todos los campos o elimine los huéspedes que estén de más</label>
+						</div>						
 						<div><input type="button" class="new_guest button" value="Nuevo huesped"></div>				
 					</div>    
 				</div>
@@ -155,6 +158,9 @@
 
 							</div>
 						</div>
+						<div class="error_message cdt">
+							<label>Hay campos sin completar. Complete todos los campos o elimine los huéspedes que estén de más</label>
+						</div>						
 						<div><input type="button" class="new_guest button" value="Nuevo huesped"></div>				
 					</div>    
 				</div>
@@ -228,6 +234,9 @@
                                 &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
+						<div class="error_message taller">
+							<label>Complete todos los campos. Revise que los horarios sean posibles</label>
+						</div>						
                         <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
                     </div>
                 </div>
@@ -294,6 +303,9 @@
                                 &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
+						<div class="error_message salon">
+							<label>Complete todos los campos. Revise que los horarios sean posibles</label>
+						</div>						
                         <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
                     </div>
                 </div>
@@ -360,13 +372,19 @@
                                 &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
+						<div class="error_message multiuso">
+							<label>Complete todos los campos. Revise que los horarios sean posibles</label>
+						</div>						
                         <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
                     </div>
                 </div>
               </div>
           </div>
      </div>  
-     
+	<div class="error_message nada_reservado">
+		<label>No reservaste nada. Algo tenés que reservar. ¿Para que entraste?</label>
+	</div>
+
     <div class="form-row botones">
 		<input id="reserva_submit" class="submit" value="Reservar" name="enviar" type="submit" />
     </div>

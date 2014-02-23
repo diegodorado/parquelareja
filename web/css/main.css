@@ -1228,7 +1228,7 @@ body #content.has-subnav > .middle > .right {
     color: #2E5CB8;
 }
 .reserva .error_message{
-    display:none;
+    display:block;
     border: 1px dotted red;
     background-color: #FFB3B3;
     color: red;
@@ -1242,6 +1242,7 @@ body #content.has-subnav > .middle > .right {
 
 .reserva .area .titulo_area{
     background-color: #7A95FF;
+	/*background-color: #203245;*/
     color: #fff;
     font-size: 21px;
     font-style: italic;
