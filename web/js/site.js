@@ -36,6 +36,7 @@ function larejaConstructor()
         });
         
         $('.ambito .remove_shift').hide();
+        $('.ambito .remove_guest').hide();
         
         $('.ambito .new_shift').click(function(){
             $ambito = $(this).parent().parent().parent().parent();
@@ -91,7 +92,89 @@ function larejaConstructor()
 		/*codigo js que es llamado en la vista reserva/templates/indexSuccess.php con <?php a_js_call('lareja.reservaInit()') ?> */
 
 
+		initGuests('cde');
+		$('.alojamiento .new_guest').click(function(){
+			$ambito_name = $(this).parent().parent().parent().parent().find('.nombre_ambito').val();
+			$('.ambito.' + $ambito_name + ' .field.guest:last').clone().insertAfter('.field.guest:last');
+			$('.ambito.' + $ambito_name + ' .field.guest:last .guest_name').val('');
+			$('.ambito.' + $ambito_name + ' .remove_guest').show();
+			initGuests($ambito_name);
+		});
+		
+		function initGuests($ambito_name){
+			$current_number = 0;
+            $('.' + $ambito_name + ' input.guest_from').removeClass('hasDatepicker');
+            $('.' + $ambito_name + ' input.guest_to').removeClass('hasDatepicker');
+			$('.ambito.' + $ambito_name + ' .field.guest').each(function(){
+				$(this).find('.denominacion label').html('Huesped ' + ($current_number+1));
+				$(this).find('input.guest_name').attr('name','guests['+$ambito_name+']['+$current_number+'][name]');
+				$(this).find('input.guest_from').attr('name','guests['+$ambito_name+']['+$current_number+'][from]');
+				$(this).find('input.guest_to').attr('name','guests['+$ambito_name+']['+$current_number+'][to]');
+				$(this).find('input.guest_from').attr('id',$ambito_name + '_' + $current_number + '_from');
+				$(this).find('input.guest_to').attr('id',$ambito_name + '_' + $current_number + '_to');
+				$(this).find('input.guest_from').datepicker({changeMonth: true,changeYear: true, yearRange:'-10:+10'});
+				$(this).find('input.guest_to').datepicker({changeMonth: true,changeYear: true, yearRange:'-10:+10'});
+				
+				if ($(this).find('input.guest_from').val() != ""){
+					setMinDate($(this).find('input.guest_from'),$(this).find('input.guest_to'));
+				}
+				
+				if ($(this).find('input.guest_to').val() != ""){
+					setMaxDate($(this).find('input.guest_to'),$(this).find('input.guest_from'));
+				}
+				
+				$(this).find('input.guest_from').change(function(){
+					setMinDate($(this),$(this).parent().find('input.guest_to'));
+				});
+				$(this).find('input.guest_to').change(function(){
+					setMaxDate($(this),$(this).parent().find('input.guest_from'));
+				});
+				$current_number++;
+			});
+			
+			$titulo = $current_number;
+			
+			if ($current_number == 1){
+				$titulo += ' Huesped';
+			}
+			else{
+				$titulo += ' Huéspedes';
+			}
+			
+			$('.ambito.' + $ambito_name + ' .titulo_set label' ).html($titulo);
+            $('.remove_guest').click(function(){
+                $(this).parent().parent().remove();
+                initGuests($ambito_name);
+                if ( $('.ambito.'+$ambito_name+' .field.guest').size() == 1 ){
+                    $('.ambito.'+$ambito_name+' .field.guest a.remove_guest').hide();
+                }
+            });
+		}
 	};
+	
+	function setMinDate($dateElement1,$dateElement2){
+		$splitted_date 	= $dateElement1.val().split('/');
+		$day 			= $splitted_date[0];
+		$month 			= $splitted_date[1];
+		$year 			= $splitted_date[2];
+		$date			= new Date($year,$month-1,$day,0,0,0,0);
+		$time			= $date.getTime();
+		$nextDayTime    = $time + (1 * 60 * 60 * 24 * 1000);
+		$nextDay		= new Date($nextDayTime);
+		$dateElement2.datepicker('option','minDate',$nextDay);
+	}
+	
+	function setMaxDate($dateElement1,$dateElement2){
+		$splitted_date 	= $dateElement1.val().split('/');
+		$day 			= $splitted_date[0];
+		$month 			= $splitted_date[1];
+		$year 			= $splitted_date[2];
+		$date			= new Date($year,$month-1,$day,0,0,0,0);
+		$time			= $date.getTime();
+		$nextDayTime    = $time - (1 * 60 * 60 * 24 * 1000);
+		$nextDay		= new Date($nextDayTime);
+		$dateElement2.datepicker('option','maxDate',$nextDay);
+	}
 	
 	this.calendarInit = function(options)
 	{

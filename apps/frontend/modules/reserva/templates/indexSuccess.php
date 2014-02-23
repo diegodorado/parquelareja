@@ -131,7 +131,7 @@
                             <div class="column valor">
                                 <label class="day">Fecha</label>
                                 <input type="text" name="cdt[shifts][0][day]" class="day">
-                                <label class="hour_from">&emsp;&emsp;&emsp;De</label>
+                                <label class="hour_from">&nbsp;&nbsp;&nbsp;De</label>
                                 <select name="taller[shifts][0][hour_from]" class="hour from">
                                     <?php for($i=0;$i<24;$i++) { ?>
                                         <?php
@@ -158,7 +158,7 @@
                                     <?php } ?>
                                 </select>
                                 <label>hs</label>
-                                &emsp;&emsp;&emsp;<a class="remove_shift">X</a>
+                                &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
                         <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
@@ -197,7 +197,7 @@
                             <div class="column valor">
                                 <label class="day">Fecha</label>
                                 <input type="text" name="cdt[shifts][0][day]" class="day">
-                                <label class="hour_from">&emsp;&emsp;&emsp;De</label>
+                                <label class="hour_from">&nbsp;&nbsp;&nbsp;De</label>
                                 <select name="taller[shifts][0][hour_from]" class="hour from">
                                     <?php for($i=0;$i<24;$i++) { ?>
                                         <?php
@@ -224,7 +224,7 @@
                                     <?php } ?>
                                 </select>
                                 <label>hs</label>
-                                &emsp;&emsp;&emsp;<a class="remove_shift">X</a>
+                                &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
                         <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
@@ -263,7 +263,7 @@
                             <div class="column valor">
                                 <label class="day">Fecha</label>
                                 <input type="text" name="cdt[shifts][0][day]" class="day">
-                                <label class="hour_from">&emsp;&emsp;&emsp;De</label>
+                                <label class="hour_from">&nbsp;&nbsp;&nbsp;De</label>
                                 <select name="taller[shifts][0][hour_from]" class="hour from">
                                     <?php for($i=0;$i<24;$i++) { ?>
                                         <?php
@@ -290,7 +290,7 @@
                                     <?php } ?>
                                 </select>
                                 <label>hs</label>
-                                &emsp;&emsp;&emsp;<a class="remove_shift">X</a>
+                                &nbsp;&nbsp;&nbsp;<a class="remove_shift">X</a>
                             </div>
                         </div>   
                         <div><input type="button" class="new_shift button" value="Nuevo horario"></div>
@@ -315,7 +315,7 @@
 						<div class="titulo_set">
 							<label>1 Huesped</label>               
 						</div>  
-						<div class="field persona 1">
+						<div class="field guest numero_1">
 						   <div class="column denominacion">
 								<label>Huesped 1</label>
 						   </div>
@@ -323,9 +323,11 @@
 								<label class="guest_name">Nombre y apellido</label>
 								<input type="text" name="guests[0][name]" class="guest_name">
 								<label class="guest_from">Desde</label>
-								<input type="text" name="guests[0][from]" class="date guest_from">				
+								<input type="text" name="guests[0][from]" class="date guest_from" id="cde_1_to">				
 								<label class="guest_to">Hasta</label>
-								<input type="text" name="guests[0][to]" class="date guest_to">
+								<input type="text" name="guests[0][to]" class="date guest_to" id="cde_1_from">
+								&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
+
 							</div>
 						</div>
 						<div><input type="button" class="new_guest button" value="Nuevo huesped"></div>				
@@ -336,7 +338,7 @@
      </div>  
      
     <div class="form-row botones">
-      <input id="reserva_submit" class="submit" value="Reservar" name="enviar" type="submit" />
+		<input id="reserva_submit" class="submit" value="Reservar" name="enviar" type="submit" />
     </div>
   </form>
 </div>

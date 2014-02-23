@@ -1324,3 +1324,9 @@ margin-bottom: 2px;
 	padding: 10px;
 	cursor: pointer;
 }
+.reserva .remove_shift, .reserva .remove_guest{
+	cursor: pointer;
+} 
+.reserva .remove_shift:hover, .reserva .remove_guest:hover{
+	text-decoration: none;
+}
