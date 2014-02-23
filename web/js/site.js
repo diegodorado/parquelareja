@@ -62,6 +62,7 @@ function larejaConstructor()
                 $currentHorario.addClass('numero_' + ($current_number+1));
                 $current_number++;
             });
+			$('.ambito .remove_shift').unbind('click');
             $('.ambito .remove_shift').click(function(){
                 $ambito = $(this).parent().parent().parent().parent().parent();
                 $(this).parent().parent().remove();
@@ -93,9 +94,11 @@ function larejaConstructor()
 
 
 		initGuests('cde');
+		initGuests('cdt');
+		
 		$('.alojamiento .new_guest').click(function(){
 			$ambito_name = $(this).parent().parent().parent().parent().find('.nombre_ambito').val();
-			$('.ambito.' + $ambito_name + ' .field.guest:last').clone().insertAfter('.field.guest:last');
+			$('.ambito.' + $ambito_name + ' .field.guest:last').clone().insertAfter('.ambito.' + $ambito_name + ' .field.guest:last');
 			$('.ambito.' + $ambito_name + ' .field.guest:last .guest_name').val('');
 			$('.ambito.' + $ambito_name + ' .remove_guest').show();
 			initGuests($ambito_name);
@@ -142,6 +145,7 @@ function larejaConstructor()
 			}
 			
 			$('.ambito.' + $ambito_name + ' .titulo_set label' ).html($titulo);
+			$('.remove_guest').unbind('click');
             $('.remove_guest').click(function(){
                 $(this).parent().parent().remove();
                 initGuests($ambito_name);

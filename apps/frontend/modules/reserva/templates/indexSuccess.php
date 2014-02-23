@@ -58,9 +58,9 @@
                        </div>
                        <div class="column valor">
                             <input type="text" class="input nombre wide" name="responsable">
-                       </div>
-                       <div class="error_message nombre required">
-                        <label>Este campo es obligatorio</label>
+						   <div class="error_message nombre required">
+								<label>Este campo es obligatorio</label>
+						   </div>
                        </div>
                   </div>
                   <div class="field telefono">
@@ -68,13 +68,13 @@
                             <label>Teléfono</label>
                        </div>
                        <div class="column valor">
-                            <input type="text" class="input telefono wide" name="telefono">
-                       </div>
-                       <div class="error_message telefono required">
-                        <label>Este campo es obligatorio</label>
-                       </div>
-                       <div class="error_message telefono format">
-                        <label>Este campo debe contener solo números</label>
+							<input type="text" class="input telefono wide" name="telefono">
+							<div class="error_message telefono required">
+								<label>Este campo es obligatorio</label>
+							</div>
+							<div class="error_message telefono format">
+								<label>Este campo debe contener solo números</label>
+							</div>
                        </div>
                   </div>
                   <div class="field email">
@@ -83,17 +83,84 @@
                        </div>
                        <div class="column valor">
                             <input type="text" class="input email wide" name="email">
-                       </div>
-                       <div class="error_message email">
-                        <label>Este campo es obligatorio</label>
-                       </div>
-                       <div class="error_message format">
-                        <label>Debe ingresar una dirección de correo válida</label>
+							<div class="error_message email">
+								<label>Este campo es obligatorio</label>
+							</div>
+							<div class="error_message format">
+								<label>Debe ingresar una dirección de correo válida</label>
+							</div>
                        </div>
                   </div>
               </div>
           </div>        
      </div>
+     <div class="area alojamiento">
+		<div class="titulo_area">
+		   <label>ALOJAMIENTO</label>
+		</div>        
+		<div class="area_content">
+			<div class="ambito cde">		
+				<input type="hidden" class="nombre_ambito" value="cde">
+				<div class="titulo_ambito">
+					<div class="column checkbox"><input type="checkbox"></div>
+					<div class="column text"><label>Centro de estudio</label></div>
+				</div>
+                <div class="area_desplegable">
+					<div class="field_set">               
+						<div class="titulo_set">
+							<label>1 Huesped</label>               
+						</div>  
+						<div class="field guest numero_1">
+						   <div class="column denominacion">
+								<label>Huesped 1</label>
+						   </div>
+							<div class="column valor">
+								<label class="guest_name">Nombre y apellido</label>
+								<input type="text" name="guests[cde][0][name]" class="guest_name">
+								<label class="guest_from">Desde</label>
+								<input type="text" name="guests[cde][0][from]" class="date guest_from" id="cde_1_to">				
+								<label class="guest_to">Hasta</label>
+								<input type="text" name="guests[cde][0][to]" class="date guest_to" id="cde_1_from">
+								&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
+
+							</div>
+						</div>
+						<div><input type="button" class="new_guest button" value="Nuevo huesped"></div>				
+					</div>    
+				</div>
+			</div>
+			<div class="ambito cdt">		
+				<input type="hidden" class="nombre_ambito" value="cdt">
+				<div class="titulo_ambito">
+					<div class="column checkbox"><input type="checkbox"></div>
+					<div class="column text"><label>Centro de trabajo</label></div>
+				</div>
+                <div class="area_desplegable">
+					<div class="field_set">               
+						<div class="titulo_set">
+							<label>1 Huesped</label>               
+						</div>  
+						<div class="field guest numero_1">
+						   <div class="column denominacion">
+								<label>Huesped 1</label>
+						   </div>
+							<div class="column valor">
+								<label class="guest_name">Nombre y apellido</label>
+								<input type="text" name="guests[cdt][0][name]" class="guest_name">
+								<label class="guest_from">Desde</label>
+								<input type="text" name="guests[cdt][0][from]" class="date guest_from" id="cdt_1_to">				
+								<label class="guest_to">Hasta</label>
+								<input type="text" name="guests[cdt][0][to]" class="date guest_to" id="cdt_1_from">
+								&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
+
+							</div>
+						</div>
+						<div><input type="button" class="new_guest button" value="Nuevo huesped"></div>				
+					</div>    
+				</div>
+			</div>
+		</div>
+     </div>  
      <div class="area ambitos">
           <div class="titulo_area">
                <label>RESERVA DE AMBITOS</label>
@@ -298,43 +365,6 @@
                 </div>
               </div>
           </div>
-     </div>  
-     <div class="area alojamiento">
-		<div class="titulo_area">
-		   <label>ALOJAMIENTO</label>
-		</div>        
-		<div class="area_content">
-			<div class="ambito cde">		
-				<input type="hidden" class="nombre_ambito" value="cde">
-				<div class="titulo_ambito">
-					<div class="column checkbox"><input type="checkbox"></div>
-					<div class="column text"><label>Centro de estudio</label></div>
-				</div>
-                <div class="area_desplegable">
-					<div class="field_set">               
-						<div class="titulo_set">
-							<label>1 Huesped</label>               
-						</div>  
-						<div class="field guest numero_1">
-						   <div class="column denominacion">
-								<label>Huesped 1</label>
-						   </div>
-							<div class="column valor">
-								<label class="guest_name">Nombre y apellido</label>
-								<input type="text" name="guests[0][name]" class="guest_name">
-								<label class="guest_from">Desde</label>
-								<input type="text" name="guests[0][from]" class="date guest_from" id="cde_1_to">				
-								<label class="guest_to">Hasta</label>
-								<input type="text" name="guests[0][to]" class="date guest_to" id="cde_1_from">
-								&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
-
-							</div>
-						</div>
-						<div><input type="button" class="new_guest button" value="Nuevo huesped"></div>				
-					</div>    
-				</div>
-			</div>
-		</div>
      </div>  
      
     <div class="form-row botones">

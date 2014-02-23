@@ -1234,9 +1234,12 @@ body #content.has-subnav > .middle > .right {
     color: red;
     font-size: 12px;
     padding: 5px 8px 5px 8px;
-    width: 384px;
     margin: 4px 0px 4px 0px;
 }
+.reserva .error_message .medium{
+	width: 300px;	
+}
+
 .reserva .area .titulo_area{
     background-color: #7A95FF;
     color: #fff;
@@ -1329,4 +1332,7 @@ margin-bottom: 2px;
 } 
 .reserva .remove_shift:hover, .reserva .remove_guest:hover{
 	text-decoration: none;
+}
+#reserva_submit{
+	cursor:pointer;
 }
