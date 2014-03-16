@@ -18,27 +18,14 @@ class reservaActions extends aEngineActions
   public function executeIndex(sfWebRequest $request)
   {
     $this->form = new ReservaForm;  
-    $this->titulo = "papapapapapap";
+    $this->titulo = "papadopulos";
+	$this->horario_desde 	= 10;
+	$this->horario_hasta	= 22;
 	
 	
 	if (!empty($_POST)){
-		echo '<pre>'; var_dump($_POST['guests']); echo '</pre>'; die();
+		echo '<pre>'; var_dump($_POST); echo '</pre>'; die();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
     if ($request->isMethod('post'))
     {
