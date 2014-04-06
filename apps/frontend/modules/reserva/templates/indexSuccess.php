@@ -53,7 +53,7 @@
             </div>
 		  <div class="field_set">
 			  <div class="titulo_set">
-				  <label>Responsable</label>               
+				  <label>Datos de contacto</label>               
 			  </div>  
 			  <div class="field nombre">
 				   <div class="column denominacion">
@@ -224,7 +224,7 @@
             </div>
               <div class="field_set">
                   <div class="titulo_set">
-                      <label>Responsable</label>               
+                      <label>Datos de contacto</label>               
                   </div>  
                   <div class="field nombre">
                        <div class="column denominacion">
@@ -273,6 +273,7 @@
 							</div>
                        </div>
                   </div>
+				  <!--
                   <div class="field alojamiento">
                        <div class="column denominacion">
                             <label>Alojamiento</label>
@@ -286,6 +287,7 @@
 							</div>
                        </div>
                   </div>
+				  -->
 			  </div>
               <div class="field_set">
                   <div class="titulo_set">
@@ -327,9 +329,14 @@
                 <div class="area_desplegable">
 					<div class="field_set">               
 						<div class="titulo_set">
-							<label>1 Alojado</label>               
+							<div class="column left">
+								<label>1 alojado</label>        
+							</div>
+							<div class="column">
+								<a class="mover_responsable">Mover responsable a este ambito</a>
+							</div>
 						</div>  
-						<div class="field guest numero_1">
+						<div class="field guest">
 						   <div class="column denominacion">
 								<label>Alojado 1</label>
 						   </div>
@@ -357,21 +364,23 @@
                 <div class="area_desplegable">
 					<div class="field_set">               
 						<div class="titulo_set">
-							<label>1 alojado</label>               
+							<div class="column left">
+								<label>1 alojado</label>        
+							</div>
+							<div class="column">
+								<a class="mover_responsable">Mover responsable a este ambito</a>
+							</div>
 						</div>  
-						<div class="field guest numero_1">
+						<div class="field guest">
 						   <div class="column denominacion">
 								<label>alojado 1</label>
 						   </div>
 							<div class="column valor">
 								<label class="guest_name">Nombre y apellido</label>
-								<input type="text" name="guests[cdt][0][name]" class="guest_name required">
-								<label class="guest_from">Desde</label>
-								<input type="text" name="guests[cdt][0][from]" class="date guest_from required" id="cdt_1_to">				
-								<label class="guest_to">Hasta</label>
-								<input type="text" name="guests[cdt][0][to]" class="date guest_to required" id="cdt_1_from">
+								<input type="text" name="guests[cde][0][name]" class="guest_name required">
+								<label class="guest_email">Email</label>
+								<input type="text" name="guests[cde][0][email]" class="guest_email email medium required">
 								&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
-
 							</div>
 						</div>
 						<div class="error_message lodging cdt">

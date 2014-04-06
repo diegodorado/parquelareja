@@ -1264,9 +1264,13 @@ body #content.has-subnav > .middle > .right {
 .reserva .field{
 margin-bottom: 2px;
 }
-.reserva .field .column{
+.reserva .field .column, .reserva .titulo_set .column{
     display: table-cell;    
 }    
+.reserva .titulo_set .column.left{
+    width: 170px;
+    vertical-align: top;  
+}
 .reserva .field .column.denominacion{
     width: 170px;
     vertical-align: top;  
@@ -1388,6 +1392,19 @@ margin-bottom: 2px;
 .reserva h3{
 	font-size: 28px!important;
 }
-.reserva .field.guest.responsible{
-	border: 1px solid red;
+.reserva .field.guest.responsible .denominacion{
+	color: #2E5CB8;
+	font-weight: bold;
+}
+.reserva .field.guest.responsible input{
+	border-color: #E0E8FF;
+	background-color: #E0E8FF;
+	font-weight: bold;
+}
+.reserva a.mover_responsable{
+	color: blue;
+	font-size: 14px;
+	cursor: pointer;
+	font-weight: normal;
+	text-decoration: underline;
 }

@@ -63,44 +63,47 @@ function larejaConstructor()
 				$ambito = $(this).parent().parent().parent();
 				if ($(this).attr('checked')){
 					$ambito.find('.area_desplegable').show();
+					initAmbito($ambito);
 				}
 				else{
-					$ambito.find('.area_desplegable').hide();              
+					$ambito.find('.area_desplegable').hide();
+					removeResponsible($ambito);
 				}
 			});
-			updatePlacesSelect();
-			
-			switch($('.field.solicitante select').val()){
-				  case 'organismo':
-					$('.field.particular.organismo').show();
-					break;
-				  case 'mensaje':
-					$('.field.particular.comunidad').show();
-					break;
-			}
-			
-			$('.field.solicitante select').change( function(){
-				$('.field.particular').hide();
-				switch(this.value) {
-				  case 'organismo':
-					$('.field.particular.organismo').show();
-					break;
-				  case 'mensaje':
-					$('.field.particular.comunidad').show();
-					break;
-				}
-			});
-			
+
 			$('.titulo_ambito .checkbox input').click(function(){
 				$ambito = $(this).parent().parent().parent();
 				if ($(this).attr('checked')){
 					$ambito.find('.area_desplegable').show();
+					initAmbito($ambito);
 				}
 				else{
-					$ambito.find('.area_desplegable').hide();              
+					$ambito.find('.area_desplegable').hide();
+					removeResponsible($ambito);
 				}
-				updatePlacesSelect();
 			});
+			
+			init_solicitante_select();
+			
+			$('#form_reserva .area.general input.nombre').keyup(function(){
+				$('#form_reserva .responsible .guest_name').val( $(this).val() + ' ' + $('#form_reserva input.apellido').val() );
+				$('#form_reserva .responsible .guest_name').attr( 'title', $('#form_reserva .responsible .guest_name').val() );
+			});
+			$('#form_reserva .area.general input.apellido').keyup(function(){
+				$('#form_reserva .responsible .guest_name').val( $('#form_reserva input.nombre').val() + ' ' + $(this).val() );
+				$('#form_reserva .responsible .guest_name').attr( 'title', $('#form_reserva .responsible .guest_name').val() );
+			});
+			$('#form_reserva .area.general input.email').keyup(function(){
+				$('#form_reserva .responsible .guest_email').val( $(this).val() );
+				$('#form_reserva .responsible .guest_email').attr( 'title', $(this).val() );
+			});
+			
+			/*$('#form_reserva input.nombre').change(function(){ $('#form_reserva input.nombre').keyup() });
+			$('#form_reserva input.apellido').change(function(){ $('#form_reserva input.apellido').keyup() });
+			$('#form_reserva input.email').change(function(){ $('#form_reserva input.email').keyup() });*/
+			$('#form_reserva .area.general input.nombre').blur(function(){ $('#form_reserva .area.general input.apellido').keyup() })
+			$('#form_reserva .area.general input.apellido').blur(function(){ $('#form_reserva .area.general input.apellido').keyup() });
+			$('#form_reserva .area.general input.email').blur(function(){ $('#form_reserva .area.general input.email').keyup() });
 			
 			$('.ambito .remove_shift').hide();
 			$('.ambito .remove_guest').hide();
@@ -113,22 +116,28 @@ function larejaConstructor()
 				$('.ambito.'+$nombre+' .field.horario a.remove_shift').show();
 				initShifts($nombre);
 			});
-			
-			
-			
 			 
 			/*codigo js que es llamado en la vista reserva/templates/indexSuccess.php con <?php a_js_call('lareja.reservaInit()') ?> */
-
-
 			
 			$('.alojamiento .new_guest').click(function(){
 				$ambito_name = $(this).parent().parent().parent().parent().find('.nombre_ambito').val();
 				$('.ambito.' + $ambito_name + ' .field.guest:last').clone().insertAfter('.ambito.' + $ambito_name + ' .field.guest:last');
-				$('.ambito.' + $ambito_name + ' .field.guest:last .guest_name').val('');
+				$('.ambito.' + $ambito_name + ' .field.guest:last .guest_name').val('').removeAttr('disabled');
+				$('.ambito.' + $ambito_name + ' .field.guest:last .guest_email').val('').removeAttr('disabled');
 				$('.ambito.' + $ambito_name + ' .field.guest:last').removeClass('responsible');
-				$('.ambito.' + $ambito_name + ' .remove_guest').show();
 				initGuests($ambito_name);
 			});
+		}
+		
+		function initAmbito($ambito){
+			setResponsible($ambito);
+			if ($ambito.find('.responsible').size() == 0){
+				$('.mover_responsable').unbind('click');
+				$ambito.find('.titulo_set .mover_responsable').show();
+				$('.mover_responsable').click(function(){
+					moveResponsible($ambito);
+				});
+			}
 		}
 		
         function initShifts($nombre){
@@ -206,6 +215,13 @@ function larejaConstructor()
                     $('.ambito.'+$ambito_name+' .field.guest a.remove_guest').hide();
                 }
             });
+			
+			$('.ambito.' + $ambito_name + ' .remove_guest').hide();
+			if ( $('.ambito.' + $ambito_name + ' .field.guest').size() > 1){
+				$('.ambito.' + $ambito_name + ' .remove_guest').show();
+			}
+            $('.ambito.'+$ambito_name+' .field.guest.responsible a.remove_guest').hide();
+			$('.ambito.'+$ambito_name+' .responsible .column.denominacion label').html('Responsable');
 		}
 		
 		function initAviso(){
@@ -222,6 +238,7 @@ function larejaConstructor()
 			$('.field.fecha input').change(function(){
 				initHorarioFields();
 			});
+			init_solicitante_select();
 			init_aviso_uso_validation();
 		}
 		
@@ -245,7 +262,46 @@ function larejaConstructor()
 			});
 		}
 		
+		function setResponsible($ambito){
+			if ($('.responsible').size() == 0){
+				$ambito.find('.column.denominacion label').html('Responsable');
+				$ambito.find('.field.guest').addClass('responsible');
+				$ambito.find('.field.guest input.guest_name').val( $('#form_reserva input.nombre').val() + ' ' + $('#form_reserva input.apellido').val());
+				$ambito.find('.field.guest input.guest_name').attr( 'title', $ambito.find('.field.guest input.guest_name').val() );
+				$ambito.find('.field.guest input.guest_name').attr('disabled','disabled');
+				$ambito.find('.field.guest input.guest_email').val( $('#form_reserva input.email').val() );
+				$ambito.find('.field.guest input.guest_email').attr( 'title', $ambito.find('.field.guest input.guest_email').val() 	 );
+				$ambito.find('.field.guest input.guest_email').attr('disabled','disabled');
+			}
+			$ambito.find('.mover_responsable').hide();
+		}
+		
+		function moveResponsible($ambito){
+			$ambito_anterior = $('#form_reserva .responsible').parent().parent().parent();
+			
+			$('#form_reserva .responsible').clone().insertBefore( $ambito.find('.field.guest:first') );
+			$ambito.find('.mover_responsable').hide();
+			
+			removeResponsible($ambito_anterior);
+				
+			initGuests( $ambito.find('.nombre_ambito').val() );
+			initGuests( $ambito_anterior.find('.nombre_ambito').val() );
+		}
+		
+		function removeResponsible($ambito){
+			if ($ambito.find('.field.guest').size() == 1){
+				$ambito.find('.field.guest').removeClass('responsible');
+				$ambito.find('.field.guest input').removeAttr('disabled');
+				$ambito.find('.field.guest input').val('');
+			}
+			else{
+				$ambito.find('.field.guest.responsible').remove();
+			}
+			initAmbito($ambito);
+		}
+		/*
 		function updatePlacesSelect(){
+		
 			while ($('.field.alojamiento select option').size() > 1){
 				$('.field.alojamiento select option:last').remove();
 			}
@@ -275,42 +331,44 @@ function larejaConstructor()
 				$('.field.alojamiento select option.ambitus:first').attr('selected','selected');
 			}
 			//if ($('.field.alojamiento select option.ambitus:selected').size() == 1){
-				addResponsibleToSelectedPlace();
+			addResponsibleToSelectedPlace();
 			//}
 		}
 		
 		function addResponsibleToSelectedPlace(){
 			$nombre_ambito = $('.field.alojamiento select').val();
-			if ($('.ambito .field.guest.responsible').size() == 1){
-				$nombre_ambito_responsable = $('.ambito .field.guest.responsible').parent().parent().parent().parent().parent().find('.nombre_ambito').val();
-				alert($nombre_ambito + '|' + $nombre_ambito_responsable);
+			if ($('.ambito .responsible').size() == 1){
+				$nombre_ambito_responsable = $('.ambito .responsible .field.guest').parent().parent().parent().parent().parent().parent().find('.nombre_ambito').val();
 				if ($nombre_ambito != $nombre_ambito_responsable){
 					if ($('.ambito.'+$nombre_ambito_responsable+' .field.guest' ).size()>1){
-						$('.ambito .field.guest.responsible').remove();
+						$('.ambito responsible').remove();
 						initGuests($nombre_ambito_responsable);
 					}
 					else{
-						$('.ambito .field.guest.responsible guest_name').val("");
-						$('.ambito .field.guest.responsible guest_email').val("");
-						$('.ambito .field.guest.responsible').removeClass('responsible');
+						$('.ambito .responsible .field.guest. .guest_name').val("");
+						$('.ambito .responsible .field.guest. .guest_email').val("");
+						$('.ambito .responsible .field.guest').unwrap();
 					}
 				}
 			}
-			if ($('.ambito.'+$nombre_ambito+' .field.guest:first.responsible').size == 0){
+			alert('.ambito.'+$nombre_ambito+' .responsible' + ':' + $('.responsible').size());
+			$('.responsible').css('border','2px solid blue');
+			if ($('.ambito.'+$nombre_ambito+' .responsible').size() == 0){
 				if ($('.ambito.'+$nombre_ambito+' .field.guest:first .guest_name').val() != "" ||
 					$('.ambito.'+$nombre_ambito+' .field.guest:first .guest_email').val() != ""){
 					$('.ambito.'+$nombre_ambito+' .field.guest:first').clone().insertBefore($('.ambito.'+$nombre_ambito+' .field.guest:first'));
 				}
+				$('.ambito.'+$nombre_ambito+' .field.guest:first').wrap('<div class="responsible"></div>');
 			}
-			$('.ambito.'+$nombre_ambito+' .field.guest:first').addClass('responsible');
 			initGuests($nombre_ambito);
 		}
-			
+		*/
 		function init_aviso_uso_validation(){
 			$('#aviso_uso_submit').click(function(){
 				$('.error_message').hide();
 				$all_ok = true;
-			
+
+				
 				$('form#form_aviso_uso .input.required:visible').each(function(){
 					if ( $(this).val() == "" ){
 						$all_ok = false;
@@ -340,7 +398,7 @@ function larejaConstructor()
 					$all_ok = false;
 					$('.field.horario .error_message.horario').show();
 				};
-				
+								
 				if($all_ok){
 					$('#form_aviso_uso div:hidden input,div:hidden select,div:hidden textarea').removeAttr('name');
 					$('#form_aviso_uso').submit();
@@ -349,6 +407,29 @@ function larejaConstructor()
 		}
 		
 	};
+	
+	function init_solicitante_select(){
+		switch($('.field.solicitante select').val()){
+			case 'organismo':
+				$('.field.particular.organismo').show();
+			break;
+			case 'mensaje':
+				$('.field.particular.comunidad').show();
+			break;
+		}
+		
+		$('.field.solicitante select').change( function(){
+			$('.field.particular').hide();
+			switch(this.value) {
+				case 'organismo':
+					$('.field.particular.organismo').show();
+				break;
+				case 'mensaje':
+					$('.field.particular.comunidad').show();
+				break;
+			}
+		});
+	}
 	
 	function setMinDate($dateElement1,$dateElement2){
 		$splitted_date 	= $dateElement1.val().split('/');
