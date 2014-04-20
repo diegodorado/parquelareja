@@ -42,7 +42,9 @@ function larejaConstructor()
 				$('.warning_message.fecha').hide();
 				if (isPast($('.field.fecha.desde input'))){
 					$('.warning_message.fecha').show();
+					setSchedulesInWorkshopLegend();
 				}
+				
 			}
 			if ($('.field.fecha.hasta input').val() != ""){
 				setMaxDate($('.field.fecha.hasta input'),$('.field.fecha.desde input'));
@@ -53,6 +55,7 @@ function larejaConstructor()
 				if (isPast($(this))){
 					$('.warning_message.fecha').show();
 				}
+				setSchedulesInWorkshopLegend();
 			});
 			$('.field.fecha.hasta input').change(function(){
 				setMaxDate($(this),$('.field.fecha.desde input'));
@@ -63,11 +66,7 @@ function larejaConstructor()
 				$ambito = $(this).parent().parent().parent();
 				if ($(this).attr('checked')){
 					$ambito.find('.area_desplegable').show();
-					initAmbito($ambito);
-				}
-				else{
-					$ambito.find('.area_desplegable').hide();
-					removeResponsible($ambito);
+					initAmbito($ambito, true);
 				}
 			});
 
@@ -75,15 +74,21 @@ function larejaConstructor()
 				$ambito = $(this).parent().parent().parent();
 				if ($(this).attr('checked')){
 					$ambito.find('.area_desplegable').show();
-					initAmbito($ambito);
+					initAmbito($ambito, true);
 				}
 				else{
+					if ($ambito.find('.responsible').size() > 0){
+						if ($('.ambito .checkbox input:checked').size() == 0){
+							removeResponsible($ambito);
+						}
+						else{
+							moveResponsible($('.ambito .checkbox input:checked:first').parent().parent().parent());
+						}
+					}
+					$ambito.find('.error_message').hide();
 					$ambito.find('.area_desplegable').hide();
-					removeResponsible($ambito);
 				}
 			});
-			
-			init_solicitante_select();
 			
 			$('#form_reserva .area.general input.nombre').keyup(function(){
 				$('#form_reserva .responsible .guest_name').val( $(this).val() + ' ' + $('#form_reserva input.apellido').val() );
@@ -125,12 +130,24 @@ function larejaConstructor()
 				$('.ambito.' + $ambito_name + ' .field.guest:last .guest_name').val('').removeAttr('disabled');
 				$('.ambito.' + $ambito_name + ' .field.guest:last .guest_email').val('').removeAttr('disabled');
 				$('.ambito.' + $ambito_name + ' .field.guest:last').removeClass('responsible');
+				$('.ambito.' + $ambito_name + ' .field.guest:last .error_message').hide();
 				initGuests($ambito_name);
 			});
+			
+			$('#reserva_submit').click(function(){
+				$('.responsible').size();
+			});
+			
+			init_reserva_validation();	
+			init_solicitante_select();
+			$('.field.solicitante select').change();
 		}
 		
-		function initAmbito($ambito){
-			setResponsible($ambito);
+		function initAmbito($ambito,$setResponsible){
+			if ($setResponsible){
+				setResponsible($ambito);
+			}
+			checkForWorkshopLegend();
 			if ($ambito.find('.responsible').size() == 0){
 				$('.mover_responsable').unbind('click');
 				$ambito.find('.titulo_set .mover_responsable').show();
@@ -138,6 +155,7 @@ function larejaConstructor()
 					moveResponsible($ambito);
 				});
 			}
+			initGuests($ambito.find('.nombre_ambito').val());
 		}
 		
         function initShifts($nombre){
@@ -173,6 +191,7 @@ function larejaConstructor()
 			$('.ambito.' + $ambito_name + ' .field.guest').each(function(){
 				$(this).find('.denominacion label').html('Alojado ' + ($current_number+1));
 				$(this).find('input.guest_name').attr('name','guests['+$ambito_name+']['+$current_number+'][name]');
+				$(this).find('input.guest_email').attr('name','guests['+$ambito_name+']['+$current_number+'][email]');
 				/*$(this).find('input.guest_from').attr('name','guests['+$ambito_name+']['+$current_number+'][from]');
 				$(this).find('input.guest_to').attr('name','guests['+$ambito_name+']['+$current_number+'][to]');
 				$(this).find('input.guest_from').attr('id',$ambito_name + '_' + $current_number + '_from');
@@ -297,7 +316,31 @@ function larejaConstructor()
 			else{
 				$ambito.find('.field.guest.responsible').remove();
 			}
-			initAmbito($ambito);
+			initAmbito($ambito, false);
+		}
+		
+		function setSchedulesInWorkshopLegend(){
+			$.ajax({
+				data : {
+					date:$('.field.fecha.desde input').val()
+				},
+				url: "/ajax/getParkSchedules.php",
+				type: "POST",
+				dataType: "json",
+				success: function($data){
+					$('span.openingTime').html($data.open);
+					$('span.closingTime').html($data.close);
+				}
+			});
+		}
+		
+		function checkForWorkshopLegend(){
+			if ($('.area.alojamiento .ambito .checkbox input:checked').size() > 0){
+				$('.taller .leyenda').hide();
+			}
+			else{
+				$('.taller .leyenda').show();
+			}
 		}
 		/*
 		function updatePlacesSelect(){
@@ -405,6 +448,76 @@ function larejaConstructor()
 				}				
 			});
 		}
+
+	function init_reserva_validation(){
+		$('#reserva_submit').click(function(){
+		
+			$all_ok = true;
+			$('.error_message').hide();
+						
+			$('.area.general input.required:visible').each(function(){
+				if ( $(this).val() == "" ){
+					$all_ok = false;
+					$(this).parent().find('.error_message.required').show();
+				}
+			});
+			$('.area.general input.email:visible').each(function(){
+				if ($(this).val != ""){
+					$re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+					if (!$re.test($(this).val())){
+						$all_ok = false;
+						$(this).parent().find('.error_message.email.format').show();
+					}
+				}
+			});
+			if ($all_ok){
+				$none_checked = true;
+				$('.titulo_ambito .checkbox input').each(function(){
+					if ($(this).attr('checked')){
+						$none_checked = false;
+						$all_complete = true;
+						$ambito = $(this).parent().parent().parent();
+						$ambito.find('input.required').each(function(){
+							if ($(this).val() == ""){
+								$all_complete = false;
+								$(this).parent().find('.error_message.required').show();
+							}
+						});
+						$ambito.find('input.email:visible').each(function(){
+							if ($(this).val() != ""){
+								$re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+								if (!$re.test($(this).val())){
+									$all_ok = false;
+									$(this).parent().find('.error_message.email.format').show();
+								}
+							}
+						});
+						if (!$all_complete){
+							$all_ok = false;
+							$ambito.find('.error_message.lodging').show();
+						}
+					}
+				});			
+				if ($none_checked){
+					$all_ok = false;
+					$('.error_message.lodging_area').show();
+				}
+				if ($('.taller .checkbox input:checked').size() > 0){
+					if ($('.taller .field.actividad input:checked').size() == 0){
+						$all_ok = false;
+						$('.taller .field.actividad .error_message.required').show();
+					}
+				}
+			}
+			if($all_ok){
+				//alert('submit');
+				$('div:hidden input,div:hidden select,div:hidden textarea').removeAttr('name');
+				$('#form_reserva .field.responsible input').removeAttr('disabled');
+				$('#form_reserva').submit();
+			}
+		});
+	
+	}
 		
 	};
 	
@@ -438,9 +551,10 @@ function larejaConstructor()
 		$year 			= $splitted_date[2];
 		$date			= new Date($year,$month-1,$day,0,0,0,0);
 		$time			= $date.getTime();
-		$nextDayTime    = $time + (1 * 60 * 60 * 24 * 1000);
-		$nextDay		= new Date($nextDayTime);
-		$dateElement2.datepicker('option','minDate',$nextDay);
+		//$nextDayTime    = $time + (1 * 60 * 60 * 24 * 1000);
+		//En lugar del proximo día se utiliza el mismo porque si se reserva taller sin alojamiento se ingresa y egresa el mismo día
+		$minDate		= new Date($time);
+		$dateElement2.datepicker('option','minDate',$minDate);
 	}
 	
 	function setMaxDate($dateElement1,$dateElement2){
@@ -450,9 +564,10 @@ function larejaConstructor()
 		$year 			= $splitted_date[2];
 		$date			= new Date($year,$month-1,$day,0,0,0,0);
 		$time			= $date.getTime();
-		$nextDayTime    = $time - (1 * 60 * 60 * 24 * 1000);
-		$nextDay		= new Date($nextDayTime);
-		$dateElement2.datepicker('option','maxDate',$nextDay);
+		//$nextDayTime    = $time - (1 * 60 * 60 * 24 * 1000);
+		//En lugar del día anterior se utiliza el mismo porque si se reserva taller sin alojamiento se ingresa y egresa el mismo día
+		$maxDate		= new Date($time);
+		$dateElement2.datepicker('option','maxDate',$maxDate);
 	}
 	
 	function isPast($dateElement1){
@@ -496,65 +611,6 @@ function larejaConstructor()
 		swfobject.embedSWF(swf, id, w, h, "9.0.0");
 	};
 	
-	this.validate = function(){
-		
-		function init_reserva_validation(){
-			$('#reserva_submit').click(function(){
-							
-				$('.area.general input.required:visible').each(function(){
-					if ( $(this).val() == "" ){
-						$all_ok = false;
-						$(this).parent().find('.error_message.required').show();
-					}
-				});
-				if ($('input.email').val() != ""){
-					$re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-					if (!$re.test($('input.email').val())){
-						$all_ok = false;
-						$('.error_message.email.format').show();
-					}
-				}
-				if ($all_ok){
-					$none_checked = true;
-					$('.titulo_ambito .checkbox input').each(function(){
-						if ($(this).attr('checked')){
-							$none_checked = false;
-							$all_complete = true;
-							$ambito = $(this).parent().parent().parent();
-							$ambito.find('input.required').each(function(){
-								if ($(this).val() == ""){
-									$all_complete = false;
-									$ambito.find('.error_message.date').show();
-								}
-							});
-							$ambito.find('select.hour.from').each(function(){
-								$fromValue = parseInt($(this).val());
-								$toValue   = parseInt($(this).parent().find('.hour.to').val());
-								if (!($toValue>$fromValue)){
-									$all_complete = false;
-									$ambito.find('.error_message.time').show();
-								}
-							});
-							if (!$all_complete){
-								$all_ok = false;
-								$ambito.find('.error_message.lodging').show();
-							}
-						}
-					});			
-					if ($none_checked){
-						$all_ok = false;
-						$('.error_message.nada_reservado').show();
-					}
-				}
-				if($all_ok){
-					//alert('submit');
-					$('div:hidden input,div:hidden select,div:hidden textarea').removeAttr('name');
-					$('#form_reserva').submit();
-				}
-			});
-		
-		}
-	}
 	
 	
 }

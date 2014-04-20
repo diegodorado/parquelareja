@@ -1308,6 +1308,7 @@ margin-bottom: 2px;
     padding: 6px;
     color: #002EB8;
     font-weight: bold;
+	font-size: 20px;
 }
 .reserva .ambito .field.horario .valor input
     width: 100px;
@@ -1407,4 +1408,7 @@ margin-bottom: 2px;
 	cursor: pointer;
 	font-weight: normal;
 	text-decoration: underline;
+}
+.reserva input.small{
+	width: 40px;
 }
