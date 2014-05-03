@@ -11,11 +11,20 @@ function larejaConstructor()
 	this.reservaInit = function(options)
 	{
 	
-		$('form').hide();
 		$('#Opciones .opcion.reserva').click(function(){
 			$('#Opciones').hide();
-			$('form#form_reserva').show();
-			initReserva();
+			$('#Opciones_reserva').show();
+		});
+		$('#Opciones_reserva .continuar').click(function(){	
+			$('#Opciones_reserva .error_message').hide();
+			if( $('#Opciones_reserva input:checked').size() > 0 ){
+				$('#Opciones_reserva').hide();
+				$('form#form_reserva').show();
+				initReserva();
+			}
+			else{
+				$('#Opciones_reserva .error_message').show();
+			}
 		});
 		$('#Opciones .opcion.aviso_uso').click(function(){
 			$('#Opciones').hide();
@@ -26,6 +35,13 @@ function larejaConstructor()
         $('#reserva_organismo').parent().hide();
 		
 		function initReserva(){
+		
+			if ( $('#Opciones_reserva input.alojamiento:checked').size() > 0 ){
+				$('.area.general .field_set.fecha.taller').hide();
+			}
+			else{
+				$('.area.general .field_set.fecha.alojamiento').hide();
+			}
 		
 			initShifts('taller');
 			initGuests('cde');
@@ -138,10 +154,29 @@ function larejaConstructor()
 				$('.responsible').size();
 			});
 			
-			init_reserva_validation();	
+			init_datos_validation();	
 			init_solicitante_select();
 			$('.field.solicitante select').change();
 		}
+		
+		function initAlojamientoTaller(){
+			$titulo = "Reserva - Paso 2: ";
+			$('.superarea.alojamiento_taller').show();
+			if($('#Opciones_reserva input.alojamiento:checked').size() > 0){
+				$titulo += "Alojamiento";
+				$('.area.alojamiento').show();
+			}
+			if($('#Opciones_reserva input.taller:checked').size() > 0){
+				if($('#Opciones_reserva input.alojamiento:checked').size() > 0){
+					$titulo += " y ";
+				}	
+				$titulo += "taller";
+				$('.area.ambitos').show();
+			}
+			$('#form_reserva h3').html($titulo);
+			init_alojamiento_validation();
+		}
+		
 		
 		function initAmbito($ambito,$setResponsible){
 			if ($setResponsible){
@@ -342,70 +377,6 @@ function larejaConstructor()
 				$('.taller .leyenda').show();
 			}
 		}
-		/*
-		function updatePlacesSelect(){
-		
-			while ($('.field.alojamiento select option').size() > 1){
-				$('.field.alojamiento select option:last').remove();
-			}
-			$options = "";
-			$('.ambito .checkbox input').each(function(){
-				$ambito = $(this).parent().parent().parent();
-				if ($(this).attr('checked')){
-					$valor_ambito = $(this).parent().parent().parent().find('.nombre_ambito').val();
-					$nombre_ambito	= $(this).parent().parent().find('.text label').html();
-					$selected = "";
-					if ($('.field.alojamiento select option.ambitus.'+$valor_ambito+':selected').size() == 1){
-						$selected = ' selected="selected"';
-					}
-					$options += '<option class="ambitus '+$valor_ambito+'" value="'+$valor_ambito+'"'+$selected+'>'+$nombre_ambito+'</option>';
-				}
-			});
-			if ($options != ""){
-				$('.field.alojamiento select').html($options);
-			}
-			else{
-				$('.field.alojamiento select').append($options);
-			}
-			if ($('.field.alojamiento select option').size() == 0){
-				$('.field.alojamiento select').html('<option>Aún no hay ambitos de alojamiento seleccionados</option>')
-			}
-			if ($('.field.alojamiento select option.ambitus:selected').size() == 0){
-				$('.field.alojamiento select option.ambitus:first').attr('selected','selected');
-			}
-			//if ($('.field.alojamiento select option.ambitus:selected').size() == 1){
-			addResponsibleToSelectedPlace();
-			//}
-		}
-		
-		function addResponsibleToSelectedPlace(){
-			$nombre_ambito = $('.field.alojamiento select').val();
-			if ($('.ambito .responsible').size() == 1){
-				$nombre_ambito_responsable = $('.ambito .responsible .field.guest').parent().parent().parent().parent().parent().parent().find('.nombre_ambito').val();
-				if ($nombre_ambito != $nombre_ambito_responsable){
-					if ($('.ambito.'+$nombre_ambito_responsable+' .field.guest' ).size()>1){
-						$('.ambito responsible').remove();
-						initGuests($nombre_ambito_responsable);
-					}
-					else{
-						$('.ambito .responsible .field.guest. .guest_name').val("");
-						$('.ambito .responsible .field.guest. .guest_email').val("");
-						$('.ambito .responsible .field.guest').unwrap();
-					}
-				}
-			}
-			alert('.ambito.'+$nombre_ambito+' .responsible' + ':' + $('.responsible').size());
-			$('.responsible').css('border','2px solid blue');
-			if ($('.ambito.'+$nombre_ambito+' .responsible').size() == 0){
-				if ($('.ambito.'+$nombre_ambito+' .field.guest:first .guest_name').val() != "" ||
-					$('.ambito.'+$nombre_ambito+' .field.guest:first .guest_email').val() != ""){
-					$('.ambito.'+$nombre_ambito+' .field.guest:first').clone().insertBefore($('.ambito.'+$nombre_ambito+' .field.guest:first'));
-				}
-				$('.ambito.'+$nombre_ambito+' .field.guest:first').wrap('<div class="responsible"></div>');
-			}
-			initGuests($nombre_ambito);
-		}
-		*/
 		function init_aviso_uso_validation(){
 			$('#aviso_uso_submit').click(function(){
 				$('.error_message').hide();
@@ -449,11 +420,10 @@ function larejaConstructor()
 			});
 		}
 
-	function init_reserva_validation(){
-		$('#reserva_submit').click(function(){
-		
+	function init_datos_validation(){
+		$('.area.general .boton.continuar').click(function(){
 			$all_ok = true;
-			$('.error_message').hide();
+			$('.area.general .error_message').hide();
 						
 			$('.area.general input.required:visible').each(function(){
 				if ( $(this).val() == "" ){
@@ -470,7 +440,18 @@ function larejaConstructor()
 					}
 				}
 			});
-			if ($all_ok){
+			if($all_ok){
+				$('.area.general').hide();
+				initAlojamientoTaller();
+			}
+		});
+	}
+	function init_alojamiento_validation(){
+		$('.superarea.alojamiento_taller .boton.continuar').click(function(){
+			$all_ok;
+			$('.superarea.alojamiento_taller .error_message').hide();
+			
+			if ($('#Opciones_reserva input.alojamiento:checked').size() > 0){
 				$none_checked = true;
 				$('.titulo_ambito .checkbox input').each(function(){
 					if ($(this).attr('checked')){
@@ -502,25 +483,56 @@ function larejaConstructor()
 					$all_ok = false;
 					$('.error_message.lodging_area').show();
 				}
-				if ($('.taller .checkbox input:checked').size() > 0){
-					if ($('.taller .field.actividad input:checked').size() == 0){
-						$all_ok = false;
-						$('.taller .field.actividad .error_message.required').show();
-					}
-				}
 			}
-			if($all_ok){
-				//alert('submit');
-				$('div:hidden input,div:hidden select,div:hidden textarea').removeAttr('name');
-				$('#form_reserva .field.responsible input').removeAttr('disabled');
+			
+			if ($('#Opciones_reserva input.taller:checked').size() > 0){
+				if ($('.taller .field.actividad input:checked').size() == 0){
+					$all_ok = false;
+					$('.taller .field.actividad .error_message.required').show();
+				}
+				if ($('.taller .field.actividad input:checked').size() == 0){
+					$all_ok = false;
+					$('.taller .field.actividad .error_message.required').show();
+				}
+				$('.taller input.required').each(function(){
+					if ($(this).val() == ""){
+						$all_ok = false;
+						$(this).parent().find('.error_message.required').show();
+					}
+				});
+			}	
+			if ($all_ok){
+				$('#form_reserva .superarea.alojamiento_taller div:hidden input').removeAttr('name');
+				$('#form_reserva .superarea.alojamiento_taller div:hidden select').removeAttr('name');
+				$('#form_reserva .superarea.alojamiento_taller div:hidden textarea').removeAttr('name');
+				//captcha_check();
+				$('#form_reserva .guest.responsible input').removeAttr('disabled');
 				$('#form_reserva').submit();
 			}
 		});
-	
 	}
-		
-	};
-	
+			
+	function captcha_check(){
+		$privatekey = "6LeV7fISAAAAAMMubxtHpWLHvWLXe6Z6O5gfxjrJ";
+		$remoteip	= $('#remoteip').val();
+		$challenge  = $('#recaptcha_challenge_field').val();
+		$response   = $('#recaptcha_response_field').val();
+		$.ajax({
+			data : {
+				privatekey	:$privatekey,
+				remoteip	:$remoteip,
+				challenge	:$challenge,
+				response	:$response
+			},
+			url: "http://api.recaptcha.net/recaptcha/api",
+			type: "POST",
+			dataType: "json",
+			success: function($data){
+				alert($data);
+			}
+		});
+	}		
+			
 	function init_solicitante_select(){
 		switch($('.field.solicitante select').val()){
 			case 'organismo':
@@ -613,6 +625,8 @@ function larejaConstructor()
 	
 	
 	
+}
+
 }
 
 window.lareja = new larejaConstructor();

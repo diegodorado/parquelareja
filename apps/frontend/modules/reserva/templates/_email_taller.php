@@ -1,5 +1,5 @@
 <div>
-	<label>---IMPORTANTE: NO RESPONDER ESTE MAIL---</label>
+	<hr>Taller</hr>
 </div>
 <br>
 <div>

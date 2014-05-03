@@ -21,6 +21,7 @@ class reservaActions extends aEngineActions
     $this->titulo = "papadopulos";
 	$this->horario_desde 	= 10;
 	$this->horario_hasta	= 22;
+	$this->remoteip			= $_SERVER['REMOTE_ADDR'];
 	
 	$dias = array('domingo','lunes','martes','miercoles','jueves','viernes','s&aacute;bado');
 	$meses = array('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre');
@@ -74,59 +75,53 @@ class reservaActions extends aEngineActions
 		$data['actividades_taller'] = $actividades_taller;
 		$data['taller_texto']		= "";
 		
-		$secondsInDay		= 60 * 60 * 24;
-		$dateFromExploded 	= explode('/',$_POST['fecha_desde']);
-		$mktimeForDateFrom 	= mktime(0,0,0,(int)$dateFromExploded[1],(int)$dateFromExploded[0],(int)$dateFromExploded[2]);
-		$dateToExploded 	= explode('/',$_POST['fecha_hasta']);
-		$mktimeForDateTo 	= mktime(0,0,0,(int)$dateToExploded[1],(int)$dateToExploded[0],(int)$dateToExploded[2]);
-		
-		$difference = $mktimeForDateTo - $mktimeForDateFrom;
-		$days		= ($difference / $secondsInDay) + 1;
-		
-		$dates = array();
-		for ($i=0;$i<$days;$i++){
-			$mktimeForCurrentDay = $mktimeForDateFrom + ($secondsInDay * $i);
-			$currentDateString = ucfirst($dias[date('w',$mktimeForCurrentDay)]) . ' ' . date('j',$mktimeForCurrentDay) . ' de ' .
-			ucfirst($meses[date('n',$mktimeForCurrentDay)-1]) . ' de ' . date('Y',$mktimeForCurrentDay);
-			$dates[] = $currentDateString;
+		if (isset($_POST['guests'])){
+			$secondsInDay		= 60 * 60 * 24;
+			$dateFromExploded 	= explode('/',$_POST['fecha_desde']);
+			$mktimeForDateFrom 	= mktime(0,0,0,(int)$dateFromExploded[1],(int)$dateFromExploded[0],(int)$dateFromExploded[2]);
+			$dateToExploded 	= explode('/',$_POST['fecha_hasta']);
+			$mktimeForDateTo 	= mktime(0,0,0,(int)$dateToExploded[1],(int)$dateToExploded[0],(int)$dateToExploded[2]);
+			
+			$difference = $mktimeForDateTo - $mktimeForDateFrom;
+			$days		= ($difference / $secondsInDay) + 1;
+			
+			$dates = array();
+			for ($i=0;$i<$days;$i++){
+				$mktimeForCurrentDay = $mktimeForDateFrom + ($secondsInDay * $i);
+				$currentDateString = ucfirst($dias[date('w',$mktimeForCurrentDay)]) . ' ' . date('j',$mktimeForCurrentDay) . ' de ' .
+				ucfirst($meses[date('n',$mktimeForCurrentDay)-1]) . ' de ' . date('Y',$mktimeForCurrentDay);
+				$dates[] = $currentDateString;
+			}
+			$data['dates'] = $dates;
 		}
-		$data['dates'] = $dates;
+		
+		
 		
 		$mail_cde 		= "";
 		$mail_cdt 		= "";
 		$mail_taller	= "";
 		$mail_mu		= "";
 		
+		$data['costo_total'] = 0;
+		
 		if (isset($_POST['taller'])){
 			$data['taller_texto'] 	= " c/uso de Taller";
-			$mail_taller 			= $this->getPartial('email_taller', $data );;
 		}
 		if (isset($_POST['guests']['cde'])){
-			$data['ambito'] 			= 'cde';
-			$data['ambito_nombre'] 		= 'Centro de estudios';
-			$data['ambito_abreviacion'] = 'CdE';
-			$costos_alojamiento 		= count($data['guests']['cde']) * $data['costos']['cde'];
-			$costos_taller				= 0;
-			$data['costo_total']		= $costos_alojamiento + $costos_taller;
-			$mail_cde 					= $this->getPartial('email_ambito', $data );;
+			$data['costo_total'] 		+= count($data['guests']['cde']) * $data['costos']['cde'];
 		}
 		if (isset($_POST['guests']['cdt'])){
-			$data['ambito'] 			= 'cdt';
-			$data['ambito_nombre'] 		= 'Centro de trabajos';
-			$data['ambito_abreviacion'] = 'CdT';
-			$costos_alojamiento 		= count($data['guests']['cdt']) * $data['costos']['cdt'];
-			$costos_taller				= 0;
-			$data['costo_total']		= $costos_alojamiento + $costos_taller;
-			$mail_cdt 					= $this->getPartial('email_ambito', $data );
+			$data['costo_total'] 		+= count($data['guests']['cdt']) * $data['costos']['cdt'];
 		}
+		$mail 					= $this->getPartial('email', $data );
 		
-		die($mail_cde);
+		die($mail);
 		echo '<pre>'; var_dump($_POST); echo '</pre>'; die();
 		echo '<pre>'; var_dump($_POST['guests']); echo '</pre>'; die();
 		
 	}
 
-    if ($request->isMethod('post'))
+    /*if ($request->isMethod('post'))
     {
     
     
@@ -217,7 +212,7 @@ class reservaActions extends aEngineActions
         
         $this->redirect('@reserva_sent');
       }
-    }    
+    }   */
       
   }
 

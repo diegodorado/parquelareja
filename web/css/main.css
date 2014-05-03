@@ -1245,7 +1245,7 @@ body #content.has-subnav > .middle > .right {
     padding: 5px 8px 5px 8px;
     margin: 4px 0px 4px 0px;
 }
-.reserva .error_message .medium{
+.reserva .error_message.medium{
 	width: 300px;	
 }
 
@@ -1355,7 +1355,7 @@ margin-bottom: 2px;
 .reserva .remove_shift:hover, .reserva .remove_guest:hover{
 	text-decoration: none;
 }
-.boton_reserva{
+.boton{
 
 	padding: 10px;
 	cursor:pointer;
@@ -1363,15 +1363,28 @@ margin-bottom: 2px;
 	border: none!important;
 	border-bottom: 1px solid #7A95FF!important;
 	border-right: 1px solid #7A95FF!important;
-
 }
-
+.text_align_center{
+	text-align: center;
+}
 #reserva_submit:active{
 	border: none!important;
 }
 #Opciones{
 	text-align: center;
 	vertical-align: middle;
+}
+#Opciones_reserva{
+	display: none;
+	text-align: center;
+}
+#Opciones_reserva div{
+	margin-left: 300px;
+	text-align: left;
+}
+#Opciones_reserva div label{
+	font-size:18px;	
+	color: #7A95FF
 }
 #Opciones .opcion{
 	width: 300px;
@@ -1411,4 +1424,16 @@ margin-bottom: 2px;
 }
 .reserva input.small{
 	width: 40px;
+}
+
+.reserva .superarea.alojamiento_taller, .reserva .area.alojamiento, .reserva .area.ambitos{
+	display: none;
+}
+.reserva .captcha_box{
+	text-align:center;
+	padding-left: 300px;
+	margin-bottom: 10px;
+}
+.reserva form{
+	display: none;
 }
