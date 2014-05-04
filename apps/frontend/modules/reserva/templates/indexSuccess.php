@@ -214,7 +214,7 @@
                         <label>Organismo</label>
                    </div>
                    <div class="column valor">
-                        <select class="input tipo_solicitante" name="organismo">
+                        <select class="input organismos" name="organismo">
                             <option value="cdh">La comunidad para el desarrollo humano</option>
                             <option value="ph">Partido humanista</option>
                             <option value="ceh">Centro de estudios humanistas</option>
@@ -228,7 +228,7 @@
                         <label>Comunidad</label>
                    </div>
                    <div class="column valor">
-						<input type="text" name="comunidad" value="" class="wide required">
+						<input type="text" name="comunidad" value="" class="comunidad wide required">
 						   <div class="error_message comunidad required">
 								<label>Campo obligatorio</label>
 						   </div>
@@ -332,7 +332,7 @@
 					<label>Fecha</label>
 				</div>
 				<div class="column valor">
-					<input type="text" class="input fecha required" name="fecha" readonly>
+					<input type="text" class="input fecha unica required" name="fecha" readonly>
 					<div class="error_message fecha required">
 						<label>Campo obligatorio</label>
 					</div>
@@ -348,6 +348,23 @@
 		  </div>
      </div>
      <div class="superarea alojamiento_taller">
+		 <div class="general_data">
+			<div class="column left">
+				<span class="titulo">Responsable</span><br>
+				<span class="nombre_apellido"></span>
+				<span class="tipo"></span><br>
+				<span class="email"></span><br>
+				<span class="telefono"></span><br>
+				<span class="titulo comentario"><br>Comentario<br></span>
+				<span class="texto comentario"></span>
+			</div>
+			<div class="column right">
+				<span class="palabra desde">Desde</span><br>
+				<span class="fecha desde"></span><br>
+				<span class="palabra hasta">Hasta</span><br>
+				<span class="fecha hasta"></span><br>
+			</div>
+		 </div>
 		 <div class="area alojamiento">
 			<div class="titulo_area">
 			   <label>ALOJAMIENTO</label>
@@ -507,7 +524,7 @@
 			</noscript>
 		  </div>
 		<div class="text_align_center">
-			<input type="button" class="boton continuar" value="Continuar">
+			<input type="button" class="boton continuar" value="Reservar">
 		</div>
 	</div>	 
 	<div class="error_message nada_reservado">

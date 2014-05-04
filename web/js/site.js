@@ -12,14 +12,15 @@ function larejaConstructor()
 	{
 	
 		$('#Opciones .opcion.reserva').click(function(){
-			$('#Opciones').hide();
-			$('#Opciones_reserva').show();
+			$('#Opciones').slideUp();
+			$('#Opciones_reserva').slideDown();
 		});
 		$('#Opciones_reserva .continuar').click(function(){	
 			$('#Opciones_reserva .error_message').hide();
 			if( $('#Opciones_reserva input:checked').size() > 0 ){
-				$('#Opciones_reserva').hide();
-				$('form#form_reserva').show();
+				$('#Opciones_reserva').slideUp(600, function(){
+					$('form#form_reserva').slideDown(800);
+				});
 				initReserva();
 			}
 			else{
@@ -160,8 +161,36 @@ function larejaConstructor()
 		}
 		
 		function initAlojamientoTaller(){
+		
+			$('.general_data .nombre_apellido').html($('.area.general input.nombre').val() + ' ' + $('.area.general input.apellido').val());
+			$('.general_data .email').html($('.area.general input.email').val());
+			$('.general_data .telefono').html($('.area.general input.telefono').val());
+			if ( $('.area.general textarea.comentario').val() != ""){
+				$('.general_data .texto.comentario').html($('.area.general textarea.comentario').val());
+			}
+			else{
+				$('.general_data .comentario').hide();
+			}
+			if ( $('.area.general select.tipo_solicitante').val() == 'organismo' ){
+				$('.general_data .tipo').html('(' + $('.area.general select.organismos option:selected').html() + ')');
+			}
+			else if( $('.area.general select.tipo_solicitante').val() == 'mensaje' ){
+				$('.general_data .tipo').html('(' + 'Comunidad ' + $('.area.general input.comunidad').val() + ')');
+			}
+			else{
+				$('.general_data .tipo').html('(' + 'maestro' + ')');
+			}
+			if ( $('#Opciones_reserva input.alojamiento:checked').size() > 0 ){
+				$('.general_data .fecha.desde').html( $('.area.general input.fecha.desde').val() );
+				$('.general_data .fecha.hasta').html( $('.area.general input.fecha.hasta').val() );
+			}
+			else{
+				$('.general_data .palabra.desde').html( 'Fecha' );
+				$('.general_data .fecha.desde').html( $('.area.general input.fecha.unica').val() );
+				$('.general_data .palabra.hasta, .general_data .fecha.hasta').hide();
+			}
+			
 			$titulo = "Reserva - Paso 2: ";
-			$('.superarea.alojamiento_taller').show();
 			if($('#Opciones_reserva input.alojamiento:checked').size() > 0){
 				$titulo += "Alojamiento";
 				$('.area.alojamiento').show();
@@ -173,6 +202,8 @@ function larejaConstructor()
 				$titulo += "taller";
 				$('.area.ambitos').show();
 			}
+			$('.superarea.alojamiento_taller').show();
+			$('#form_reserva').slideDown(400);
 			$('#form_reserva h3').html($titulo);
 			init_alojamiento_validation();
 		}
@@ -441,14 +472,16 @@ function larejaConstructor()
 				}
 			});
 			if($all_ok){
-				$('.area.general').hide();
-				initAlojamientoTaller();
+				$('#form_reserva').slideUp(400, function(){
+					$('.area.general').hide();
+					initAlojamientoTaller();
+				});
 			}
 		});
 	}
 	function init_alojamiento_validation(){
 		$('.superarea.alojamiento_taller .boton.continuar').click(function(){
-			$all_ok;
+			$all_ok = true;
 			$('.superarea.alojamiento_taller .error_message').hide();
 			
 			if ($('#Opciones_reserva input.alojamiento:checked').size() > 0){

@@ -1437,3 +1437,31 @@ margin-bottom: 2px;
 .reserva form{
 	display: none;
 }
+.reserva .general_data{
+	border: 4px solid #7A95FF;
+	margin-bottom: 10px;
+}
+.reserva .general_data .column{
+	display:table-cell;
+	padding: 5px 10px 5px 10px;
+}
+.reserva .general_data .column.left{
+	width:600px;	
+}
+.reserva .general_data .column.right{
+	width:300px;
+	text-align: center;
+}
+.reserva .general_data .column.left .titulo, .reserva .general_data .column.right .palabra{
+	font-weight: bold;
+	font-size: 16px;
+	color: #999;
+}
+.reserva .general_data .column.left .nombre_apellido, .reserva .general_data .column.left .tipo , .reserva .general_data .column.right .fecha{
+	font-size: 18px;
+	color: #7A95FF;
+	
+}
+.reserva .general_data .column.left .email, .reserva .general_data .column.left .telefono{
+	color: #666;
+}
