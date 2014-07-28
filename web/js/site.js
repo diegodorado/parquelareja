@@ -192,14 +192,14 @@ function larejaConstructor()
 			
 			$titulo = "Reserva - Paso 2: ";
 			if($('#Opciones_reserva input.alojamiento:checked').size() > 0){
-				$titulo += "Alojamiento";
+				$titulo += "Centros";
 				$('.area.alojamiento').show();
 			}
 			if($('#Opciones_reserva input.taller:checked').size() > 0){
 				if($('#Opciones_reserva input.alojamiento:checked').size() > 0){
 					$titulo += " y ";
 				}	
-				$titulo += "taller";
+				$titulo += "Taller";
 				$('.area.ambitos').show();
 			}
 			$('.superarea.alojamiento_taller').show();

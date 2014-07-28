@@ -13,7 +13,7 @@
 	<div id="Opciones_reserva">
 		<div>
 			<input type="checkbox" class="alojamiento">
-			<label>Alojamiento</label>
+			<label>Centros</label>
 		</div>	
 		<div>	
 			<input type="checkbox" class="taller">
@@ -23,38 +23,38 @@
 		<input type="button" value="Continuar" class="boton continuar">
 	</div>
 	<form id="form_aviso_uso" action="" method="post">
-		<h3>Aviso de usufructo de la multiuso</h3>
+		<h3>Aviso de uso de la multiuso</h3>
 		<div class="area_content">
             <div class="field_set">               
                 <div class="field solicitante">
                    <div class="column denominacion">
-                        <label>Tipo de solicitante</label>
+                        <label>Solicitante (requerido)</label>
                    </div>
                    <div class="column valor">
                         <select class="input tipo_solicitante" name="solicitante">
                             <option value="maestro">Maestro</option>
+                            <option value="mensaje">El Mensaje de Silo</option>
                             <option value="organismo">Organismo</option>
-                            <option value="mensaje">Mensaje de silo</option>
                         </select>
                    </div>
                 </div>
                 <div class="field organismo particular">
                    <div class="column denominacion">
-                        <label>Organismo</label>
+                        <label>Organismo (requerido)</label>
                    </div>
                    <div class="column valor">
                         <select class="input tipo_solicitante" name="organismo">
-                            <option value="cdh">La comunidad para el desarrollo humano</option>
-                            <option value="ph">Partido humanista</option>
-                            <option value="ceh">Centro de estudios humanistas</option>
-                            <option value="msg">Mundo sin guerras</option>
-                            <option value="cc">Convergencia de las culturas</option>
+                            <option value="ceh">Centro Mundial de Estudios Humanistas</option>
+                            <option value="cc">Convergencia de las Cuturas</option>
+                            <option value="cdh">La Comunidad (para el desarrollo humano)</option>
+                            <option value="msg">Mundo sin Guerras y sin violencia</option>
+                            <option value="ph">Partido Humanista</option>
                         </select>
                    </div>
                 </div>
                 <div class="field comunidad particular">
                    <div class="column denominacion">
-                        <label>Comunidad</label>
+                        <label>Comunidad (requerido)</label>
                    </div>
                    <div class="column valor">
 						<input type="text" name="comunidad" value="" class="input comunidad wide required">
@@ -70,7 +70,7 @@
 			  </div>  
 			  <div class="field nombre">
 				   <div class="column denominacion">
-						<label>Nombre</label>
+						<label>Nombre (requerido)</label>
 				   </div>
 				   <div class="column valor">
 					   <input type="text" class="input nombre wide required" name="nombre">
@@ -81,7 +81,7 @@
 			  </div>
 			  <div class="field nombre">
 				   <div class="column denominacion">
-						<label>Apellido</label>
+						<label>Apellido(s) (requerido)</label>
 				   </div>
 				   <div class="column valor">
 					   <input type="text" class="input apellido wide required" name="apellido">
@@ -92,7 +92,7 @@
 			  </div>
 			  <div class="field email">
 				   <div class="column denominacion">
-						<label>E-mail</label>
+						<label>E-mail (requerido)</label>
 				   </div>
 				   <div class="column valor">
 						<input type="text" class="input email wide required" name="email">
@@ -106,7 +106,7 @@
 			  </div>
 			  <div class="field telefono">
 				   <div class="column denominacion">
-						<label>Teléfono</label>
+						<label>Teléfono/Celular (requerido)</label>
 				   </div>
 				   <div class="column valor">
 						<input type="text" class="input telefono required" name="telefono">
@@ -204,28 +204,28 @@
                    <div class="column valor">
                         <select class="input tipo_solicitante" name="solicitante">
                             <option value="maestro">Maestro</option>
+                            <option value="mensaje">El Mensaje de Silo</option>
                             <option value="organismo">Organismo</option>
-                            <option value="mensaje">Mensaje de silo</option>
                         </select>
                    </div>
                 </div>
                 <div class="field organismo particular">
                    <div class="column denominacion">
-                        <label>Organismo</label>
+                        <label>Organismo (requerido)</label>
                    </div>
                    <div class="column valor">
                         <select class="input organismos" name="organismo">
-                            <option value="cdh">La comunidad para el desarrollo humano</option>
-                            <option value="ph">Partido humanista</option>
-                            <option value="ceh">Centro de estudios humanistas</option>
-                            <option value="msg">Mundo sin guerras</option>
-                            <option value="cc">Convergencia de las culturas</option>
+                            <option value="ceh">Centro Mundial de Estudios Humanistas</option>
+                            <option value="cc">Convergencia de las Cuturas</option>
+                            <option value="cdh">La Comunidad (para el desarrollo humano)</option>
+                            <option value="msg">Mundo sin Guerras y sin violencia</option>
+                            <option value="ph">Partido Humanista</option>
                         </select>
                    </div>
                 </div>
                 <div class="field comunidad particular">
                    <div class="column denominacion">
-                        <label>Comunidad</label>
+                        <label>Comunidad (requerido)</label>
                    </div>
                    <div class="column valor">
 						<input type="text" name="comunidad" value="" class="comunidad wide required">
@@ -241,7 +241,7 @@
                   </div>  
                   <div class="field nombre">
                        <div class="column denominacion">
-                            <label>Nombre</label>
+                            <label>Nombre (requerido)</label>
                        </div>
                        <div class="column valor">
                            <input type="text" class="input nombre wide required" name="nombre">
@@ -252,7 +252,7 @@
                   </div>
                   <div class="field nombre">
                        <div class="column denominacion">
-                            <label>Apellido</label>
+                            <label>Apellido(s) (requerido)</label>
                        </div>
                        <div class="column valor">
                            <input type="text" class="input apellido wide required" name="apellido">
@@ -263,7 +263,7 @@
                   </div>
                   <div class="field email">
                        <div class="column denominacion">
-                            <label>E-mail</label>
+                            <label>E-mail (requerido)</label>
                        </div>
                        <div class="column valor">
                             <input type="text" class="input email wide required" name="email">
@@ -277,7 +277,7 @@
                   </div>
                   <div class="field telefono">
                        <div class="column denominacion">
-                            <label>Teléfono</label>
+                            <label>Teléfono/Celular (requerido)</label>
                        </div>
                        <div class="column valor">
 							<input type="text" class="input telefono required" name="telefono">
@@ -288,7 +288,7 @@
                   </div>
                   <div class="field comentario">
                        <div class="column denominacion">
-                            <label>Comentario</label>
+                            <label>Comentarios (opcional)</label>
                        </div>
                        <div class="column valor">
 							<textarea class="input comentario" name="comentario" rows="4" cols="30"></textarea>
@@ -302,7 +302,7 @@
 				  
                   <div class="field  fecha desde">
 						<div class="column denominacion">
-							<label>Ingreso</label>
+							<label>Ingreso (requerido)</label>
 						</div>
 						<div class="column valor">
 							<input type="text" class="input fecha desde required" name="fecha_desde" readonly>
@@ -313,7 +313,7 @@
                   </div>
                   <div class="field  fecha hasta">
                        <div class="column denominacion">
-                            <label>Egreso</label>
+                            <label>Egreso (requerido)</label>
                        </div>
                        <div class="column valor">
                             <input type="text" class="input fecha hasta required" name="fecha_hasta" readonly>
@@ -355,7 +355,7 @@
 				<span class="tipo"></span><br>
 				<span class="email"></span><br>
 				<span class="telefono"></span><br>
-				<span class="titulo comentario"><br>Comentario<br></span>
+				<span class="titulo comentario"><br>Comentarios (opcional)<br></span>
 				<span class="texto comentario"></span>
 			</div>
 			<div class="column right">
@@ -367,23 +367,23 @@
 		 </div>
 		 <div class="area alojamiento">
 			<div class="titulo_area">
-			   <label>ALOJAMIENTO</label>
+			   <label>CENTROS</label>
 			</div>        
 			<div class="area_content">
 				<div class="ambito cde">		
 					<input type="hidden" class="nombre_ambito" value="cde">
 					<div class="titulo_ambito">
 						<div class="column checkbox"><input type="checkbox"></div>
-						<div class="column text"><label>Centro de estudio</label></div>
+						<div class="column text"><label>Centro de Estudio</label></div>
 					</div>
 					<div class="area_desplegable">
 						<div class="field_set">               
 							<div class="titulo_set">
 								<div class="column left">
-									<label>1 alojado</label>        
+									<a class="mover_responsable">Mover responsable a este ambito</a>
 								</div>
 								<div class="column">
-									<a class="mover_responsable">Mover responsable a este ambito</a>
+									<label>1 alojado</label>        
 								</div>
 							</div>  
 							<div class="field guest">
@@ -401,7 +401,7 @@
 							<div class="error_message lodging cde">
 								<label>Hay campos sin completar. Complete todos los campos o elimine a los alojados que estén de más</label>
 							</div>						
-							<div><input type="button" class="new_guest button" value="Nuevo alojado"></div>				
+							<div><input type="button" class="new_guest button" value="Agregar Alojado"></div>				
 						</div>    
 					</div>
 				</div>
@@ -409,16 +409,16 @@
 					<input type="hidden" class="nombre_ambito" value="cdt">
 					<div class="titulo_ambito">
 						<div class="column checkbox"><input type="checkbox"></div>
-						<div class="column text"><label>Centro de trabajo</label></div>
+						<div class="column text"><label>Centro de Trabajo</label></div>
 					</div>
 					<div class="area_desplegable">
 						<div class="field_set">               
 							<div class="titulo_set">
 								<div class="column left">
-									<label>1 alojado</label>        
+									<a class="mover_responsable">Mover responsable a este ambito</a>
 								</div>
 								<div class="column">
-									<a class="mover_responsable">Mover responsable a este ambito</a>
+									<label>1 alojado</label>        
 								</div>
 							</div>  
 							<div class="field guest">
@@ -439,7 +439,7 @@
 							<div class="error_message lodging cdt">
 								<label>Hay campos sin completar. Complete todos los campos o elimine los alojadoes que estén de más</label>
 							</div>						
-							<div><input type="button" class="new_guest button" value="Nuevo alojado"></div>				
+							<div><input type="button" class="new_guest button" value="Agregar Alojado"></div>				
 						</div>    
 					</div>
 				</div>
@@ -463,29 +463,29 @@
 						<div class="field_set">               
 							<div class="field actividad">
 								<div class="column denominacion">
-									<label>Actividades a realizar</label>
+									<label>Actividades a Realizar (requerido)</label>
 								</div>
 								<div class="column valor">
+									<input type="checkbox" name="taller[actividades][ceramica]">
+									<label>Cer&aacute;mica</label><br>
 									<input type="checkbox" name="taller[actividades][fuego]">
+									<label>Metales</label><br>
+									<input type="checkbox" name="taller[actividades][vidrio]">
+									<label>Perfumer&iacute;a</label>
+									<div class="error_message required">
 									<label>Producci&oacute;n y conservaci&oacute;n del fuego</label><br>
 									<input type="checkbox" name="taller[actividades][frio]">
 									<label>Trabajos en fr&iacute;o</label><br>
-									<input type="checkbox" name="taller[actividades][ceramica]">
-									<label>Cer&aacute;mica</label><br>
 									<input type="checkbox" name="taller[actividades][metales]">
-									<label>Metales</label><br>
-									<input type="checkbox" name="taller[actividades][vidrio]">
 									<label>Vidrio</label><br>
 									<input type="checkbox" name="taller[actividades][perfumeria]">
-									<label>Perfumer&iacute;a</label>
-									<div class="error_message required">
 										<label>Debe elegir al menos una actividad</label>
 									</div>
 								</div>
 							</div>
 							<div class="field cantidad">
 							   <div class="column denominacion">
-									<label>Cantidad de personas</label>
+									<label>Cantidad de participantes (requerido)</label>
 							   </div>
 								<div class="column valor">
 									<input type="text" class="small required number" name="taller[cantidad]">
