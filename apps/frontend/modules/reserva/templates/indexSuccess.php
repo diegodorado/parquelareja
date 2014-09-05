@@ -2,7 +2,7 @@
 
 <?php slot('body_class') ?>reserva simple<?php end_slot() ?>
 
-
+<script type="text/javascript" src="/js/jquery.easyModal.js"></script>
 <div class="center">
   <!--<form id="form_reserva" action="<?=url_for('@reserva_index') ?>" method="post">-->
 	<input type="hidden" id="remoteip" value="<?php echo $remoteip; ?>">
@@ -53,11 +53,11 @@
                    </div>
                 </div>
                 <div class="field comunidad particular">
-                   <div class="column denominacion">
+                   <!--<div class="column denominacion">
                         <label>Comunidad (requerido)</label>
-                   </div>
+                   </div>-->
                    <div class="column valor">
-						<input type="text" name="comunidad" value="" class="input comunidad wide required">
+						<input type="text" name="comunidad" value="" class="input comunidad wide required" placeholder="Comunidad (requerido)">
 						   <div class="error_message comunidad required">
 								<label>Campo obligatorio</label>
 						   </div>
@@ -69,33 +69,33 @@
 				  <label>Datos de contacto</label>               
 			  </div>  
 			  <div class="field nombre">
-				   <div class="column denominacion">
+				   <!--<div class="column denominacion">
 						<label>Nombre (requerido)</label>
-				   </div>
+				   </div>-->
 				   <div class="column valor">
-					   <input type="text" class="input nombre wide required" name="nombre">
+					   <input type="text" class="input nombre wide required" name="nombre" placeholder="Nombre (requerido)">
 					   <div class="error_message nombre required">
 							<label>Campo obligatorio</label>
 					   </div>
 				   </div>
 			  </div>
 			  <div class="field nombre">
-				   <div class="column denominacion">
+				   <!--<div class="column denominacion">
 						<label>Apellido(s) (requerido)</label>
-				   </div>
+				   </div>-->
 				   <div class="column valor">
-					   <input type="text" class="input apellido wide required" name="apellido">
+					   <input type="text" class="input apellido wide required" name="apellido" placeholder="Apellido(s) (requerido)">
 					   <div class="error_message apellido required">
 							<label>Campo obligatorio</label>
 					   </div>
 				   </div>
 			  </div>
 			  <div class="field email">
-				   <div class="column denominacion">
+				   <!--<div class="column denominacion">
 						<label>E-mail (requerido)</label>
-				   </div>
+				   </div>-->
 				   <div class="column valor">
-						<input type="text" class="input email wide required" name="email">
+						<input type="text" class="input email wide required" name="email" placeholder="Email (requerido)">
 						<div class="error_message email required">
 							<label>Campo obligatorio</label>
 						</div>
@@ -105,11 +105,11 @@
 				   </div>
 			  </div>
 			  <div class="field telefono">
-				   <div class="column denominacion">
+				   <!--<div class="column denominacion">
 						<label>Teléfono/Celular (requerido)</label>
-				   </div>
+				   </div>-->
 				   <div class="column valor">
-						<input type="text" class="input telefono required" name="telefono">
+						<input type="text" class="input telefono required" name="telefono" placeholder="Teléfono/Celular (requerido)">
 						<div class="error_message telefono required">
 							<label>Campo obligatorio</label>
 						</div>
@@ -119,11 +119,11 @@
 				   </div>
 			  </div>
 			  <div class="field fecha">
-				   <div class="column denominacion">
+				   <!--<div class="column denominacion">
 						<label>Fecha</label>
-				   </div>
+				   </div>-->
 				   <div class="column valor">
-						<input type="text" class="input fecha required" name="fecha" readonly>
+						<input type="text" class="input fecha required" name="fecha" readonly placeholder="Fecha">
 						<div class="error_message fecha required">
 							<label>Campo obligatorio</label>
 						</div>
@@ -158,11 +158,11 @@
 				   </div>
 			  </div>
 			  <div class="field cantidad">
-				   <div class="column denominacion">
+				   <!--<div class="column denominacion">
 						<label>Cantidad de personas</label>
-				   </div>
+				   </div>-->
 				   <div class="column valor">
-						<input type="text" class="input cantidad required number" name="cantidad">
+						<input type="text" class="input cantidad required number" name="cantidad" placeholder="Cantidad de personas">
 						<div class="error_message cantidad required">
 							<label>Campo obligatorio</label>
 						</div>
@@ -172,11 +172,11 @@
 				   </div>
 			  </div>
 			  <div class="field actividad">
-				   <div class="column denominacion">
+				   <!--<div class="column denominacion">
 						<label>Actividad</label>
-				   </div>
+				   </div>-->
 				   <div class="column valor">
-						<textarea cols="29" rows="5" class="input actividad required" name="actividad"></textarea>
+						<textarea cols="29" rows="5" class="input actividad required" name="actividad" placeholder="Actividad"></textarea>
 						<div class="error_message actividad required">
 							<label>Campo obligatorio</label>
 						</div>
@@ -199,7 +199,7 @@
             <div class="field_set">               
                 <div class="field solicitante">
                    <div class="column denominacion">
-                        <label>Tipo de solicitante</label>
+                        <label>Solicitante (requerido)</label>
                    </div>
                    <div class="column valor">
                         <select class="input tipo_solicitante" name="solicitante">
@@ -224,11 +224,11 @@
                    </div>
                 </div>
                 <div class="field comunidad particular">
-                   <div class="column denominacion">
+                   <!--<div class="column denominacion">
                         <label>Comunidad (requerido)</label>
-                   </div>
+                   </div>-->
                    <div class="column valor">
-						<input type="text" name="comunidad" value="" class="comunidad wide required">
+						<input type="text" name="comunidad" value="" class="comunidad wide required" placeholder="Comunidad (requerido)">
 						   <div class="error_message comunidad required">
 								<label>Campo obligatorio</label>
 						   </div>
@@ -240,33 +240,33 @@
                       <label>Datos de contacto</label>               
                   </div>  
                   <div class="field nombre">
-                       <div class="column denominacion">
+                       <!--<div class="column denominacion">
                             <label>Nombre (requerido)</label>
-                       </div>
+                       </div>-->
                        <div class="column valor">
-                           <input type="text" class="input nombre wide required" name="nombre">
+                           <input type="text" class="input nombre wide required" name="nombre" placeholder="Nombre (requerido)">
 						   <div class="error_message nombre required">
 								<label>Campo obligatorio</label>
 						   </div>
                        </div>
                   </div>
                   <div class="field nombre">
-                       <div class="column denominacion">
+                       <!--<div class="column denominacion">
                             <label>Apellido(s) (requerido)</label>
-                       </div>
+                       </div>-->
                        <div class="column valor">
-                           <input type="text" class="input apellido wide required" name="apellido">
+                           <input type="text" class="input apellido wide required" name="apellido" placeholder="Apellido(s) (requerido)">
 						   <div class="error_message apellido required">
 								<label>Campo obligatorio</label>
 						   </div>
                        </div>
                   </div>
                   <div class="field email">
-                       <div class="column denominacion">
+                       <!--<div class="column denominacion">
                             <label>E-mail (requerido)</label>
-                       </div>
+                       </div>-->
                        <div class="column valor">
-                            <input type="text" class="input email wide required" name="email">
+                            <input type="text" class="input email wide required" name="email" placeholder="E-mail (requerido)">
 							<div class="error_message email required">
 								<label>Campo obligatorio</label>
 							</div>
@@ -276,22 +276,22 @@
                        </div>
                   </div>
                   <div class="field telefono">
-                       <div class="column denominacion">
+                       <!--<div class="column denominacion">
                             <label>Teléfono/Celular (requerido)</label>
-                       </div>
+                       </div>-->
                        <div class="column valor">
-							<input type="text" class="input telefono required" name="telefono">
+							<input type="text" class="input telefono wide required" name="telefono" placeholder="Teléfono/Celular (requerido)">
 							<div class="error_message telefono required">
 								<label>Campo obligatorio</label>
 							</div>
                        </div>
                   </div>
                   <div class="field comentario">
-                       <div class="column denominacion">
+                       <!--<div class="column denominacion">
                             <label>Comentarios (opcional)</label>
-                       </div>
+                       </div>-->
                        <div class="column valor">
-							<textarea class="input comentario" name="comentario" rows="4" cols="30"></textarea>
+							<textarea class="input comentario" name="comentario" rows="4" cols="30" placeholder="Comentarios (opcional)"></textarea>
                        </div>
                   </div>
 			  </div>
@@ -391,10 +391,10 @@
 									<label>Alojado 1</label>
 							   </div>
 								<div class="column valor">
-									<label class="guest_name">Nombre y apellido</label>
-									<input type="text" name="guests[cde][0][name]" class="guest_name required">
-									<label class="guest_email">Email</label>
-									<input type="text" name="guests[cde][0][email]" class="guest_email email medium required">
+									<!--<label class="guest_name">Nobre y apellido</label>-->
+									<input type="text" name="guests[cde][0][name]" class="guest_name required" placeholder="Nombre y apellido">
+									<!--<label class="guest_email">Email</label>-->
+									<input type="text" name="guests[cde][0][email]" class="guest_email email medium required" placeholder="Email">
 									&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
 								</div>
 							</div>
@@ -426,10 +426,10 @@
 									<label>alojado 1</label>
 							   </div>
 								<div class="column valor">
-									<label class="guest_name">Nombre y apellido</label>
-									<input type="text" name="guests[cde][0][name]" class="guest_name required">
-									<label class="guest_email">Email</label>
-									<input type="text" name="guests[cde][0][email]" class="guest_email email medium required">
+									<!--<label class="guest_name">Nombre y apellido</label>-->
+									<input type="text" name="guests[cde][0][name]" class="guest_name required" placeholder="Nombre y apellido">
+									<!--<label class="guest_email">Email</label>-->
+									<input type="text" name="guests[cde][0][email]" class="guest_email email medium required" placeholder="E-mail">
 									&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
 									<div class="error_message email format">
 										<label>Debe ingresar una dirección de correo válida</label>
@@ -468,17 +468,17 @@
 								<div class="column valor">
 									<input type="checkbox" name="taller[actividades][ceramica]">
 									<label>Cer&aacute;mica</label><br>
-									<input type="checkbox" name="taller[actividades][fuego]">
+									<input type="checkbox" name="taller[actividades][metales]">
 									<label>Metales</label><br>
-									<input type="checkbox" name="taller[actividades][vidrio]">
-									<label>Perfumer&iacute;a</label>
-									<div class="error_message required">
+									<input type="checkbox" name="taller[actividades][perfumeria]">
+									<label>Perfumer&iacute;a</label><br>
+									<input type="checkbox" name="taller[actividades][fuego]">
 									<label>Producci&oacute;n y conservaci&oacute;n del fuego</label><br>
 									<input type="checkbox" name="taller[actividades][frio]">
 									<label>Trabajos en fr&iacute;o</label><br>
-									<input type="checkbox" name="taller[actividades][metales]">
+									<input type="checkbox" name="taller[actividades][vidrio]">
 									<label>Vidrio</label><br>
-									<input type="checkbox" name="taller[actividades][perfumeria]">
+									<div class="error_message required">
 										<label>Debe elegir al menos una actividad</label>
 									</div>
 								</div>
