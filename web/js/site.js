@@ -10,6 +10,7 @@ function larejaConstructor()
 {
 	this.reservaInit = function(options)
 	{
+		initHelpDialogs();
 		
 		$('#Opciones .opcion.reserva').click(function(){
 			$('#Opciones').slideUp();
@@ -36,6 +37,10 @@ function larejaConstructor()
         $('#reserva_organismo').parent().hide();
 		
 		function initReserva(){
+		
+			initHelpDialogs();
+			
+		
 		
 			if ( $('#Opciones_reserva input.alojamiento:checked').size() > 0 ){
 				$('.area.general .field_set.fecha.taller').hide();
@@ -158,6 +163,51 @@ function larejaConstructor()
 			init_datos_validation();	
 			init_solicitante_select();
 			$('.field.solicitante select').change();
+		}
+		
+		function initHelpDialogs(){
+		
+			$("#dialog_1").dialog({
+				autoOpen: false,
+				modal: true,
+				height: 500,
+				width: 800,
+				resizable: false
+			});
+			$("#dialog_2").dialog({
+				autoOpen: false,
+				modal: true,
+				height: 500,
+				width: 800,
+				resizable: false
+			});
+			$("#dialog_3").dialog({
+				autoOpen: false,
+				modal: true,
+				height: 500,
+				width: 800,
+				resizable: false
+			});
+			$("#dialog_4").dialog({
+				autoOpen: false,
+				modal: true,
+				height: 500,
+				width: 800,
+				resizable: false
+			});
+			$(".helpButton1").click(function() {
+				$("#dialog_1").dialog("open");
+			});
+			$(".helpButton2").click(function() {
+				$("#dialog_2").dialog("open");
+			});
+			$(".helpButton3").click(function() {
+				$("#dialog_3").dialog("open");
+			});
+			$(".helpButton4").click(function() {
+				$("#dialog_4").dialog("open");
+			});
+			
 		}
 		
 		function initAlojamientoTaller(){
@@ -313,6 +363,9 @@ function larejaConstructor()
 		}
 		
 		function initAviso(){
+		
+			initHelpDialogs();
+				
 			today = new Date();
 			$('.field.fecha input').datepicker({
 				changeMonth: true,
