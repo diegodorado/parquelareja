@@ -1,28 +1,22 @@
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 Dir['plugins/*/lib/recipes/*.rb'].each { |plugin| load(plugin) }
-
 load Gem.find_files('capifony_symfony1.rb').first.to_s
 
+set :stages,        %w(production staging)
+set :default_stage, "staging"
+require 'capistrano/ext/multistage'
+
 set :application, "parquelareja"
-set :domain,      "201.235.255.14"
-#set :domain,      "parquelareja.org"
-set :user, 'parqaa7'
-set :deploy_to,   "/home/#{user}/#{application}"
-set :use_sudo, false
-
-ssh_options[:port] = 9022
-
-set :deploy_via, :copy
-
 set :repository,  "git://github.com/diegodorado/#{application}.git"
 set :scm,         :git
 
-role :web,        domain                         # Your HTTP server, Apache/etc
-role :app,        domain                         # This may be the same as your `Web` server
-role :db,         domain, :primary => true       # This is where symfony migrations will run
-
 set  :keep_releases,  3
 set :web_path,           "web"
+
+
+task :uname do
+  run "uname -a"
+end
 
 before "deploy:create_symlink" do
   run "mv #{latest_release}/web/frontend_prod.php  #{latest_release}/web/index.php"
@@ -32,14 +26,10 @@ namespace :database do
   desc "Restores last backup"
   task :restore, :roles => :db , :only => { :primary => true }  do
 
-    begin
-      zipped_file_path  = `readlink -f backups/#{application}.remote_dump.latest.sql.gz`.chop  # gunzip does not work with a symlink
-    rescue Exception # fallback for file systems that don't support symlinks
-      zipped_file_path  = "backups/#{application}.remote_dump.latest.sql.gz"
-    end
+    zipped_file_path  = `readlink backups/#{application}.remote_dump.latest.sql.gz`.chop  # gunzip does not work with a symlink
     unzipped_file_path   = "backups/#{application}_dump.sql"
 
-    run_locally "gunzip -c #{zipped_file_path} > #{unzipped_file_path}"
+    run_locally "gunzip -c backups/#{zipped_file_path} > #{unzipped_file_path}"
 
     config = load_database_config IO.read('config/databases.yml'), symfony_env_local
 
@@ -73,6 +63,32 @@ namespace :database do
 
   end  
   
+  desc "Push local dump to remote & populate there"
+  task :push_dump, :roles => :db, :only => { :primary => true } do
+
+    filename  = "#{application}.remote_dump.latest.sql.gz"
+    file      = "backups/#{filename}"
+    sqlfile   = "#{application}_dump.sql"
+    config    = ""
+
+    upload(file, "#{remote_tmp_dir}/#{filename}", :via => :scp)
+    run "#{try_sudo} gunzip -c #{remote_tmp_dir}/#{filename} > #{remote_tmp_dir}/#{sqlfile}"
+
+    run "#{try_sudo} cat #{shared_path}/config/databases.yml" do |ch, st, data|
+      config = load_database_config data, symfony_env_prod
+    end
+
+    try_sudo generate_sql_command('drop', config)
+    try_sudo generate_sql_command('create', config)
+
+    sql_import_cmd = generate_sql_command('import', config)
+
+    try_sudo "#{sql_import_cmd} < #{remote_tmp_dir}/#{sqlfile}"
+
+    run "#{try_sudo} rm #{remote_tmp_dir}/#{filename}"
+    run "#{try_sudo} rm #{remote_tmp_dir}/#{sqlfile}"
+  end
+    
 end
 
 
