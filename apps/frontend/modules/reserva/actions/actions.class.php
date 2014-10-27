@@ -17,6 +17,10 @@ class reservaActions extends aEngineActions
   */
   public function executeIndex(sfWebRequest $request)
   {
+    
+  
+  
+  
     $this->form = new ReservaForm;  
     $this->titulo = "papadopulos";
 	$this->horario_desde 	= 10;
@@ -115,10 +119,23 @@ class reservaActions extends aEngineActions
 		}
 		$mail 					= $this->getPartial('email', $data );
 		
-		die($mail);
-		echo '<pre>'; var_dump($_POST); echo '</pre>'; die();
-		echo '<pre>'; var_dump($_POST['guests']); echo '</pre>'; die();
+		$emails 				= "eva@redhumanista.org";
 		
+		/*die($mail);
+		echo '<pre>'; var_dump($_POST); echo '</pre>'; die();
+		echo '<pre>'; var_dump($_POST['guests']); echo '</pre>'; die();*/
+		
+        $message = Swift_Message::newInstance()
+          ->setFrom(array('reservas@parquelareja.org' => 'Reservas Parque La Reja'))
+          ->setTo($emails)
+          ->setSubject('Nueva Reserva de Parques de Estudio y Reflexion La Reja')
+          ->setBody($mail)
+          ->setContentType("text/html")
+        ;
+         
+        $this->getMailer()->send($message);
+        
+        $this->redirect('@reserva_sent');
 	}
 
     /*if ($request->isMethod('post'))

@@ -1431,7 +1431,7 @@ margin-bottom: 2px;
 }
 .reserva .captcha_box{
 	text-align:center;
-	padding-left: 300px;
+	padding-left: 230px;
 	margin-bottom: 10px;
 }
 .reserva form{
@@ -1464,4 +1464,19 @@ margin-bottom: 2px;
 }
 .reserva .general_data .column.left .email, .reserva .general_data .column.left .telefono{
 	color: #666;
+}
+.columna_grande{
+	display: table-cell;
+}
+.columna_grande.izquierda{
+	width: 760px;
+}
+.columna_grande.derecha{
+	width: 170px;
+}
+.columna_grande.derecha input{
+	margin: 10px 0px 0px 10px;
+	width: 160px;
+	cursor: pointer;
+	text-align: center;
 }

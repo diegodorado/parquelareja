@@ -10,7 +10,8 @@ function larejaConstructor()
 {
 	this.reservaInit = function(options)
 	{
-	
+		initHelpDialogs();
+		
 		$('#Opciones .opcion.reserva').click(function(){
 			$('#Opciones').slideUp();
 			$('#Opciones_reserva').slideDown();
@@ -36,6 +37,10 @@ function larejaConstructor()
         $('#reserva_organismo').parent().hide();
 		
 		function initReserva(){
+		
+			initHelpDialogs();
+			
+		
 		
 			if ( $('#Opciones_reserva input.alojamiento:checked').size() > 0 ){
 				$('.area.general .field_set.fecha.taller').hide();
@@ -160,8 +165,52 @@ function larejaConstructor()
 			$('.field.solicitante select').change();
 		}
 		
-		function initAlojamientoTaller(){
+		function initHelpDialogs(){
 		
+			$("#dialog_1").dialog({
+				autoOpen: false,
+				modal: true,
+				height: 500,
+				width: 800,
+				resizable: false
+			});
+			$("#dialog_2").dialog({
+				autoOpen: false,
+				modal: true,
+				height: 500,
+				width: 800,
+				resizable: false
+			});
+			$("#dialog_3").dialog({
+				autoOpen: false,
+				modal: true,
+				height: 500,
+				width: 800,
+				resizable: false
+			});
+			$("#dialog_4").dialog({
+				autoOpen: false,
+				modal: true,
+				height: 500,
+				width: 800,
+				resizable: false
+			});
+			$(".helpButton1").click(function() {
+				$("#dialog_1").dialog("open");
+			});
+			$(".helpButton2").click(function() {
+				$("#dialog_2").dialog("open");
+			});
+			$(".helpButton3").click(function() {
+				$("#dialog_3").dialog("open");
+			});
+			$(".helpButton4").click(function() {
+				$("#dialog_4").dialog("open");
+			});
+			
+		}
+		
+		function initAlojamientoTaller(){
 			$('.general_data .nombre_apellido').html($('.area.general input.nombre').val() + ' ' + $('.area.general input.apellido').val());
 			$('.general_data .email').html($('.area.general input.email').val());
 			$('.general_data .telefono').html($('.area.general input.telefono').val());
@@ -192,14 +241,14 @@ function larejaConstructor()
 			
 			$titulo = "Reserva - Paso 2: ";
 			if($('#Opciones_reserva input.alojamiento:checked').size() > 0){
-				$titulo += "Alojamiento";
+				$titulo += "Centros";
 				$('.area.alojamiento').show();
 			}
 			if($('#Opciones_reserva input.taller:checked').size() > 0){
 				if($('#Opciones_reserva input.alojamiento:checked').size() > 0){
 					$titulo += " y ";
 				}	
-				$titulo += "taller";
+				$titulo += "Taller";
 				$('.area.ambitos').show();
 			}
 			$('.superarea.alojamiento_taller').show();
@@ -210,6 +259,10 @@ function larejaConstructor()
 		
 		
 		function initAmbito($ambito,$setResponsible){
+			var debo_acomodar_placeholder=!'placeholder' in document.createElement('input');
+			if(debo_acomodar_placeholder){
+				asignar_evento(window,'load',acomodar_formularios);
+			}
 			if ($setResponsible){
 				setResponsible($ambito);
 			}
@@ -310,6 +363,9 @@ function larejaConstructor()
 		}
 		
 		function initAviso(){
+		
+			initHelpDialogs();
+				
 			today = new Date();
 			$('.field.fecha input').datepicker({
 				changeMonth: true,
@@ -594,7 +650,7 @@ function larejaConstructor()
 		$day 			= $splitted_date[0];
 		$month 			= $splitted_date[1];
 		$year 			= $splitted_date[2];
-		$date			= new Date($year,$month-1,$day,0,0,0,0);
+		$date			= new Date($year,$month-1,parseInt($day)+1,0,0,0,0);
 		$time			= $date.getTime();
 		//$nextDayTime    = $time + (1 * 60 * 60 * 24 * 1000);
 		//En lugar del proximo día se utiliza el mismo porque si se reserva taller sin alojamiento se ingresa y egresa el mismo día
@@ -607,7 +663,7 @@ function larejaConstructor()
 		$day 			= $splitted_date[0];
 		$month 			= $splitted_date[1];
 		$year 			= $splitted_date[2];
-		$date			= new Date($year,$month-1,$day,0,0,0,0);
+		$date			= new Date($year,$month-1,parseInt($day)-1,0,0,0,0);
 		$time			= $date.getTime();
 		//$nextDayTime    = $time - (1 * 60 * 60 * 24 * 1000);
 		//En lugar del día anterior se utiliza el mismo porque si se reserva taller sin alojamiento se ingresa y egresa el mismo día
@@ -646,8 +702,7 @@ function larejaConstructor()
 
 
 
-	this.embedSWF = function(options)
-	{
+	this.embedSWF = function(options){
 		var id = options['id'];
 		var swf = options['swf'];
 		var $el = $('#'+id);
@@ -656,7 +711,39 @@ function larejaConstructor()
 		swfobject.embedSWF(swf, id, w, h, "9.0.0");
 	};
 	
-	
+	function emular_placeholder(evento){
+		if(!this.getAttribute('hube_entrado')){
+			this.value='';
+			this.setAttribute('hube_entrado','si');
+			this.style.color='black';
+		}
+	}
+	function asignar_evento(destino,nombre_evento,funcion){
+		if(destino.addEventListener){
+			destino.addEventListener(nombre_evento,funcion);
+		}else{
+			destino['on'+nombre_evento]=funcion;
+		}
+	}
+	function acomodar_un_formulario(formulario){
+	  var inputs_a_transformar={};
+	  for(var i=0; i<formulario.children.length; i++){
+		var elemento=formulario.children[i];
+		if(elemento.tagName=='INPUT'){
+		  var texto_placeholder=elemento.getAttribute('placeholder');
+		  if(texto_placeholder){
+			elemento.value=texto_placeholder;
+			elemento.style.color='#787878';
+			asignar_evento(elemento,'focus',emular_placeholder);
+		  }
+		}
+	  }
+	}
+	function acomodar_formularios(){
+		for(var i=0; i<document.forms.length; i++){
+			acomodar_un_formulario(document.forms[i]);
+		}
+	}
 	
 }
 
