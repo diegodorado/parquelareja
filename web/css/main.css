@@ -1278,6 +1278,9 @@ margin-bottom: 2px;
 .reserva .field .column.valor input.wide, .reserva .field .column.valor select.wide{
     width: 300px;
 }
+.reserva .field .column.valor input.xwide, .reserva .field .column.valor select.xwide{
+    width: 330px;
+}
 .reserva .field .column.valor input.medium, .reserva .field .column.valor select.medium{
     width: 240px;
 }

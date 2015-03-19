@@ -2,6 +2,8 @@
 
 <?php slot('body_class') ?>reserva simple<?php end_slot() ?>
 
+
+
 <script type="text/javascript" src="/js/jquery.easyModal.js"></script>
 <div class="center">
   <!--<form id="form_reserva" action="<?=url_for('@reserva_index') ?>" method="post">-->
@@ -14,8 +16,8 @@
 		<div>
 			<input type="checkbox" class="alojamiento">
 			<label>Centros</label>
-		</div>	
-		<div>	
+		</div>
+		<div>
 			<input type="checkbox" class="taller">
 			<label>Taller</label>
 		</div>
@@ -25,7 +27,7 @@
 	<form id="form_aviso_uso" action="" method="post">
 		<h3>Aviso de uso de la multiuso</h3>
 		<div class="area_content columna_grande izquierda">
-            <div class="field_set">               
+            <div class="field_set">
                 <div class="field solicitante">
                    <div class="column denominacion">
                         <label>Solicitante (requerido)</label>
@@ -51,13 +53,25 @@
                             <option value="ph">Partido Humanista</option>
                         </select>
                    </div>
+
                 </div>
+					<div class="field equipo particular">
+					   <div class="column denominacion">
+							<label>Equipo de base</label>
+					   </div>
+						<div class="column valor">
+							<input type="text" class="input equipo_de_base xwide required" name="equipo_de_base" placeholder="Equipo de Base o Grupo Promotor (requerido)">
+							<div class="error_message equipo_de_base required">
+								<label>Campo obligatorio</label>
+							</div>
+						</div>
+					</div>
                 <div class="field comunidad particular">
                    <!--<div class="column denominacion">
                         <label>Comunidad (requerido)</label>
                    </div>-->
                    <div class="column valor">
-						<input type="text" name="comunidad" value="" class="input comunidad wide required" placeholder="Comunidad (requerido)">
+										<input type="text" name="comunidad" value="" class="input comunidad wide required" placeholder="Comunidad (requerido)">
 						   <div class="error_message comunidad required">
 								<label>Campo obligatorio</label>
 						   </div>
@@ -66,8 +80,8 @@
             </div>
 		  <div class="field_set">
 			  <div class="titulo_set">
-				  <label>Datos de contacto</label>               
-			  </div>  
+				  <label>Datos de contacto</label>
+			  </div>
 			  <div class="field nombre">
 				   <!--<div class="column denominacion">
 						<label>Nombre (requerido)</label>
@@ -140,7 +154,7 @@
 							if ($i < 10){
 								$hora = '0'.$hora;
 							} ?>
-							<option><?php echo $hora; ?></option>								
+							<option><?php echo $hora; ?></option>
 							<?php } ?>
 						</select>
 						a <select class="input horario hasta required" name="horario_hasta" disabled>
@@ -149,7 +163,7 @@
 							if ($i < 10){
 								$hora = '0'.$hora;
 							} ?>
-							<option><?php echo $hora; ?></option>								
+							<option><?php echo $hora; ?></option>
 							<?php } ?>
 						</select> hs.
 						<div class="error_message horario">
@@ -193,7 +207,7 @@
 	<div class="form-row botones">
 		<input id="aviso_uso_submit" class="boton_reserva" value="Avisar" name="enviar" type="button" />
 	</div>
-	  
+
   </form>
   <form id="form_reserva" action="" method="post">
   	<h3>Reserva - Paso 1</h3>
@@ -203,7 +217,7 @@
 				   <label>SOLICITANTE</label>
 			  </div>
 			  <div class="area_content">
-				<div class="field_set">               
+				<div class="field_set">
 					<div class="field solicitante">
 					   <div class="column denominacion">
 							<label>Solicitante (requerido)</label>
@@ -228,7 +242,18 @@
 								<option value="msg">Mundo sin Guerras y sin violencia</option>
 								<option value="ph">Partido Humanista</option>
 							</select>
+					   </div>					   
+					</div>
+					<div class="field equipo particular">
+					   <div class="column denominacion">
+							<label>Equipo de base</label>
 					   </div>
+						<div class="column valor">
+							<input type="text" class="input equipo_de_base xwide required" name="equipo_de_base" placeholder="Equipo de Base o Grupo Promotor (requerido)">
+							<div class="error_message equipo_de_base required">
+								<label>Campo obligatorio</label>
+							</div>
+						</div>
 					</div>
 					<div class="field comunidad particular">
 					   <!--<div class="column denominacion">
@@ -244,8 +269,8 @@
 				</div>
 				  <div class="field_set">
 					  <div class="titulo_set">
-						  <label>Datos de contacto</label>               
-					  </div>  
+						  <label>Datos de contacto</label>
+					  </div>
 					  <div class="field nombre">
 						   <!--<div class="column denominacion">
 								<label>Nombre (requerido)</label>
@@ -304,9 +329,9 @@
 				  </div>
 				  <div class="field_set fecha alojamiento">
 					  <div class="titulo_set">
-						  <label>Fecha</label>               
-					  </div>			  
-					  
+						  <label>Fecha</label>
+					  </div>
+
 					  <div class="field  fecha desde">
 							<div class="column denominacion">
 								<label>Ingreso (requerido)</label>
@@ -333,7 +358,7 @@
 						   </div>
 					  </div>
 				  </div>
-				<div class="field_set fecha taller">                  
+				<div class="field_set fecha taller">
 					<div class="field  fecha hasta">
 						<div class="column denominacion">
 						<label>Fecha</label>
@@ -349,7 +374,7 @@
 					</div>
 					</div>
 				</div>
-			  </div>   
+			  </div>
 			  <div class="text_align_center">
 				<input type="button" class="boton continuar" value="Continuar">
 			  </div>
@@ -375,24 +400,24 @@
 			 <div class="area alojamiento">
 				<div class="titulo_area">
 				   <label>CENTROS</label>
-				</div>        
+				</div>
 				<div class="area_content">
-					<div class="ambito cde">		
+					<div class="ambito cde">
 						<input type="hidden" class="nombre_ambito" value="cde">
 						<div class="titulo_ambito">
 							<div class="column checkbox"><input type="checkbox"></div>
 							<div class="column text"><label>Centro de Estudio</label></div>
 						</div>
 						<div class="area_desplegable">
-							<div class="field_set">               
+							<div class="field_set">
 								<div class="titulo_set">
 									<div class="column left">
 										<a class="mover_responsable">Mover responsable a este ambito</a>
 									</div>
 									<div class="column">
-										<label>1 alojado</label>        
+										<label>1 alojado</label>
 									</div>
-								</div>  
+								</div>
 								<div class="field guest">
 								   <div class="column denominacion">
 										<label>Alojado 1</label>
@@ -407,27 +432,27 @@
 								</div>
 								<div class="error_message lodging cde">
 									<label>Hay campos sin completar. Complete todos los campos o elimine a los alojados que estén de más</label>
-								</div>						
-								<div><input type="button" class="new_guest button" value="Agregar Alojado"></div>				
-							</div>    
+								</div>
+								<div><input type="button" class="new_guest button" value="Agregar Alojado"></div>
+							</div>
 						</div>
 					</div>
-					<div class="ambito cdt">		
+					<div class="ambito cdt">
 						<input type="hidden" class="nombre_ambito" value="cdt">
 						<div class="titulo_ambito">
 							<div class="column checkbox"><input type="checkbox"></div>
 							<div class="column text"><label>Centro de Trabajo</label></div>
 						</div>
 						<div class="area_desplegable">
-							<div class="field_set">               
+							<div class="field_set">
 								<div class="titulo_set">
 									<div class="column left">
 										<a class="mover_responsable">Mover responsable a este ambito</a>
 									</div>
 									<div class="column">
-										<label>1 alojado</label>        
+										<label>1 alojado</label>
 									</div>
-								</div>  
+								</div>
 								<div class="field guest">
 								   <div class="column denominacion">
 										<label>alojado 1</label>
@@ -440,21 +465,21 @@
 										&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
 										<div class="error_message email format">
 											<label>Debe ingresar una dirección de correo válida</label>
-										</div>						
+										</div>
 									</div>
 								</div>
 								<div class="error_message lodging cdt">
 									<label>Hay campos sin completar. Complete todos los campos o elimine los alojadoes que estén de más</label>
-								</div>						
-								<div><input type="button" class="new_guest button" value="Agregar Alojado"></div>				
-							</div>    
+								</div>
+								<div><input type="button" class="new_guest button" value="Agregar Alojado"></div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="error_message lodging_area">
 					<label>Está prohibido dormir en el pasto</label>
 				</div>
-			 </div>  
+			 </div>
 			 <div class="area ambitos">
 				  <div class="titulo_area">
 					   <label>TALLER</label>
@@ -467,7 +492,7 @@
 							<div class="column text"><label>Reservar</label></div>
 						</div>-->
 						<div class="area_desplegada">
-							<div class="field_set">               
+							<div class="field_set">
 								<div class="field actividad">
 									<div class="column denominacion">
 										<label>Actividades a Realizar (requerido)</label>
@@ -512,12 +537,12 @@
 										<textarea name="taller[comentario]" cols="40"rows="3"></textarea>
 									</div>
 								</div>
-							</div>    
+							</div>
 						</div>
 					  </div>
 				  </div>
-			 </div> 	
-			 <div class="captcha_box">
+			 </div>
+			 <!--<div class="captcha_box">
 				<script type="text/javascript"
 					src="http://www.google.com/recaptcha/api/challenge?k=6LeV7fISAAAAABH4YgN3UXTcEq9N1-7J3LleM6BE">
 				</script>
@@ -529,7 +554,7 @@
 					<input type="hidden" name="recaptcha_response_field"
 					value="manual_challenge">
 				</noscript>
-			  </div>
+			  </div>-->
 			<div class="text_align_center">
 				<input type="button" class="boton continuar" value="Reservar">
 			</div>
@@ -562,13 +587,10 @@
 			<p>Ejemplo de dialogo numero 4.</p>
 			<p>Ayuda  a los otros humanistas a concretar una reserva en su parque de estudio y reflexion</p>
 		</div>
-	</div>	
+	</div>
 </div>
 
 
-<?php //a_js_call('lareja.reservaInit()') ?>
 <?php a_js_call('lareja.reservaInit(?)', array(
     'test' => $titulo
   )) ?>
-
-

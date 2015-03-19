@@ -11,12 +11,12 @@ function larejaConstructor()
 	this.reservaInit = function(options)
 	{
 		initHelpDialogs();
-		
+
 		$('#Opciones .opcion.reserva').click(function(){
 			$('#Opciones').slideUp();
 			$('#Opciones_reserva').slideDown();
 		});
-		$('#Opciones_reserva .continuar').click(function(){	
+		$('#Opciones_reserva .continuar').click(function(){
 			$('#Opciones_reserva .error_message').hide();
 			if( $('#Opciones_reserva input:checked').size() > 0 ){
 				$('#Opciones_reserva').slideUp(600, function(){
@@ -35,24 +35,24 @@ function larejaConstructor()
 		});
         $('.field.particular').hide();
         $('#reserva_organismo').parent().hide();
-		
+
 		function initReserva(){
-		
+
 			initHelpDialogs();
-			
-		
-		
+
+
+
 			if ( $('#Opciones_reserva input.alojamiento:checked').size() > 0 ){
 				$('.area.general .field_set.fecha.taller').hide();
 			}
 			else{
 				$('.area.general .field_set.fecha.alojamiento').hide();
 			}
-		
+
 			initShifts('taller');
 			initGuests('cde');
 			initGuests('cdt');
-			
+
 			today = new Date();
 			$('.field.fecha input').datepicker({
 				changeMonth: true,
@@ -66,7 +66,7 @@ function larejaConstructor()
 					$('.warning_message.fecha').show();
 					setSchedulesInWorkshopLegend();
 				}
-				
+
 			}
 			if ($('.field.fecha.hasta input').val() != ""){
 				setMaxDate($('.field.fecha.hasta input'),$('.field.fecha.desde input'));
@@ -82,8 +82,8 @@ function larejaConstructor()
 			$('.field.fecha.hasta input').change(function(){
 				setMaxDate($(this),$('.field.fecha.desde input'));
 			});
-		
-		
+
+
 			$('.ambito .checkbox input').each(function(){
 				$ambito = $(this).parent().parent().parent();
 				if ($(this).attr('checked')){
@@ -111,7 +111,7 @@ function larejaConstructor()
 					$ambito.find('.area_desplegable').hide();
 				}
 			});
-			
+
 			$('#form_reserva .area.general input.nombre').keyup(function(){
 				$('#form_reserva .responsible .guest_name').val( $(this).val() + ' ' + $('#form_reserva input.apellido').val() );
 				$('#form_reserva .responsible .guest_name').attr( 'title', $('#form_reserva .responsible .guest_name').val() );
@@ -124,17 +124,17 @@ function larejaConstructor()
 				$('#form_reserva .responsible .guest_email').val( $(this).val() );
 				$('#form_reserva .responsible .guest_email').attr( 'title', $(this).val() );
 			});
-			
+
 			/*$('#form_reserva input.nombre').change(function(){ $('#form_reserva input.nombre').keyup() });
 			$('#form_reserva input.apellido').change(function(){ $('#form_reserva input.apellido').keyup() });
 			$('#form_reserva input.email').change(function(){ $('#form_reserva input.email').keyup() });*/
 			$('#form_reserva .area.general input.nombre').blur(function(){ $('#form_reserva .area.general input.apellido').keyup() })
 			$('#form_reserva .area.general input.apellido').blur(function(){ $('#form_reserva .area.general input.apellido').keyup() });
 			$('#form_reserva .area.general input.email').blur(function(){ $('#form_reserva .area.general input.email').keyup() });
-			
+
 			$('.ambito .remove_shift').hide();
 			$('.ambito .remove_guest').hide();
-			
+
 			$('.ambito .new_shift').click(function(){
 				$ambito = $(this).parent().parent().parent().parent();
 				$nombre = $ambito.find('.nombre_ambito').val();
@@ -143,9 +143,9 @@ function larejaConstructor()
 				$('.ambito.'+$nombre+' .field.horario a.remove_shift').show();
 				initShifts($nombre);
 			});
-			 
+
 			/*codigo js que es llamado en la vista reserva/templates/indexSuccess.php con <?php a_js_call('lareja.reservaInit()') ?> */
-			
+
 			$('.alojamiento .new_guest').click(function(){
 				$ambito_name = $(this).parent().parent().parent().parent().find('.nombre_ambito').val();
 				$('.ambito.' + $ambito_name + ' .field.guest:last').clone().insertAfter('.ambito.' + $ambito_name + ' .field.guest:last');
@@ -155,18 +155,18 @@ function larejaConstructor()
 				$('.ambito.' + $ambito_name + ' .field.guest:last .error_message').hide();
 				initGuests($ambito_name);
 			});
-			
+
 			$('#reserva_submit').click(function(){
 				$('.responsible').size();
 			});
-			
-			init_datos_validation();	
+
+			init_datos_validation();
 			init_solicitante_select();
 			$('.field.solicitante select').change();
 		}
-		
+
 		function initHelpDialogs(){
-		
+
 			$("#dialog_1").dialog({
 				autoOpen: false,
 				modal: true,
@@ -207,9 +207,9 @@ function larejaConstructor()
 			$(".helpButton4").click(function() {
 				$("#dialog_4").dialog("open");
 			});
-			
+
 		}
-		
+
 		function initAlojamientoTaller(){
 			$('.general_data .nombre_apellido').html($('.area.general input.nombre').val() + ' ' + $('.area.general input.apellido').val());
 			$('.general_data .email').html($('.area.general input.email').val());
@@ -238,7 +238,7 @@ function larejaConstructor()
 				$('.general_data .fecha.desde').html( $('.area.general input.fecha.unica').val() );
 				$('.general_data .palabra.hasta, .general_data .fecha.hasta').hide();
 			}
-			
+
 			$titulo = "Reserva - Paso 2: ";
 			if($('#Opciones_reserva input.alojamiento:checked').size() > 0){
 				$titulo += "Centros";
@@ -247,7 +247,7 @@ function larejaConstructor()
 			if($('#Opciones_reserva input.taller:checked').size() > 0){
 				if($('#Opciones_reserva input.alojamiento:checked').size() > 0){
 					$titulo += " y ";
-				}	
+				}
 				$titulo += "Taller";
 				$('.area.ambitos').show();
 			}
@@ -256,8 +256,8 @@ function larejaConstructor()
 			$('#form_reserva h3').html($titulo);
 			init_alojamiento_validation();
 		}
-		
-		
+
+
 		function initAmbito($ambito,$setResponsible){
 			var debo_acomodar_placeholder=!'placeholder' in document.createElement('input');
 			if(debo_acomodar_placeholder){
@@ -276,7 +276,7 @@ function larejaConstructor()
 			}
 			initGuests($ambito.find('.nombre_ambito').val());
 		}
-		
+
         function initShifts($nombre){
             $current_number = 0;
             $('.horario input.day').removeClass('hasDatepicker');
@@ -302,7 +302,7 @@ function larejaConstructor()
                 }
             });
         }
-        
+
 		function initGuests($ambito_name){
 			$current_number = 0;
             $('.' + $ambito_name + ' input.guest_from').removeClass('hasDatepicker');
@@ -317,15 +317,15 @@ function larejaConstructor()
 				$(this).find('input.guest_to').attr('id',$ambito_name + '_' + $current_number + '_to');
 				$(this).find('input.guest_from').datepicker({changeMonth: true,changeYear: true, yearRange:'-10:+10'});
 				$(this).find('input.guest_to').datepicker({changeMonth: true,changeYear: true, yearRange:'-10:+10'});
-				
+
 				if ($(this).find('input.guest_from').val() != ""){
 					setMinDate($(this).find('input.guest_from'),$(this).find('input.guest_to'));
 				}
-				
+
 				if ($(this).find('input.guest_to').val() != ""){
 					setMaxDate($(this).find('input.guest_to'),$(this).find('input.guest_from'));
 				}
-				
+
 				$(this).find('input.guest_from').change(function(){
 					setMinDate($(this),$(this).parent().find('input.guest_to'));
 				});
@@ -334,16 +334,16 @@ function larejaConstructor()
 				});*/
 				$current_number++;
 			});
-			
+
 			$titulo = $current_number;
-			
+
 			if ($current_number == 1){
 				$titulo += ' Alojado';
 			}
 			else{
 				$titulo += ' Alojados';
 			}
-			
+
 			$('.ambito.' + $ambito_name + ' .titulo_set label' ).html($titulo);
 			$('.remove_guest').unbind('click');
             $('.remove_guest').click(function(){
@@ -353,7 +353,7 @@ function larejaConstructor()
                     $('.ambito.'+$ambito_name+' .field.guest a.remove_guest').hide();
                 }
             });
-			
+
 			$('.ambito.' + $ambito_name + ' .remove_guest').hide();
 			if ( $('.ambito.' + $ambito_name + ' .field.guest').size() > 1){
 				$('.ambito.' + $ambito_name + ' .remove_guest').show();
@@ -361,11 +361,11 @@ function larejaConstructor()
             $('.ambito.'+$ambito_name+' .field.guest.responsible a.remove_guest').hide();
 			$('.ambito.'+$ambito_name+' .responsible .column.denominacion label').html('Responsable');
 		}
-		
+
 		function initAviso(){
-		
+
 			initHelpDialogs();
-				
+
 			today = new Date();
 			$('.field.fecha input').datepicker({
 				changeMonth: true,
@@ -382,9 +382,9 @@ function larejaConstructor()
 			init_solicitante_select();
 			init_aviso_uso_validation();
 		}
-		
+
 		function initHorarioFields(){
-			
+
 			$.ajax({
 				data : {
 					date:$('.field.fecha input').val()
@@ -402,7 +402,7 @@ function larejaConstructor()
 				}
 			});
 		}
-		
+
 		function setResponsible($ambito){
 			if ($('.responsible').size() == 0){
 				$ambito.find('.column.denominacion label').html('Responsable');
@@ -416,19 +416,19 @@ function larejaConstructor()
 			}
 			$ambito.find('.mover_responsable').hide();
 		}
-		
+
 		function moveResponsible($ambito){
 			$ambito_anterior = $('#form_reserva .responsible').parent().parent().parent();
-			
+
 			$('#form_reserva .responsible').clone().insertBefore( $ambito.find('.field.guest:first') );
 			$ambito.find('.mover_responsable').hide();
-			
+
 			removeResponsible($ambito_anterior);
-				
+
 			initGuests( $ambito.find('.nombre_ambito').val() );
 			initGuests( $ambito_anterior.find('.nombre_ambito').val() );
 		}
-		
+
 		function removeResponsible($ambito){
 			if ($ambito.find('.field.guest').size() == 1){
 				$ambito.find('.field.guest').removeClass('responsible');
@@ -440,7 +440,7 @@ function larejaConstructor()
 			}
 			initAmbito($ambito, false);
 		}
-		
+
 		function setSchedulesInWorkshopLegend(){
 			$.ajax({
 				data : {
@@ -455,7 +455,7 @@ function larejaConstructor()
 				}
 			});
 		}
-		
+
 		function checkForWorkshopLegend(){
 			if ($('.area.alojamiento .ambito .checkbox input:checked').size() > 0){
 				$('.taller .leyenda').hide();
@@ -469,14 +469,14 @@ function larejaConstructor()
 				$('.error_message').hide();
 				$all_ok = true;
 
-				
+
 				$('form#form_aviso_uso .input.required:visible').each(function(){
 					if ( $(this).val() == "" ){
 						$all_ok = false;
 						$(this).parent().find('.error_message.required').show();
 					}
 				});
-				
+
 				$('form#form_aviso_uso .input.email:visible').each(function(){
 					var reg = new RegExp(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 					if ( $(this).val() != "" && !reg.test($(this).val())){
@@ -484,7 +484,7 @@ function larejaConstructor()
 						$(this).parent().find('.error_message.format').show();
 					}
 				});
-				
+
 				$('form#form_aviso_uso .input.number:visible').each(function(){
 					var reg = new RegExp(/^\s*\d+\s*$/);
 					if ( $(this).val() != "" && !reg.test($(this).val())){
@@ -492,18 +492,18 @@ function larejaConstructor()
 						$(this).parent().find('.error_message.number').show();
 					}
 				});
-				
+
 				$desde = parseInt($('form#form_aviso_uso .input.horario.desde:visible').val());
 				$hasta = parseInt($('form#form_aviso_uso .input.horario.hasta:visible').val());
 				if (!($hasta > $desde)){
 					$all_ok = false;
 					$('.field.horario .error_message.horario').show();
 				};
-								
+
 				if($all_ok){
 					$('#form_aviso_uso div:hidden input,div:hidden select,div:hidden textarea').removeAttr('name');
 					$('#form_aviso_uso').submit();
-				}				
+				}
 			});
 		}
 
@@ -511,7 +511,7 @@ function larejaConstructor()
 		$('.area.general .boton.continuar').click(function(){
 			$all_ok = true;
 			$('.area.general .error_message').hide();
-						
+
 			$('.area.general input.required:visible').each(function(){
 				if ( $(this).val() == "" ){
 					$all_ok = false;
@@ -539,7 +539,7 @@ function larejaConstructor()
 		$('.superarea.alojamiento_taller .boton.continuar').click(function(){
 			$all_ok = true;
 			$('.superarea.alojamiento_taller .error_message').hide();
-			
+
 			if ($('#Opciones_reserva input.alojamiento:checked').size() > 0){
 				$none_checked = true;
 				$('.titulo_ambito .checkbox input').each(function(){
@@ -567,13 +567,13 @@ function larejaConstructor()
 							$ambito.find('.error_message.lodging').show();
 						}
 					}
-				});			
+				});
 				if ($none_checked){
 					$all_ok = false;
 					$('.error_message.lodging_area').show();
 				}
 			}
-			
+
 			if ($('#Opciones_reserva input.taller:checked').size() > 0){
 				if ($('.taller .field.actividad input:checked').size() == 0){
 					$all_ok = false;
@@ -589,7 +589,7 @@ function larejaConstructor()
 						$(this).parent().find('.error_message.required').show();
 					}
 				});
-			}	
+			}
 			if ($all_ok){
 				$('#form_reserva .superarea.alojamiento_taller div:hidden input').removeAttr('name');
 				$('#form_reserva .superarea.alojamiento_taller div:hidden select').removeAttr('name');
@@ -600,7 +600,7 @@ function larejaConstructor()
 			}
 		});
 	}
-			
+
 	function captcha_check(){
 		$privatekey = "6LeV7fISAAAAAMMubxtHpWLHvWLXe6Z6O5gfxjrJ";
 		$remoteip	= $('#remoteip').val();
@@ -620,23 +620,25 @@ function larejaConstructor()
 				alert($data);
 			}
 		});
-	}		
-			
+	}
+
 	function init_solicitante_select(){
 		switch($('.field.solicitante select').val()){
 			case 'organismo':
 				$('.field.particular.organismo').show();
+				$('.field.particular.equipo').show();
 			break;
 			case 'mensaje':
 				$('.field.particular.comunidad').show();
 			break;
 		}
-		
+
 		$('.field.solicitante select').change( function(){
 			$('.field.particular').hide();
 			switch(this.value) {
 				case 'organismo':
 					$('.field.particular.organismo').show();
+					$('.field.particular.equipo').show();
 				break;
 				case 'mensaje':
 					$('.field.particular.comunidad').show();
@@ -644,7 +646,7 @@ function larejaConstructor()
 			}
 		});
 	}
-	
+
 	function setMinDate($dateElement1,$dateElement2){
 		$splitted_date 	= $dateElement1.val().split('/');
 		$day 			= $splitted_date[0];
@@ -657,7 +659,7 @@ function larejaConstructor()
 		$minDate		= new Date($time);
 		$dateElement2.datepicker('option','minDate',$minDate);
 	}
-	
+
 	function setMaxDate($dateElement1,$dateElement2){
 		$splitted_date 	= $dateElement1.val().split('/');
 		$day 			= $splitted_date[0];
@@ -670,7 +672,7 @@ function larejaConstructor()
 		$maxDate		= new Date($time);
 		$dateElement2.datepicker('option','maxDate',$maxDate);
 	}
-	
+
 	function isPast($dateElement1){
 		$splitted_date 	= $dateElement1.val().split('/');
 		$day 			= $splitted_date[0];
@@ -680,13 +682,13 @@ function larejaConstructor()
 		$dateTime		= $date.getTime();
 		$today			= new Date();
 		$todayTime		= $today.getTime();
-		$difference		= $date - $today; 
+		$difference		= $date - $today;
 		if ( ($difference/1000/60/60) < -24){
 			return true;
 		}
 		return false;
 	}
-	
+
 	this.calendarInit = function(options)
 	{
 		$('#calendar_filters h5').click(function(e){
@@ -696,7 +698,7 @@ function larejaConstructor()
   		$('#calendar').attr('class','');
   		$('#calendar').addClass($(this).attr('data-type'));
 		});
-	
+
 	};
 
 
@@ -710,7 +712,7 @@ function larejaConstructor()
 		var h = (options['height'])?options['height']:$el.height();
 		swfobject.embedSWF(swf, id, w, h, "9.0.0");
 	};
-	
+
 	function emular_placeholder(evento){
 		if(!this.getAttribute('hube_entrado')){
 			this.value='';
@@ -744,10 +746,9 @@ function larejaConstructor()
 			acomodar_un_formulario(document.forms[i]);
 		}
 	}
-	
+
 }
 
 }
 
 window.lareja = new larejaConstructor();
-
