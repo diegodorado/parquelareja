@@ -428,10 +428,16 @@
 										<!--<label class="guest_email">Email</label>-->
 										<input type="text" name="guests[cde][0][email]" class="guest_email email medium required" placeholder="Email">
 										&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
+										<div class="error_message email format">
+											<label>Debe ingresar una dirección de correo válida</label>
+										</div>
 									</div>
 								</div>
 								<div class="error_message lodging cde">
 									<label>Hay campos sin completar. Complete todos los campos o elimine a los alojados que estén de más</label>
+								</div>
+								<div class="error_message repeated_emails cde">
+									<label>Hay campos de mail repetidos. Todas las direcciones de correo deben ser únicas</label>
 								</div>
 								<div><input type="button" class="new_guest button" value="Agregar Alojado"></div>
 							</div>
@@ -459,9 +465,9 @@
 								   </div>
 									<div class="column valor">
 										<!--<label class="guest_name">Nombre y apellido</label>-->
-										<input type="text" name="guests[cde][0][name]" class="guest_name required" placeholder="Nombre y apellido">
+										<input type="text" name="guests[cdt][0][name]" class="guest_name required" placeholder="Nombre y apellido">
 										<!--<label class="guest_email">Email</label>-->
-										<input type="text" name="guests[cde][0][email]" class="guest_email email medium required" placeholder="E-mail">
+										<input type="text" name="guests[cdt][0][email]" class="guest_email email medium required" placeholder="E-mail">
 										&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
 										<div class="error_message email format">
 											<label>Debe ingresar una dirección de correo válida</label>
@@ -470,6 +476,9 @@
 								</div>
 								<div class="error_message lodging cdt">
 									<label>Hay campos sin completar. Complete todos los campos o elimine los alojadoes que estén de más</label>
+								</div>
+								<div class="error_message repeated_emails cdt">
+									<label>Hay campos de mail repetidos. Todas las direcciones de correo deben ser únicas</label>
 								</div>
 								<div><input type="button" class="new_guest button" value="Agregar Alojado"></div>
 							</div>

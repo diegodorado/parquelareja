@@ -40,8 +40,6 @@ function larejaConstructor()
 
 			initHelpDialogs();
 
-
-
 			if ( $('#Opciones_reserva input.alojamiento:checked').size() > 0 ){
 				$('.area.general .field_set.fecha.taller').hide();
 			}
@@ -124,10 +122,6 @@ function larejaConstructor()
 				$('#form_reserva .responsible .guest_email').val( $(this).val() );
 				$('#form_reserva .responsible .guest_email').attr( 'title', $(this).val() );
 			});
-
-			/*$('#form_reserva input.nombre').change(function(){ $('#form_reserva input.nombre').keyup() });
-			$('#form_reserva input.apellido').change(function(){ $('#form_reserva input.apellido').keyup() });
-			$('#form_reserva input.email').change(function(){ $('#form_reserva input.email').keyup() });*/
 			$('#form_reserva .area.general input.nombre').blur(function(){ $('#form_reserva .area.general input.apellido').keyup() })
 			$('#form_reserva .area.general input.apellido').blur(function(){ $('#form_reserva .area.general input.apellido').keyup() });
 			$('#form_reserva .area.general input.email').blur(function(){ $('#form_reserva .area.general input.email').keyup() });
@@ -152,7 +146,9 @@ function larejaConstructor()
 				$('.ambito.' + $ambito_name + ' .field.guest:last .guest_name').val('').removeAttr('disabled');
 				$('.ambito.' + $ambito_name + ' .field.guest:last .guest_email').val('').removeAttr('disabled');
 				$('.ambito.' + $ambito_name + ' .field.guest:last').removeClass('responsible');
+				$('.ambito.' + $ambito_name + ' .field.guest:last input').css("border-color", "#7a95ff");
 				$('.ambito.' + $ambito_name + ' .field.guest:last .error_message').hide();
+				
 				initGuests($ambito_name);
 			});
 
@@ -259,8 +255,7 @@ function larejaConstructor()
 
 
 		function initAmbito($ambito,$setResponsible){
-			var debo_acomodar_placeholder=!'placeholder' in document.createElement('input');
-			if(debo_acomodar_placeholder){
+			var debo_acomodar_placeholder=!'placeholder' in document.createElement('input');			if(debo_acomodar_placeholder){
 				asignar_evento(window,'load',acomodar_formularios);
 			}
 			if ($setResponsible){
@@ -405,14 +400,15 @@ function larejaConstructor()
 
 		function setResponsible($ambito){
 			if ($('.responsible').size() == 0){
-				$ambito.find('.column.denominacion label').html('Responsable');
-				$ambito.find('.field.guest').addClass('responsible');
-				$ambito.find('.field.guest input.guest_name').val( $('#form_reserva input.nombre').val() + ' ' + $('#form_reserva input.apellido').val());
-				$ambito.find('.field.guest input.guest_name').attr( 'title', $ambito.find('.field.guest input.guest_name').val() );
-				$ambito.find('.field.guest input.guest_name').attr('disabled','disabled');
-				$ambito.find('.field.guest input.guest_email').val( $('#form_reserva input.email').val() );
-				$ambito.find('.field.guest input.guest_email').attr( 'title', $ambito.find('.field.guest input.guest_email').val() 	 );
-				$ambito.find('.field.guest input.guest_email').attr('disabled','disabled');
+				$ambito.find('.field.guest:first').before($ambito.find('.field.guest:first').clone());
+				$ambito.find('.field.guest:first .column.denominacion label').html('Responsable');
+				$ambito.find('.field.guest:first').addClass('responsible');
+				$ambito.find('.field.guest:first input.guest_name').val( $('#form_reserva input.nombre').val() + ' ' + $('#form_reserva input.apellido').val());
+				$ambito.find('.field.guest:first input.guest_name').attr( 'title', $ambito.find('.field.guest input.guest_name').val() );
+				$ambito.find('.field.guest:first input.guest_name').attr('disabled','disabled');
+				$ambito.find('.field.guest:first input.guest_email').val( $('#form_reserva input.email').val() );
+				$ambito.find('.field.guest:first input.guest_email').attr( 'title', $ambito.find('.field.guest input.guest_email').val() 	 );
+				$ambito.find('.field.guest:first input.guest_email').attr('disabled','disabled');
 			}
 			$ambito.find('.mover_responsable').hide();
 		}
@@ -546,20 +542,42 @@ function larejaConstructor()
 					if ($(this).attr('checked')){
 						$none_checked = false;
 						$all_complete = true;
+						$ambito.find('input.required').css("border-color", "#7a95ff");
+						$ambito.find('.responsible input.required').css("border-color", "#e0e8ff");
+						$ambito.find(".error_message .repeated_emails").hide();
 						$ambito = $(this).parent().parent().parent();
 						$ambito.find('input.required').each(function(){
 							if ($(this).val() == ""){
 								$all_complete = false;
+								$(this).css("border-color", "red");
 								$(this).parent().find('.error_message.required').show();
 							}
 						});
 						$ambito.find('input.email:visible').each(function(){
-							if ($(this).val() != ""){
+							$current_mail = $(this);
+							if ($current_mail.val() != ""){
 								$re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-								if (!$re.test($(this).val())){
+								if (!$re.test($current_mail.val())){
+									$(this).css("border-color", "red");
 									$all_ok = false;
 									$(this).parent().find('.error_message.email.format').show();
 								}
+							}
+							if ($all_ok && $current_mail.val() != ""){
+								$times = 0;
+								$ambito.find('input.email:visible').each(function(){
+									if ($(this).val() == $current_mail.val()){
+										$times++;
+										if ($times > 1){
+											$(this).css("border-color", "red");
+											$all_ok = false;
+											$current_mail.css("border-color", "red");
+											$ambito.find(".error_message.repeated_emails").show();
+										}
+									}
+									if ($times > 1){
+									}
+								});
 							}
 						});
 						if (!$all_complete){
