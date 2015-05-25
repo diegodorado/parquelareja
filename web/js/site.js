@@ -217,13 +217,15 @@ function larejaConstructor()
 				$('.general_data .comentario').hide();
 			}
 			if ( $('.area.general select.tipo_solicitante').val() == 'organismo' ){
-				$('.general_data .tipo').html('(' + $('.area.general select.organismos option:selected').html() + ')');
+				$('.general_data .equipo').html($('.area.general input.equipo_de_base').val());
+				$('.general_data .organismo').html($('.area.general select.organismos option:selected').html());
 			}
 			else if( $('.area.general select.tipo_solicitante').val() == 'mensaje' ){
-				$('.general_data .tipo').html('(' + 'Comunidad ' + $('.area.general input.comunidad').val() + ')');
+				$('.general_data .equipo').html('Comunidad ' + $('.area.general input.comunidad').val());
+				$('.general_data .organismo').html("El mensaje de silo");
 			}
 			else{
-				$('.general_data .tipo').html('(' + 'maestro' + ')');
+				$('.general_data .tipo').html('maestro');
 			}
 			if ( $('#Opciones_reserva input.alojamiento:checked').size() > 0 ){
 				$('.general_data .fecha.desde').html( $('.area.general input.fecha.desde').val() );
@@ -248,6 +250,13 @@ function larejaConstructor()
 				$('.area.ambitos').show();
 			}
 			$('.superarea.alojamiento_taller').show();
+			
+			$responsable_cde = $responsable_cdt = "Mover a " + $('.area.general input.nombre').val() + " " + $('.area.general input.apellido').val();
+			$responsable_cde += " al centro de estudio";
+			$responsable_cdt += " al centro de trabajo";
+			$('.ambito.cde .mover_responsable').html( $responsable_cde ) ;
+			$('.ambito.cdt .mover_responsable').html( $responsable_cdt ) ;
+			
 			$('#form_reserva').slideDown(400);
 			$('#form_reserva h3').html($titulo);
 			init_alojamiento_validation();
@@ -507,20 +516,23 @@ function larejaConstructor()
 		$('.area.general .boton.continuar').click(function(){
 			$all_ok = true;
 			$('.area.general .error_message').hide();
+			$('.area.general input').css('border-color', '#7a95ff');
 
 			$('.area.general input.required:visible').each(function(){
 				if ( $(this).val() == "" ){
 					$all_ok = false;
 					$(this).parent().find('.error_message.required').show();
+					$(this).css('border-color', 'red');
 				}
 			});
 			$('.area.general input.email:visible').each(function(){
-				if ($(this).val != ""){
+				if ($(this).val() != ""){
 					$re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 					if (!$re.test($(this).val())){
 						$all_ok = false;
 						$(this).parent().find('.error_message.email.format').show();
 					}
+					$(this).css('border-color', 'red');
 				}
 			});
 			if($all_ok){
@@ -535,6 +547,7 @@ function larejaConstructor()
 		$('.superarea.alojamiento_taller .boton.continuar').click(function(){
 			$all_ok = true;
 			$('.superarea.alojamiento_taller .error_message').hide();
+			//$('.superarea.alojamiento_taller .field.guest').css('background-color', '#FFB3B3');
 
 			if ($('#Opciones_reserva input.alojamiento:checked').size() > 0){
 				$none_checked = true;
@@ -551,6 +564,7 @@ function larejaConstructor()
 								$all_complete = false;
 								$(this).css("border-color", "red");
 								$(this).parent().find('.error_message.required').show();
+								//$(this).parent().parent().css('background-color', '#FFB3B3');
 							}
 						});
 						$ambito.find('input.email:visible').each(function(){
@@ -561,6 +575,7 @@ function larejaConstructor()
 									$(this).css("border-color", "red");
 									$all_ok = false;
 									$(this).parent().find('.error_message.email.format').show();
+									//$(this).parent().parent().css('background-color', '#FFB3B3');
 								}
 							}
 							if ($all_ok && $current_mail.val() != ""){
@@ -573,6 +588,7 @@ function larejaConstructor()
 											$all_ok = false;
 											$current_mail.css("border-color", "red");
 											$ambito.find(".error_message.repeated_emails").show();
+											$(this).parent().parent().css('background-color', '#FFB3B3');
 										}
 									}
 									if ($times > 1){
