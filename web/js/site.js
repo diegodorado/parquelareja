@@ -140,7 +140,8 @@ function larejaConstructor()
 
 			/*codigo js que es llamado en la vista reserva/templates/indexSuccess.php con <?php a_js_call('lareja.reservaInit()') ?> */
 
-			$('.alojamiento .new_guest').click(function(){
+			$('.alojamiento .new_guest').click(function(){				
+				$center_complete = false;
 				$ambito_name = $(this).parent().parent().parent().parent().find('.nombre_ambito').val();
 				$('.ambito.' + $ambito_name + ' .field.guest:last').clone().insertAfter('.ambito.' + $ambito_name + ' .field.guest:last');
 				$('.ambito.' + $ambito_name + ' .field.guest:last .guest_name').val('').removeAttr('disabled');
@@ -148,7 +149,6 @@ function larejaConstructor()
 				$('.ambito.' + $ambito_name + ' .field.guest:last').removeClass('responsible');
 				$('.ambito.' + $ambito_name + ' .field.guest:last input').css("border-color", "#7a95ff");
 				$('.ambito.' + $ambito_name + ' .field.guest:last .error_message').hide();
-				
 				initGuests($ambito_name);
 			});
 
@@ -159,6 +159,29 @@ function larejaConstructor()
 			init_datos_validation();
 			init_solicitante_select();
 			$('.field.solicitante select').change();
+		}
+		
+		function check_full_house(){
+			$('.ambito').each(function(){
+				$ambito_name = $(this).find('.nombre_ambito').val();
+				$center_complete = false;
+				if ($ambito_name == 'cde' && $('.ambito.' + $ambito_name + ' .field.guest').size() >= 16 ){
+					$center_complete = true;
+				}
+				else if ($ambito_name == 'cdt' && $('.ambito.' + $ambito_name + ' .field.guest').size() >= 15 ){
+					$center_complete = true;
+				}				
+				if ($center_complete){
+					$(this).find('.new_guest').hide();
+					$(this).find('.mover_responsable_box').hide();
+					$(this).find('.centro_completo').show();
+				}
+				else{
+					$(this).find('.new_guest').show();
+					$(this).find('.mover_responsable_box').show();
+					$(this).find('.centro_completo').hide();
+				}
+			});
 		}
 
 		function initHelpDialogs(){
@@ -254,8 +277,8 @@ function larejaConstructor()
 			$responsable_cde = $responsable_cdt = "Mover a " + $('.area.general input.nombre').val() + " " + $('.area.general input.apellido').val();
 			$responsable_cde += " al centro de estudio";
 			$responsable_cdt += " al centro de trabajo";
-			$('.ambito.cde .mover_responsable').html( $responsable_cde ) ;
-			$('.ambito.cdt .mover_responsable').html( $responsable_cdt ) ;
+			$('.ambito.cde .mover_responsable').attr( 'value', $responsable_cde ) ;
+			$('.ambito.cdt .mover_responsable').attr( 'value', $responsable_cdt ) ;
 			
 			$('#form_reserva').slideDown(400);
 			$('#form_reserva h3').html($titulo);
@@ -342,10 +365,10 @@ function larejaConstructor()
 			$titulo = $current_number;
 
 			if ($current_number == 1){
-				$titulo += ' Alojado';
+				$titulo += ' Alojado ';
 			}
 			else{
-				$titulo += ' Alojados';
+				$titulo += ' Alojados ';
 			}
 
 			$('.ambito.' + $ambito_name + ' .titulo_set label' ).html($titulo);
@@ -364,6 +387,7 @@ function larejaConstructor()
 			}
             $('.ambito.'+$ambito_name+' .field.guest.responsible a.remove_guest').hide();
 			$('.ambito.'+$ambito_name+' .responsible .column.denominacion label').html('Responsable');
+			check_full_house();
 		}
 
 		function initAviso(){
@@ -555,16 +579,17 @@ function larejaConstructor()
 					if ($(this).attr('checked')){
 						$none_checked = false;
 						$all_complete = true;
-						$ambito.find('input.required').css("border-color", "#7a95ff");
+						//$ambito.find('input.required').css("border-color", "#7a95ff");
 						$ambito.find('.responsible input.required').css("border-color", "#e0e8ff");
 						$ambito.find(".error_message .repeated_emails").hide();
+						$ambito.find('.field.guest').css('background-color','#E0E8FF');
 						$ambito = $(this).parent().parent().parent();
 						$ambito.find('input.required').each(function(){
 							if ($(this).val() == ""){
 								$all_complete = false;
-								$(this).css("border-color", "red");
+								//$(this).css("border-color", "red");
 								$(this).parent().find('.error_message.required').show();
-								//$(this).parent().parent().css('background-color', '#FFB3B3');
+								$(this).parent().parent().css('background-color', '#FFB3B3');
 							}
 						});
 						$ambito.find('input.email:visible').each(function(){
@@ -572,10 +597,10 @@ function larejaConstructor()
 							if ($current_mail.val() != ""){
 								$re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 								if (!$re.test($current_mail.val())){
-									$(this).css("border-color", "red");
+									//$(this).css("border-color", "red");
 									$all_ok = false;
 									$(this).parent().find('.error_message.email.format').show();
-									//$(this).parent().parent().css('background-color', '#FFB3B3');
+									$(this).parent().parent().css('background-color', '#FFB3B3');
 								}
 							}
 							if ($all_ok && $current_mail.val() != ""){
@@ -584,9 +609,9 @@ function larejaConstructor()
 									if ($(this).val() == $current_mail.val()){
 										$times++;
 										if ($times > 1){
-											$(this).css("border-color", "red");
+											//$(this).css("border-color", "red");
 											$all_ok = false;
-											$current_mail.css("border-color", "red");
+											//$current_mail.css("border-color", "red");
 											$ambito.find(".error_message.repeated_emails").show();
 											$(this).parent().parent().css('background-color', '#FFB3B3');
 										}

@@ -198,12 +198,12 @@
 			  </div>
 		  </div>
 	  </div>
-	  <div class="columna_grande derecha">
+	  <!--<div class="columna_grande derecha">
 		<input class="helpButton1" type="button" value="como hacer esto">
 		<input class="helpButton2" value="como hacer aquello">
 		<input class="helpButton3" value="bla bla bla">
 		<input class="helpButton4" value="blu blu blu">
-	  </div>
+	  </div>-->
 	<div class="form-row botones">
 		<input id="aviso_uso_submit" class="boton_reserva" value="Avisar" name="enviar" type="button" />
 	</div>
@@ -413,10 +413,14 @@
 							<div class="field_set">
 								<div class="titulo_set">
 									<div class="column left">
-										<a class="mover_responsable">Mover responsable a este ambito</a>
+										
 									</div>
 									<div class="column">
-										<label>1 alojado</label>
+										<label>1 alojado </label>
+										<span class="mover_responsable_box">
+											<input class="mover_responsable" type="button" value="Mover responsable a este ambito">
+										</span>
+										<span class="centro_completo">Centro completo!</span>
 									</div>
 								</div>
 								<div class="field guest">
@@ -428,7 +432,7 @@
 										<input type="text" name="guests[cde][0][name]" class="guest_name required" placeholder="Nombre y apellido(s) (requerido)">
 										<!--<label class="guest_email">Email</label>-->
 										<input type="text" name="guests[cde][0][email]" class="guest_email email medium required" placeholder="Email (requerido)">
-										&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
+										&nbsp;&nbsp;&nbsp;<a class="remove_guest">Eliminar alojado</a>
 										<div class="error_message email format">
 											<label>La dirección de mail no parece válida!</label>
 										</div>
@@ -454,10 +458,13 @@
 							<div class="field_set">
 								<div class="titulo_set">
 									<div class="column left">
-										<a class="mover_responsable">Mover responsable a este ambito</a>
 									</div>
 									<div class="column">
-										<label>1 alojado</label>
+										<label>1 alojado </label>
+										<span class="mover_responsable_box">
+											<input class="mover_responsable" type="button" value="Mover responsable a este ambito">
+										</span>
+										<span class="centro_completo">Centro completo!</span>
 									</div>
 								</div>
 								<div class="field guest">
@@ -469,7 +476,7 @@
 										<input type="text" name="guests[cdt][0][name]" class="guest_name required" placeholder="Nombre y apellido(s) (requerido)">
 										<!--<label class="guest_email">Email</label>-->
 										<input type="text" name="guests[cdt][0][email]" class="guest_email email medium required" placeholder="E-mail (requerido)">
-										&nbsp;&nbsp;&nbsp;<a class="remove_guest">X</a>
+										&nbsp;&nbsp;&nbsp;<a class="remove_guest">Eliminar alojado</a>
 										<div class="error_message email format">
 											<label>La dirección de mail no parece válida!</label>
 										</div>
@@ -570,12 +577,14 @@
 			</div>
 		</div>
 	</div>
+	<!--
 	<div class="columna_grande derecha">
 		<input class="helpButton1" type="button" value="como hacer esto">
 		<input class="helpButton2" value="como hacer aquello">
 		<input class="helpButton3" value="bla bla bla">
 		<input class="helpButton4" value="blu blu blu">
 	</div>
+	-->
 	<div class="error_message nada_reservado">
 		<label>No reservaste nada. Algo tenés que reservar. ¿Para que entraste?</label>
 	</div>
