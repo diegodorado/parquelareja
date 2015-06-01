@@ -1236,6 +1236,15 @@ body #content.has-subnav > .middle > .right {
     padding: 5px 8px 5px 8px;
     margin: 4px 0px 4px 0px;
 }
+.reserva .error_message.email.format{
+    display: none;
+    border: 1px dotted #FF5500;
+    background-color: #FBFB7F;
+    color: #FF5500;
+    font-size: 12px;
+    padding: 5px 8px 5px 8px;
+    margin: 4px 0px 4px 0px;
+}
 .reserva .warning_message{
     display: none;
     border: 1px dotted #FF5107;
@@ -1262,7 +1271,7 @@ body #content.has-subnav > .middle > .right {
     margin-top: 10px;
 }
 .reserva .field{
-margin-bottom: 2px;
+padding-top: 2px;
 }
 .reserva .field .column, .reserva .titulo_set .column{
     display: table-cell;    
@@ -1272,14 +1281,19 @@ margin-bottom: 2px;
     vertical-align: top;  
 }
 .reserva .field .column.denominacion{
-    width: 170px;
-    vertical-align: top;  
+    width: 140px;
+    vertical-align: middle;  
+	padding-left: 5px;
+	text-align: center;
 }
 .reserva .field .column.valor input.wide, .reserva .field .column.valor select.wide{
     width: 300px;
 }
+.reserva .field .column.valor input.xwide, .reserva .field .column.valor select.xwide{
+    width: 330px;
+}
 .reserva .field .column.valor input.medium, .reserva .field .column.valor select.medium{
-    width: 240px;
+    width: 290px;
 }
 .reserva .field_set{
     background-color: #E0E8FF;
@@ -1336,7 +1350,7 @@ margin-bottom: 2px;
 	width: 100px;
 }
 .reserva .alojamiento input.guest_name{
-	width: 240px;
+	width: 290px;
 }
 .reserva input.button{
 	border:0px;
@@ -1406,6 +1420,11 @@ margin-bottom: 2px;
 .reserva h3{
 	font-size: 28px!important;
 }
+.reserva .field.guest{
+	border-bottom: 1px dotted #7A95FF;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
 .reserva .field.guest.responsible .denominacion{
 	color: #2E5CB8;
 	font-weight: bold;
@@ -1415,12 +1434,17 @@ margin-bottom: 2px;
 	background-color: #E0E8FF;
 	font-weight: bold;
 }
-.reserva a.mover_responsable{
-	color: blue;
+.reserva input.mover_responsable{
+	/*color: blue;*/
 	font-size: 14px;
 	cursor: pointer;
 	font-weight: normal;
-	text-decoration: underline;
+	/*text-decoration: underline;*/
+}
+.reserva span.centro_completo{
+	display:none;
+	font-weight: normal;
+	color: #175BC9;
 }
 .reserva input.small{
 	width: 40px;
@@ -1446,10 +1470,10 @@ margin-bottom: 2px;
 	padding: 5px 10px 5px 10px;
 }
 .reserva .general_data .column.left{
-	width:600px;	
+	width:760px;	
 }
 .reserva .general_data .column.right{
-	width:300px;
+	width:140px;
 	text-align: center;
 }
 .reserva .general_data .column.left .titulo, .reserva .general_data .column.right .palabra{
@@ -1469,7 +1493,7 @@ margin-bottom: 2px;
 	display: table-cell;
 }
 .columna_grande.izquierda{
-	width: 760px;
+	width: 930px;
 }
 .columna_grande.derecha{
 	width: 170px;

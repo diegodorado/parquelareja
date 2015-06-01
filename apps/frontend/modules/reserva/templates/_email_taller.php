@@ -1,13 +1,14 @@
-<div>
+﻿<div>
 	<hr>Taller</hr>
 </div>
 <br>
 <div>
 	Fecha: <?php echo $fecha_desde; ?> a <?php echo $fecha_hasta; ?><br>
 	<fieldset width="500">
-	<legend>Responsable</legend>
+	<legend><b>Responsable</b></legend>
 	<?php echo utf8_decode($nombre) . ' ' . utf8_decode($apellido); ?>
-	(<?php 
+	<br>
+	<?php 
 	if ($solicitante == 'maestro'){
 		echo 'Maestro';
 	}
@@ -16,8 +17,9 @@
 	}
 	else{
 		echo $organismos[$organismo];
+		echo '<br>Equipo "' . $equipo_de_base . '"';
 	}
-	?>)<br>
+	?><br>
 	<?php echo $email; ?><br>
 	<?php echo $telefono; ?><br>
 	</fieldset>

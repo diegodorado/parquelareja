@@ -31,16 +31,16 @@ class reservaActions extends aEngineActions
 	$meses = array('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre');
 	
 	$organismos = array(
-		'cdh'=>'La comunidad para el desarrollo humano',
+		'cdh'=>'La Comunidad (para el desarrollo humano)',
 		'ph'=>'Partido humanista',
-		'ceh'=>'Centro mundial de estudios humanistas',
-		'msg'=>'Mundo sin guerras',
-		'cc'=>'Convergencia de las culturas'
+		'ceh'=>'Centro Mundial de Estudios Humanistas',
+		'msg'=>'Mundo sin Guerras y sin Violencia',
+		'cc'=>'Convergencia de las Culturas'
 	);
 	
 	$actividades_taller = array(
 		'fuego' => 'Producci&oacute;n y Conservaci&oacute;n del Fuego',
-		'frio' => 'Trabajos en fr&iacute;o',
+		'frio' => 'Trabajos en Fr&iacute;o',
 		'metales' => 'Metales',
 		'ceramica' => 'Cer&aacutemica;',
 		'vidrio' => 'Vidrio',
@@ -131,6 +131,7 @@ class reservaActions extends aEngineActions
           ->setSubject('Nueva Reserva de Parques de Estudio y Reflexion La Reja')
           ->setBody($mail)
           ->setContentType("text/html")
+		  ->setCharset('utf-8')
         ;
          
         $this->getMailer()->send($message);

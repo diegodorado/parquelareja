@@ -1,4 +1,4 @@
-<div>
+Ôªø<div>
 	<label>---IMPORTANTE: NO RESPONDER ESTE MAIL---</label>
 </div>
 <br>
@@ -10,8 +10,9 @@
 	<?php } ?>	
 	<fieldset width="500">
 	<legend><b>Responsable</b></legend>
-	<?php echo utf8_decode($nombre) . ' ' . utf8_decode($apellido); ?>
-	(<?php 
+	<?php echo $nombre . ' ' . $apellido; ?>
+	<br>
+	<?php 
 	if ($solicitante == 'maestro'){
 		echo 'Maestro';
 	}
@@ -20,8 +21,9 @@
 	}
 	else{
 		echo $organismos[$organismo];
+		echo '<br>Equipo "' . $equipo_de_base . '"';
 	}
-	?>)<br>
+	?><br>
 	<?php echo $email; ?><br>
 	<?php echo $telefono; ?><br>
 	<?php if (isset($comentario)) { ?>
@@ -46,7 +48,7 @@
 		<div>
 			<table cellpadding="0" cellspacing="0" border="1">
 				<tr>
-					<td width="200">¡mbito</td>
+					<td width="200">√Åmbito</td>
 					<td width="200">Nombre y apellido</td>
 					<td width="200">Email</td>
 					<td width="200">Importe</td>
@@ -54,8 +56,8 @@
 			<?php foreach ($guests['cde'] as $guest){ ?>
 				<tr>
 					<td>Centro de estudios</td>
-					<td><?php echo utf8_decode($guest['name']); ?></td>
-					<td><?php echo utf8_decode($guest['email']); ?></td>
+					<td><?php echo $guest['name']; ?></td>
+					<td><?php echo $guest['email']; ?></td>
 					<td>$ <?php echo $costos['cde']; ?></td>
 				</tr>
 			<?php } ?> 
@@ -63,14 +65,14 @@
 		</div>
 		<br>
 		<div>
-			<label>INFORMACI”N PARA EL CALENDARIO</label>
+			<label>INFORMACI√ìN PARA EL CALENDARIO</label>
 		</div>
 		<div>
 			<?php for($i=0;$i<count($dates);$i++) { ?>
 				<br><b><?php echo $dates[$i]; ?></b><br><br>
 				<?php echo 'CdE' . $taller_texto; ?>: <?php echo count($guests['cde']); ?> Alojado<?php if (count($guests['cde'])!=1){echo 's';} ?>. 
 				<?php if ($i == 0){ echo 'Ingreso 18:30hs.';} else if ($i == count($dates)-1){ echo 'Egreso 17:30hs.';}?>
-				(Resp.	 <?php echo ucfirst(utf8_decode($nombre)) . ' ' . ucfirst(utf8_decode($apellido)); ?>)<br>
+				(Resp.	 <?php echo ucfirst($nombre) . ' ' . ucfirst($apellido); ?>)<br>
 			<?php } ?>
 		</div>
 	<?php } ?>
@@ -85,7 +87,7 @@
 		<div>
 			<table cellpadding="0" cellspacing="0" border="1">
 				<tr>
-					<td width="200">¡mbito</td>
+					<td width="200">√Åmbito</td>
 					<td width="200">Nombre y apellido</td>
 					<td width="200">Email</td>
 					<td width="200">Importe</td>
@@ -93,8 +95,8 @@
 			<?php foreach ($guests['cdt'] as $guest){ ?>
 				<tr>
 					<td>Centro de trabajo</td>
-					<td><?php echo utf8_decode($guest['name']); ?></td>
-					<td><?php echo utf8_decode($guest['email']); ?></td>
+					<td><?php echo $guest['name']; ?></td>
+					<td><?php echo $guest['email']; ?></td>
 					<td>$ <?php echo $costos['cdt']; ?></td>
 				</tr>
 			<?php } ?> 
@@ -102,14 +104,14 @@
 		</div>
 		<br>
 		<div>
-			<label>INFORMACI”N PARA EL CALENDARIO</label>
+			<label>INFORMACI√ìN PARA EL CALENDARIO</label>
 		</div>
 		<div>
 			<?php for($i=0;$i<count($dates);$i++) { ?>
 				<br><b><?php echo $dates[$i]; ?></b><br><br>
 				<?php echo 'CdT' . $taller_texto; ?>: <?php echo count($guests['cdt']); ?> Alojado<?php if (count($guests['cdt'])!=1){echo 's';} ?>. 
 				<?php if ($i == 0){ echo 'Ingreso 18:30hs.';} else if ($i == count($dates)-1){ echo 'Egreso 17:30hs.';}?>
-				(Resp.	 <?php echo ucfirst(utf8_decode($nombre)) . ' ' . ucfirst(utf8_decode($apellido)); ?>)<br>
+				(Resp.	 <?php echo ucfirst($nombre) . ' ' . ucfirst($apellido); ?>)<br>
 			<?php } ?>
 		</div>
 	<?php } ?>
