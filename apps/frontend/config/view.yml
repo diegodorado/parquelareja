@@ -25,12 +25,13 @@ default:
     - /apostropheExtraSlotsPlugin/css/aExtraSlots.less: { data-asset-group: global }   # Apostrophe Extra Slots Plugin - Styles
     - /apostropheFeedbackPlugin/css/aFeedback.less: { data-asset-group: global }       # Apostrophe Feedback Plugin - Styles
     - main.css: { position: last, data-asset-group: global }                         # Sandbox Default Styles
+    - reserva.css: { position: last, data-asset-group: reserva }                         # Sandbox Default Styles
 
   javascripts:
     - /apostropheBlogPlugin/js/aBlog.js: { position: last, data-asset-group: global }                 # Apostrophe Blog Plugin
     - /apostropheExtraSlotsPlugin/js/aExtraSlots.js: { position: last, data-asset-group: global }        # Apostrophe Extra Slots Plugin - Maps Slot
     - /apostropheFeedbackPlugin/js/aFeedback.js: { position: last, data-asset-group: global }         # Apostrophe Feedback Plugin
-    - jquery.ui.datepicker-es.js: { position: last, data-asset-group: global }                           
+    - jquery.ui.datepicker-es.js: { position: last, data-asset-group: global }
     - site.js: { position: last, data-asset-group: global }                           # Sandbox Default Javascript
 
   has_layout:     true

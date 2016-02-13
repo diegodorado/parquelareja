@@ -1,8 +1,12 @@
-set :domain,      "plr.cooph.com.ar"
-set :user, 'hormigon'
-set :deploy_to,   "/home/#{user}/#{application}"
+set :domain,      "parquelareja.org"
+set :user, 'parqaa7'
+set :deploy_to,   "/home/#{user}/staging"
 set :use_sudo, false
 
+ssh_options[:port] = 9022
+default_run_options[:pty] = true
+
+#set :deploy_via, :copy
 set :deploy_via, :remote_cache
 
 role :web,        domain                         # Your HTTP server, Apache/etc

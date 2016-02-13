@@ -7,7 +7,7 @@ set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 
 set :application, "parquelareja"
-set :repository,  "git://github.com/diegodorado/#{application}.git"
+set :repository,  "https://github.com/diegodorado/parquelareja.git"
 set :scm,         :git
 
 set  :keep_releases,  3
@@ -44,7 +44,7 @@ namespace :database do
 
     run_locally "rm #{unzipped_file_path}"
   end
-  
+
   desc "Loads dump sql file located at data/dump.sql"
   task :create, :roles => :db , :only => { :primary => true }  do
 
@@ -61,8 +61,8 @@ namespace :database do
     sql_import_cmd = generate_sql_command('import', config)
     run_locally "#{sql_import_cmd} < #{file_path}"
 
-  end  
-  
+  end
+
   desc "Push local dump to remote & populate there"
   task :push_dump, :roles => :db, :only => { :primary => true } do
 
@@ -88,7 +88,7 @@ namespace :database do
     run "#{try_sudo} rm #{remote_tmp_dir}/#{filename}"
     run "#{try_sudo} rm #{remote_tmp_dir}/#{sqlfile}"
   end
-    
+
 end
 
 
