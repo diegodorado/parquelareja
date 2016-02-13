@@ -94,6 +94,7 @@ end
 
 after "deploy:update_code" do
   # Fix permissions
+  run "cd #{latest_release} && chmod 755 ."
   run "cd #{latest_release} && find * -type f -exec chmod 644 {} \\;"
   run "cd #{latest_release} && find * -type d -exec chmod 755 {} \\;"
 end

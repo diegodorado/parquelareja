@@ -1,6 +1,6 @@
 set :domain,      "parquelareja.org"
 set :user, 'parqaa7'
-set :deploy_to,   "/home/#{user}/#{application}"
+set :deploy_to,   "/home/#{user}/parquelareja"
 set :use_sudo, false
 
 ssh_options[:port] = 9022

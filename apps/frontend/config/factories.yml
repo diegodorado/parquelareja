@@ -47,7 +47,8 @@ all:
       transport:
         class: Swift_SmtpTransport
         param:
-          host:       smtp.gmail.com
+          #host:       smtp.gmail.com
+          host:       64.233.190.108
           port:       465
           encryption: ssl
           username: reservas@parquelareja.org
