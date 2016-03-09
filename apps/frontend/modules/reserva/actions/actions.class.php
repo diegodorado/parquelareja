@@ -17,19 +17,19 @@ class reservaActions extends aEngineActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    
-  
-  
-  
-    $this->form = new ReservaForm;  
+
+
+
+
+    $this->form = new ReservaForm;
     $this->titulo = "papadopulos";
 	$this->horario_desde 	= 10;
 	$this->horario_hasta	= 22;
 	$this->remoteip			= $_SERVER['REMOTE_ADDR'];
-	
+
 	$dias = array('domingo','lunes','martes','miercoles','jueves','viernes','s&aacute;bado');
 	$meses = array('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre');
-	
+
 	$organismos = array(
 		'cdh'=>'La Comunidad (para el desarrollo humano)',
 		'ph'=>'Partido humanista',
@@ -37,7 +37,7 @@ class reservaActions extends aEngineActions
 		'msg'=>'Mundo sin Guerras y sin Violencia',
 		'cc'=>'Convergencia de las Culturas'
 	);
-	
+
 	$actividades_taller = array(
 		'fuego' => 'Producci&oacute;n y Conservaci&oacute;n del Fuego',
 		'frio' => 'Trabajos en Fr&iacute;o',
@@ -46,7 +46,7 @@ class reservaActions extends aEngineActions
 		'vidrio' => 'Vidrio',
 		'perfumeria' => 'Perfumer&iacute;a'
 	);
-	
+
 	$costos = array(
 		'cde' => 80,
 		'cdt' => 80,
@@ -69,26 +69,26 @@ class reservaActions extends aEngineActions
 			)
 		)
 	);
-	
-	
+
+
 	if (!empty($_POST)){
-	
+
 		$data 						= $_POST;
 		$data['costos'] 			= $costos;
 		$data['organismos'] 		= $organismos;
 		$data['actividades_taller'] = $actividades_taller;
 		$data['taller_texto']		= "";
-		
+
 		if (isset($_POST['guests'])){
 			$secondsInDay		= 60 * 60 * 24;
 			$dateFromExploded 	= explode('/',$_POST['fecha_desde']);
 			$mktimeForDateFrom 	= mktime(0,0,0,(int)$dateFromExploded[1],(int)$dateFromExploded[0],(int)$dateFromExploded[2]);
 			$dateToExploded 	= explode('/',$_POST['fecha_hasta']);
 			$mktimeForDateTo 	= mktime(0,0,0,(int)$dateToExploded[1],(int)$dateToExploded[0],(int)$dateToExploded[2]);
-			
+
 			$difference = $mktimeForDateTo - $mktimeForDateFrom;
 			$days		= ($difference / $secondsInDay) + 1;
-			
+
 			$dates = array();
 			for ($i=0;$i<$days;$i++){
 				$mktimeForCurrentDay = $mktimeForDateFrom + ($secondsInDay * $i);
@@ -98,33 +98,51 @@ class reservaActions extends aEngineActions
 			}
 			$data['dates'] = $dates;
 		}
-		
-		
-		
-		$mail_cde 		= "";
-		$mail_cdt 		= "";
-		$mail_taller	= "";
-		$mail_mu		= "";
-		
+
+
+
+    $groups = [];
+
 		$data['costo_total'] = 0;
-		
+
 		if (isset($_POST['taller'])){
+      $groups[] = 'reservas_taller';
 			$data['taller_texto'] 	= " c/uso de Taller";
 		}
 		if (isset($_POST['guests']['cde'])){
+      $groups[] = 'reservas_cde';
 			$data['costo_total'] 		+= count($data['guests']['cde']) * $data['costos']['cde'];
 		}
 		if (isset($_POST['guests']['cdt'])){
+      $groups[] = 'reservas_cdt';
 			$data['costo_total'] 		+= count($data['guests']['cdt']) * $data['costos']['cdt'];
 		}
-		$mail 					= $this->getPartial('email', $data );
-		
-		$emails 				= "eva@redhumanista.org";
-		
-		/*die($mail);
-		echo '<pre>'; var_dump($_POST); echo '</pre>'; die();
-		echo '<pre>'; var_dump($_POST['guests']); echo '</pre>'; die();*/
-		
+		$mail = $this->getPartial('email', $data );
+
+
+
+
+/*
+y el aviso de uso de la multiuso??
+
+$groups[] = 'reservas_mu';
+
+*/
+
+    //busco los mails de los usuarios que estan en los grupos
+    //segun el tipo de reserva (cde, cdt, taller)
+    $query = Doctrine_Query::create()
+      ->select('u.email_address')
+      ->from('sfGuardUser u')
+      ->leftJoin('u.Groups g')
+      ->whereIn('g.name', $groups);
+
+    $emails = [];
+    foreach($query->fetchArray() as $user){
+      $emails[]=$user['email_address'];
+    }
+
+
         $message = Swift_Message::newInstance()
           ->setFrom(array('reservas@parquelareja.org' => 'Reservas Parque La Reja'))
           ->setTo($emails)
@@ -133,110 +151,19 @@ class reservaActions extends aEngineActions
           ->setContentType("text/html")
 		  ->setCharset('utf-8')
         ;
-         
+
         $this->getMailer()->send($message);
-        
+
         $this->redirect('@reserva_sent');
 	}
-
-    /*if ($request->isMethod('post'))
-    {
-    
-    
-    
-      //$this->getUser()->setFlash('aCacheInvalid', true);    
-      $this->form->bind($request->getParameter('reserva'));
-      if ($this->form->isValid())
-      {
-
-        $datos = $this->form->getValues();
-        $datos['fecha_reserva'] = date("d-m-Y H:i");
-
-        $sMail ='';
-
-        switch($datos['ambito']){
-          case 'cde':
-            $sMail .='<strong>Ambito:</strong> Centro de Estudios<br/><br/>';
-            $groups = array('reservas_cde');
-            break;
-          case 'cdet':
-            $sMail .='<strong>Ambito:</strong> Centro de Estudios (con Taller)<br/><br/>';
-            $groups = array('reservas_cde', 'reservas_taller');
-            break;
-          case 'cdt':
-            $sMail .='<strong>Ambito:</strong> Centro de Trabajo<br/><br/>';
-            $groups = array('reservas_cdt');
-            break;
-          case 'cdtt':
-            $sMail .='<strong>Ambito:</strong> Centro de Trabajo (con Taller)<br/><br/>';
-            $groups = array('reservas_cdt', 'reservas_taller');
-            break;
-          case 'taller':
-            $sMail .='<strong>Ambito:</strong> Taller<br/><br/>';
-            $groups = array('reservas_taller');
-            break;
-          case 'mu':
-            $sMail .='<strong>Ambito:</strong> Multiuso<br/><br/>';
-            $groups = array('reservas_mu');
-            break;
-        }
+      //$this->getUser()->setFlash('aCacheInvalid', true);
 
 
-        $query = Doctrine_Query::create()
-          ->select('u.email_address')
-          ->from('sfGuardUser u')
-          ->leftJoin('u.Groups g')
-          ->whereIn('g.name', $groups);
-
-            
-        $emails = array();
-        foreach($query->fetchArray() as $user){
-          $emails[]=$user['email_address'];
-        }
-
-        switch($datos['solicitante']){
-          case 'maestro':
-            $sMail .='<strong>Maestro:</strong> '.$datos['nombre'].'<br/><br/>';
-            break;
-          case 'organismo':
-            $sMail .='<strong>Organismo:</strong> '.$datos['organismo'].'<br/><br/>';
-            break;
-          case 'comunidad':
-            $sMail .='<strong>Comunidad de el Mensaje de Silo:</strong> '.$datos['comunidad'].'<br/><br/>';
-            break;
-        }
-                
-        $sMail .='<strong>Responsable:</strong> '.$datos['responsable'].'<br/><br/>';
-        $sMail .='<strong>Telefono:</strong> '.$datos['telefono'].'<br/><br/>';
-        $sMail .='<strong>Email:</strong> '.$datos['email'].'<br/><br/>';
-        $sMail .='<strong>Comentario:</strong> '.$datos['comentario'].'<br/><br/>';
-        $sMail .='<strong>Fecha y Hora de Ingreso:</strong> '.$datos['ingreso'].'<br/><br/>';
-        $sMail .='<strong>Fecha y Hora de Egreso:</strong> '.$datos['egreso'].'<br/><br/>';
-        $sMail .='<strong>Cantidad de personas:</strong> '.$datos['cantidad_personas'].'<br/><br/>';
-        $sMail .='<strong>Fecha y hora de Reserva:</strong> '.$datos['fecha_reserva'].'<br/><br/>';
-
-
-        $body = $sMail;
-
-        $message = Swift_Message::newInstance()
-          ->setFrom(array('reservas@parquelareja.org' => 'Parque La Reja'))
-          ->setTo($emails)
-          ->setSubject('Nueva Reserva de Parques de Estudio y Reflexion La Reja')
-          ->setBody($body)
-          ->setContentType("text/html")
-        ;
-         
-        $this->getMailer()->send($message);
-        
-        $this->redirect('@reserva_sent');
-      }
-    }   */
-      
   }
 
   public function executeSent(sfWebRequest $request)
   {
   }
-  
-  
+
+
 }
