@@ -101,7 +101,7 @@ class reservaActions extends aEngineActions
 
 
 
-    $groups = [];
+    $groups = array();
 
 		$data['costo_total'] = 0;
 
@@ -137,7 +137,7 @@ $groups[] = 'reservas_mu';
       ->leftJoin('u.Groups g')
       ->whereIn('g.name', $groups);
 
-    $emails = [];
+    $emails = array();
     foreach($query->fetchArray() as $user){
       $emails[]=$user['email_address'];
     }
