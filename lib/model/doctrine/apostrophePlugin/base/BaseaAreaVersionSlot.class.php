@@ -12,18 +12,18 @@
  * @property aAreaVersion $AreaVersion
  * @property aSlot $Slot
  * 
- * @method integer          getSlotId()          Returns the current record's "slot_id" value
- * @method integer          getAreaVersionId()   Returns the current record's "area_version_id" value
- * @method integer          getPermid()          Returns the current record's "permid" value
- * @method integer          getRank()            Returns the current record's "rank" value
- * @method aAreaVersion     getAreaVersion()     Returns the current record's "AreaVersion" value
- * @method aSlot            getSlot()            Returns the current record's "Slot" value
- * @method aAreaVersionSlot setSlotId()          Sets the current record's "slot_id" value
- * @method aAreaVersionSlot setAreaVersionId()   Sets the current record's "area_version_id" value
- * @method aAreaVersionSlot setPermid()          Sets the current record's "permid" value
- * @method aAreaVersionSlot setRank()            Sets the current record's "rank" value
- * @method aAreaVersionSlot setAreaVersion()     Sets the current record's "AreaVersion" value
- * @method aAreaVersionSlot setSlot()            Sets the current record's "Slot" value
+ * @method integer          get()                Returns the current record's "slot_id" value
+ * @method integer          get()                Returns the current record's "area_version_id" value
+ * @method integer          get()                Returns the current record's "permid" value
+ * @method integer          get()                Returns the current record's "rank" value
+ * @method aAreaVersion     get()                Returns the current record's "AreaVersion" value
+ * @method aSlot            get()                Returns the current record's "Slot" value
+ * @method aAreaVersionSlot set()                Sets the current record's "slot_id" value
+ * @method aAreaVersionSlot set()                Sets the current record's "area_version_id" value
+ * @method aAreaVersionSlot set()                Sets the current record's "permid" value
+ * @method aAreaVersionSlot set()                Sets the current record's "rank" value
+ * @method aAreaVersionSlot set()                Sets the current record's "AreaVersion" value
+ * @method aAreaVersionSlot set()                Sets the current record's "Slot" value
  * 
  * @package    symfony
  * @subpackage model

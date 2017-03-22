@@ -13,20 +13,20 @@
  * @property aPage $Page
  * @property Doctrine_Collection $AreaVersions
  * 
- * @method integer             getId()             Returns the current record's "id" value
- * @method integer             getPageId()         Returns the current record's "page_id" value
- * @method string              getName()           Returns the current record's "name" value
- * @method string              getCulture()        Returns the current record's "culture" value
- * @method integer             getLatestVersion()  Returns the current record's "latest_version" value
- * @method aPage               getPage()           Returns the current record's "Page" value
- * @method Doctrine_Collection getAreaVersions()   Returns the current record's "AreaVersions" collection
- * @method aArea               setId()             Sets the current record's "id" value
- * @method aArea               setPageId()         Sets the current record's "page_id" value
- * @method aArea               setName()           Sets the current record's "name" value
- * @method aArea               setCulture()        Sets the current record's "culture" value
- * @method aArea               setLatestVersion()  Sets the current record's "latest_version" value
- * @method aArea               setPage()           Sets the current record's "Page" value
- * @method aArea               setAreaVersions()   Sets the current record's "AreaVersions" collection
+ * @method integer             get()               Returns the current record's "id" value
+ * @method integer             get()               Returns the current record's "page_id" value
+ * @method string              get()               Returns the current record's "name" value
+ * @method string              get()               Returns the current record's "culture" value
+ * @method integer             get()               Returns the current record's "latest_version" value
+ * @method aPage               get()               Returns the current record's "Page" value
+ * @method Doctrine_Collection get()               Returns the current record's "AreaVersions" collection
+ * @method aArea               set()               Sets the current record's "id" value
+ * @method aArea               set()               Sets the current record's "page_id" value
+ * @method aArea               set()               Sets the current record's "name" value
+ * @method aArea               set()               Sets the current record's "culture" value
+ * @method aArea               set()               Sets the current record's "latest_version" value
+ * @method aArea               set()               Sets the current record's "Page" value
+ * @method aArea               set()               Sets the current record's "AreaVersions" collection
  * 
  * @package    symfony
  * @subpackage model

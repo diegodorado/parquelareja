@@ -10,14 +10,14 @@
  * @property aMediaItem $aMediaItem
  * @property aCategory $aCategory
  * 
- * @method integer              getMediaItemId()   Returns the current record's "media_item_id" value
- * @method integer              getCategoryId()    Returns the current record's "category_id" value
- * @method aMediaItem           getAMediaItem()    Returns the current record's "aMediaItem" value
- * @method aCategory            getACategory()     Returns the current record's "aCategory" value
- * @method aMediaItemToCategory setMediaItemId()   Sets the current record's "media_item_id" value
- * @method aMediaItemToCategory setCategoryId()    Sets the current record's "category_id" value
- * @method aMediaItemToCategory setAMediaItem()    Sets the current record's "aMediaItem" value
- * @method aMediaItemToCategory setACategory()     Sets the current record's "aCategory" value
+ * @method integer              get()              Returns the current record's "media_item_id" value
+ * @method integer              get()              Returns the current record's "category_id" value
+ * @method aMediaItem           get()              Returns the current record's "aMediaItem" value
+ * @method aCategory            get()              Returns the current record's "aCategory" value
+ * @method aMediaItemToCategory set()              Sets the current record's "media_item_id" value
+ * @method aMediaItemToCategory set()              Sets the current record's "category_id" value
+ * @method aMediaItemToCategory set()              Sets the current record's "aMediaItem" value
+ * @method aMediaItemToCategory set()              Sets the current record's "aCategory" value
  * 
  * @package    symfony
  * @subpackage model

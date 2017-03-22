@@ -9,12 +9,12 @@
  * @property string $culture
  * @property aPage $Page
  * 
- * @method integer       getPageId()  Returns the current record's "page_id" value
- * @method string        getCulture() Returns the current record's "culture" value
- * @method aPage         getPage()    Returns the current record's "Page" value
- * @method aLuceneUpdate setPageId()  Sets the current record's "page_id" value
- * @method aLuceneUpdate setCulture() Sets the current record's "culture" value
- * @method aLuceneUpdate setPage()    Sets the current record's "Page" value
+ * @method integer       get()        Returns the current record's "page_id" value
+ * @method string        get()        Returns the current record's "culture" value
+ * @method aPage         get()        Returns the current record's "Page" value
+ * @method aLuceneUpdate set()        Sets the current record's "page_id" value
+ * @method aLuceneUpdate set()        Sets the current record's "culture" value
+ * @method aLuceneUpdate set()        Sets the current record's "Page" value
  * 
  * @package    symfony
  * @subpackage model

@@ -11,16 +11,16 @@
  * @property sfGuardGroup $Group
  * @property aPage $Page
  * 
- * @method integer      getPageId()    Returns the current record's "page_id" value
- * @method string       getPrivilege() Returns the current record's "privilege" value
- * @method integer      getGroupId()   Returns the current record's "group_id" value
- * @method sfGuardGroup getGroup()     Returns the current record's "Group" value
- * @method aPage        getPage()      Returns the current record's "Page" value
- * @method aGroupAccess setPageId()    Sets the current record's "page_id" value
- * @method aGroupAccess setPrivilege() Sets the current record's "privilege" value
- * @method aGroupAccess setGroupId()   Sets the current record's "group_id" value
- * @method aGroupAccess setGroup()     Sets the current record's "Group" value
- * @method aGroupAccess setPage()      Sets the current record's "Page" value
+ * @method integer      get()          Returns the current record's "page_id" value
+ * @method string       get()          Returns the current record's "privilege" value
+ * @method integer      get()          Returns the current record's "group_id" value
+ * @method sfGuardGroup get()          Returns the current record's "Group" value
+ * @method aPage        get()          Returns the current record's "Page" value
+ * @method aGroupAccess set()          Sets the current record's "page_id" value
+ * @method aGroupAccess set()          Sets the current record's "privilege" value
+ * @method aGroupAccess set()          Sets the current record's "group_id" value
+ * @method aGroupAccess set()          Sets the current record's "Group" value
+ * @method aGroupAccess set()          Sets the current record's "Page" value
  * 
  * @package    symfony
  * @subpackage model

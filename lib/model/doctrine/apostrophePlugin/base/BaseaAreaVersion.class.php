@@ -14,22 +14,22 @@
  * @property sfGuardUser $Author
  * @property Doctrine_Collection $AreaVersionSlots
  * 
- * @method integer             getId()               Returns the current record's "id" value
- * @method integer             getAreaId()           Returns the current record's "area_id" value
- * @method integer             getVersion()          Returns the current record's "version" value
- * @method integer             getAuthorId()         Returns the current record's "author_id" value
- * @method string              getDiff()             Returns the current record's "diff" value
- * @method aArea               getArea()             Returns the current record's "Area" value
- * @method sfGuardUser         getAuthor()           Returns the current record's "Author" value
- * @method Doctrine_Collection getAreaVersionSlots() Returns the current record's "AreaVersionSlots" collection
- * @method aAreaVersion        setId()               Sets the current record's "id" value
- * @method aAreaVersion        setAreaId()           Sets the current record's "area_id" value
- * @method aAreaVersion        setVersion()          Sets the current record's "version" value
- * @method aAreaVersion        setAuthorId()         Sets the current record's "author_id" value
- * @method aAreaVersion        setDiff()             Sets the current record's "diff" value
- * @method aAreaVersion        setArea()             Sets the current record's "Area" value
- * @method aAreaVersion        setAuthor()           Sets the current record's "Author" value
- * @method aAreaVersion        setAreaVersionSlots() Sets the current record's "AreaVersionSlots" collection
+ * @method integer             get()                 Returns the current record's "id" value
+ * @method integer             get()                 Returns the current record's "area_id" value
+ * @method integer             get()                 Returns the current record's "version" value
+ * @method integer             get()                 Returns the current record's "author_id" value
+ * @method string              get()                 Returns the current record's "diff" value
+ * @method aArea               get()                 Returns the current record's "Area" value
+ * @method sfGuardUser         get()                 Returns the current record's "Author" value
+ * @method Doctrine_Collection get()                 Returns the current record's "AreaVersionSlots" collection
+ * @method aAreaVersion        set()                 Sets the current record's "id" value
+ * @method aAreaVersion        set()                 Sets the current record's "area_id" value
+ * @method aAreaVersion        set()                 Sets the current record's "version" value
+ * @method aAreaVersion        set()                 Sets the current record's "author_id" value
+ * @method aAreaVersion        set()                 Sets the current record's "diff" value
+ * @method aAreaVersion        set()                 Sets the current record's "Area" value
+ * @method aAreaVersion        set()                 Sets the current record's "Author" value
+ * @method aAreaVersion        set()                 Sets the current record's "AreaVersionSlots" collection
  * 
  * @package    symfony
  * @subpackage model

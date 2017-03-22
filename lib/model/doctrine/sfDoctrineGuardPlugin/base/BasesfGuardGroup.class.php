@@ -9,30 +9,30 @@
  * @property string $description
  * @property Doctrine_Collection $Users
  * @property Doctrine_Collection $Permissions
- * @property Doctrine_Collection $Categories
- * @property Doctrine_Collection $Accesses
- * @property Doctrine_Collection $CategoryGroups
  * @property Doctrine_Collection $sfGuardGroupPermission
  * @property Doctrine_Collection $sfGuardUserGroup
+ * @property Doctrine_Collection $Accesses
+ * @property Doctrine_Collection $Categories
+ * @property Doctrine_Collection $CategoryGroups
  * 
- * @method string              getName()                   Returns the current record's "name" value
- * @method string              getDescription()            Returns the current record's "description" value
- * @method Doctrine_Collection getUsers()                  Returns the current record's "Users" collection
- * @method Doctrine_Collection getPermissions()            Returns the current record's "Permissions" collection
- * @method Doctrine_Collection getCategories()             Returns the current record's "Categories" collection
- * @method Doctrine_Collection getAccesses()               Returns the current record's "Accesses" collection
- * @method Doctrine_Collection getCategoryGroups()         Returns the current record's "CategoryGroups" collection
- * @method Doctrine_Collection getSfGuardGroupPermission() Returns the current record's "sfGuardGroupPermission" collection
- * @method Doctrine_Collection getSfGuardUserGroup()       Returns the current record's "sfGuardUserGroup" collection
- * @method sfGuardGroup        setName()                   Sets the current record's "name" value
- * @method sfGuardGroup        setDescription()            Sets the current record's "description" value
- * @method sfGuardGroup        setUsers()                  Sets the current record's "Users" collection
- * @method sfGuardGroup        setPermissions()            Sets the current record's "Permissions" collection
- * @method sfGuardGroup        setCategories()             Sets the current record's "Categories" collection
- * @method sfGuardGroup        setAccesses()               Sets the current record's "Accesses" collection
- * @method sfGuardGroup        setCategoryGroups()         Sets the current record's "CategoryGroups" collection
- * @method sfGuardGroup        setSfGuardGroupPermission() Sets the current record's "sfGuardGroupPermission" collection
- * @method sfGuardGroup        setSfGuardUserGroup()       Sets the current record's "sfGuardUserGroup" collection
+ * @method string              get()                       Returns the current record's "name" value
+ * @method string              get()                       Returns the current record's "description" value
+ * @method Doctrine_Collection get()                       Returns the current record's "Users" collection
+ * @method Doctrine_Collection get()                       Returns the current record's "Permissions" collection
+ * @method Doctrine_Collection get()                       Returns the current record's "sfGuardGroupPermission" collection
+ * @method Doctrine_Collection get()                       Returns the current record's "sfGuardUserGroup" collection
+ * @method Doctrine_Collection get()                       Returns the current record's "Accesses" collection
+ * @method Doctrine_Collection get()                       Returns the current record's "Categories" collection
+ * @method Doctrine_Collection get()                       Returns the current record's "CategoryGroups" collection
+ * @method sfGuardGroup        set()                       Sets the current record's "name" value
+ * @method sfGuardGroup        set()                       Sets the current record's "description" value
+ * @method sfGuardGroup        set()                       Sets the current record's "Users" collection
+ * @method sfGuardGroup        set()                       Sets the current record's "Permissions" collection
+ * @method sfGuardGroup        set()                       Sets the current record's "sfGuardGroupPermission" collection
+ * @method sfGuardGroup        set()                       Sets the current record's "sfGuardUserGroup" collection
+ * @method sfGuardGroup        set()                       Sets the current record's "Accesses" collection
+ * @method sfGuardGroup        set()                       Sets the current record's "Categories" collection
+ * @method sfGuardGroup        set()                       Sets the current record's "CategoryGroups" collection
  * 
  * @package    symfony
  * @subpackage model
@@ -68,24 +68,24 @@ abstract class BasesfGuardGroup extends sfDoctrineRecord
              'local' => 'group_id',
              'foreign' => 'permission_id'));
 
-        $this->hasMany('aCategory as Categories', array(
-             'refClass' => 'aCategoryGroup',
-             'local' => 'group_id',
-             'foreign' => 'category_id'));
-
-        $this->hasMany('aGroupAccess as Accesses', array(
-             'local' => 'id',
-             'foreign' => 'group_id'));
-
-        $this->hasMany('aCategoryGroup as CategoryGroups', array(
-             'local' => 'id',
-             'foreign' => 'group_id'));
-
         $this->hasMany('sfGuardGroupPermission', array(
              'local' => 'id',
              'foreign' => 'group_id'));
 
         $this->hasMany('sfGuardUserGroup', array(
+             'local' => 'id',
+             'foreign' => 'group_id'));
+
+        $this->hasMany('aGroupAccess as Accesses', array(
+             'local' => 'id',
+             'foreign' => 'group_id'));
+
+        $this->hasMany('aCategory as Categories', array(
+             'refClass' => 'aCategoryGroup',
+             'local' => 'group_id',
+             'foreign' => 'category_id'));
+
+        $this->hasMany('aCategoryGroup as CategoryGroups', array(
              'local' => 'id',
              'foreign' => 'group_id'));
 

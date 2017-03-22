@@ -10,14 +10,14 @@
  * @property integer $taggable_id
  * @property Tag $Tag
  * 
- * @method integer getTagId()          Returns the current record's "tag_id" value
- * @method string  getTaggableModel()  Returns the current record's "taggable_model" value
- * @method integer getTaggableId()     Returns the current record's "taggable_id" value
- * @method Tag     getTag()            Returns the current record's "Tag" value
- * @method Tagging setTagId()          Sets the current record's "tag_id" value
- * @method Tagging setTaggableModel()  Sets the current record's "taggable_model" value
- * @method Tagging setTaggableId()     Sets the current record's "taggable_id" value
- * @method Tagging setTag()            Sets the current record's "Tag" value
+ * @method integer get()               Returns the current record's "tag_id" value
+ * @method string  get()               Returns the current record's "taggable_model" value
+ * @method integer get()               Returns the current record's "taggable_id" value
+ * @method Tag     get()               Returns the current record's "Tag" value
+ * @method Tagging set()               Sets the current record's "tag_id" value
+ * @method Tagging set()               Sets the current record's "taggable_model" value
+ * @method Tagging set()               Sets the current record's "taggable_id" value
+ * @method Tagging set()               Sets the current record's "Tag" value
  * 
  * @package    symfony
  * @subpackage model

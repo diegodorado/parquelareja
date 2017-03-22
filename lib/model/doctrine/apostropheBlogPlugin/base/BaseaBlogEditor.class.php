@@ -10,14 +10,14 @@
  * @property aBlogItem $BlogItem
  * @property sfGuardUser $Editor
  * 
- * @method integer     getBlogItemId()   Returns the current record's "blog_item_id" value
- * @method integer     getUserId()       Returns the current record's "user_id" value
- * @method aBlogItem   getBlogItem()     Returns the current record's "BlogItem" value
- * @method sfGuardUser getEditor()       Returns the current record's "Editor" value
- * @method aBlogEditor setBlogItemId()   Sets the current record's "blog_item_id" value
- * @method aBlogEditor setUserId()       Sets the current record's "user_id" value
- * @method aBlogEditor setBlogItem()     Sets the current record's "BlogItem" value
- * @method aBlogEditor setEditor()       Sets the current record's "Editor" value
+ * @method integer     get()             Returns the current record's "blog_item_id" value
+ * @method integer     get()             Returns the current record's "user_id" value
+ * @method aBlogItem   get()             Returns the current record's "BlogItem" value
+ * @method sfGuardUser get()             Returns the current record's "Editor" value
+ * @method aBlogEditor set()             Sets the current record's "blog_item_id" value
+ * @method aBlogEditor set()             Sets the current record's "user_id" value
+ * @method aBlogEditor set()             Sets the current record's "BlogItem" value
+ * @method aBlogEditor set()             Sets the current record's "Editor" value
  * 
  * @package    symfony
  * @subpackage model
