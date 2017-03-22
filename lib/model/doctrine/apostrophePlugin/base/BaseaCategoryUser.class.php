@@ -10,14 +10,14 @@
  * @property aCategory $Category
  * @property sfGuardUser $User
  * 
- * @method integer       getCategoryId()  Returns the current record's "category_id" value
- * @method integer       getUserId()      Returns the current record's "user_id" value
- * @method aCategory     getCategory()    Returns the current record's "Category" value
- * @method sfGuardUser   getUser()        Returns the current record's "User" value
- * @method aCategoryUser setCategoryId()  Sets the current record's "category_id" value
- * @method aCategoryUser setUserId()      Sets the current record's "user_id" value
- * @method aCategoryUser setCategory()    Sets the current record's "Category" value
- * @method aCategoryUser setUser()        Sets the current record's "User" value
+ * @method integer       get()            Returns the current record's "category_id" value
+ * @method integer       get()            Returns the current record's "user_id" value
+ * @method aCategory     get()            Returns the current record's "Category" value
+ * @method sfGuardUser   get()            Returns the current record's "User" value
+ * @method aCategoryUser set()            Sets the current record's "category_id" value
+ * @method aCategoryUser set()            Sets the current record's "user_id" value
+ * @method aCategoryUser set()            Sets the current record's "Category" value
+ * @method aCategoryUser set()            Sets the current record's "User" value
  * 
  * @package    symfony
  * @subpackage model

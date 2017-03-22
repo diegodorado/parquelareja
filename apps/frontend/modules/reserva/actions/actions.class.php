@@ -48,24 +48,24 @@ class reservaActions extends aEngineActions
 	);
 
 	$costos = array(
-		'cde' => 80,
-		'cdt' => 80,
+		'cde' => 200,
+		'cdt' => 200,
 		'taller' => array(
 			'con_alojamiento' => array(
-				'fuego' => 20,
-				'frio'  => 20,
-				'ceramica' => 20,
-				'metales' => 20,
+				'fuego' => 60,
+				'frio'  => 60,
+				'ceramica' => 60,
+				'metales' => 60,
 				'vidrio' => 100,
-				'prefumeria' => 20
+				'perfumeria' => 60
 			),
 			'sin_alojamiento' => array(
-				'fuego' => 30,
-				'frio'  => 30,
-				'ceramica' => 30,
-				'metales' => 30,
+				'fuego' => 80,
+				'frio'  => 80,
+				'ceramica' => 80,
+				'metales' => 80,
 				'vidrio' => 100,
-				'prefumeria' => 30
+				'perfumeria' => 80
 			)
 		)
 	);
@@ -108,6 +108,7 @@ class reservaActions extends aEngineActions
 		if (isset($_POST['taller'])){
       $groups[] = 'reservas_taller';
 			$data['taller_texto'] 	= " c/uso de Taller";
+      //el costo del taller no esta en funcionamiento aun
 		}
 		if (isset($_POST['guests']['cde'])){
       $groups[] = 'reservas_cde';

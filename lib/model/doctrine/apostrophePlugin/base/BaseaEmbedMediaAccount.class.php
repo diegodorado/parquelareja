@@ -9,12 +9,12 @@
  * @property string $service
  * @property string $username
  * 
- * @method integer            getId()       Returns the current record's "id" value
- * @method string             getService()  Returns the current record's "service" value
- * @method string             getUsername() Returns the current record's "username" value
- * @method aEmbedMediaAccount setId()       Sets the current record's "id" value
- * @method aEmbedMediaAccount setService()  Sets the current record's "service" value
- * @method aEmbedMediaAccount setUsername() Sets the current record's "username" value
+ * @method integer            get()         Returns the current record's "id" value
+ * @method string             get()         Returns the current record's "service" value
+ * @method string             get()         Returns the current record's "username" value
+ * @method aEmbedMediaAccount set()         Sets the current record's "id" value
+ * @method aEmbedMediaAccount set()         Sets the current record's "service" value
+ * @method aEmbedMediaAccount set()         Sets the current record's "username" value
  * 
  * @package    symfony
  * @subpackage model

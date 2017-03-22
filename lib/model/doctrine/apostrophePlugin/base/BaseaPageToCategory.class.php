@@ -10,14 +10,14 @@
  * @property aCategory $aCategory
  * @property aPage $aPage
  * 
- * @method integer         getPageId()      Returns the current record's "page_id" value
- * @method integer         getCategoryId()  Returns the current record's "category_id" value
- * @method aCategory       getACategory()   Returns the current record's "aCategory" value
- * @method aPage           getAPage()       Returns the current record's "aPage" value
- * @method aPageToCategory setPageId()      Sets the current record's "page_id" value
- * @method aPageToCategory setCategoryId()  Sets the current record's "category_id" value
- * @method aPageToCategory setACategory()   Sets the current record's "aCategory" value
- * @method aPageToCategory setAPage()       Sets the current record's "aPage" value
+ * @method integer         get()            Returns the current record's "page_id" value
+ * @method integer         get()            Returns the current record's "category_id" value
+ * @method aCategory       get()            Returns the current record's "aCategory" value
+ * @method aPage           get()            Returns the current record's "aPage" value
+ * @method aPageToCategory set()            Sets the current record's "page_id" value
+ * @method aPageToCategory set()            Sets the current record's "category_id" value
+ * @method aPageToCategory set()            Sets the current record's "aCategory" value
+ * @method aPageToCategory set()            Sets the current record's "aPage" value
  * 
  * @package    symfony
  * @subpackage model

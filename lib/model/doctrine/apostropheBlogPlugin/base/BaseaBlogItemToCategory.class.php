@@ -10,14 +10,14 @@
  * @property aBlogItem $BlogItem
  * @property aCategory $Category
  * 
- * @method integer             getBlogItemId()   Returns the current record's "blog_item_id" value
- * @method integer             getCategoryId()   Returns the current record's "category_id" value
- * @method aBlogItem           getBlogItem()     Returns the current record's "BlogItem" value
- * @method aCategory           getCategory()     Returns the current record's "Category" value
- * @method aBlogItemToCategory setBlogItemId()   Sets the current record's "blog_item_id" value
- * @method aBlogItemToCategory setCategoryId()   Sets the current record's "category_id" value
- * @method aBlogItemToCategory setBlogItem()     Sets the current record's "BlogItem" value
- * @method aBlogItemToCategory setCategory()     Sets the current record's "Category" value
+ * @method integer             get()             Returns the current record's "blog_item_id" value
+ * @method integer             get()             Returns the current record's "category_id" value
+ * @method aBlogItem           get()             Returns the current record's "BlogItem" value
+ * @method aCategory           get()             Returns the current record's "Category" value
+ * @method aBlogItemToCategory set()             Sets the current record's "blog_item_id" value
+ * @method aBlogItemToCategory set()             Sets the current record's "category_id" value
+ * @method aBlogItemToCategory set()             Sets the current record's "BlogItem" value
+ * @method aBlogItemToCategory set()             Sets the current record's "Category" value
  * 
  * @package    symfony
  * @subpackage model

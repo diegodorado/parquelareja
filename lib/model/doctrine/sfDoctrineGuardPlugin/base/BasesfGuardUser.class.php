@@ -17,70 +17,70 @@
  * @property timestamp $last_login
  * @property Doctrine_Collection $Groups
  * @property Doctrine_Collection $Permissions
- * @property Doctrine_Collection $BlogAuthorItems
- * @property Doctrine_Collection $BlogEditorItems
- * @property Doctrine_Collection $BlogItemEditors
- * @property Doctrine_Collection $Categories
- * @property Doctrine_Collection $aPage
- * @property Doctrine_Collection $aAreaVersion
- * @property Doctrine_Collection $Accesses
- * @property Doctrine_Collection $MediaItems
- * @property Doctrine_Collection $CategoryUsers
  * @property Doctrine_Collection $sfGuardUserPermission
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
+ * @property Doctrine_Collection $aPage
+ * @property Doctrine_Collection $aAreaVersion
+ * @property Doctrine_Collection $Accesses
+ * @property Doctrine_Collection $MediaItems
+ * @property Doctrine_Collection $Categories
+ * @property Doctrine_Collection $CategoryUsers
+ * @property Doctrine_Collection $BlogAuthorItems
+ * @property Doctrine_Collection $BlogEditorItems
+ * @property Doctrine_Collection $BlogItemEditors
  * 
- * @method string                getFirstName()             Returns the current record's "first_name" value
- * @method string                getLastName()              Returns the current record's "last_name" value
- * @method string                getEmailAddress()          Returns the current record's "email_address" value
- * @method string                getUsername()              Returns the current record's "username" value
- * @method string                getAlgorithm()             Returns the current record's "algorithm" value
- * @method string                getSalt()                  Returns the current record's "salt" value
- * @method string                getPassword()              Returns the current record's "password" value
- * @method boolean               getIsActive()              Returns the current record's "is_active" value
- * @method boolean               getIsSuperAdmin()          Returns the current record's "is_super_admin" value
- * @method timestamp             getLastLogin()             Returns the current record's "last_login" value
- * @method Doctrine_Collection   getGroups()                Returns the current record's "Groups" collection
- * @method Doctrine_Collection   getPermissions()           Returns the current record's "Permissions" collection
- * @method Doctrine_Collection   getBlogAuthorItems()       Returns the current record's "BlogAuthorItems" collection
- * @method Doctrine_Collection   getBlogEditorItems()       Returns the current record's "BlogEditorItems" collection
- * @method Doctrine_Collection   getBlogItemEditors()       Returns the current record's "BlogItemEditors" collection
- * @method Doctrine_Collection   getCategories()            Returns the current record's "Categories" collection
- * @method Doctrine_Collection   getAPage()                 Returns the current record's "aPage" collection
- * @method Doctrine_Collection   getAAreaVersion()          Returns the current record's "aAreaVersion" collection
- * @method Doctrine_Collection   getAccesses()              Returns the current record's "Accesses" collection
- * @method Doctrine_Collection   getMediaItems()            Returns the current record's "MediaItems" collection
- * @method Doctrine_Collection   getCategoryUsers()         Returns the current record's "CategoryUsers" collection
- * @method Doctrine_Collection   getSfGuardUserPermission() Returns the current record's "sfGuardUserPermission" collection
- * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
- * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
- * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
- * @method sfGuardUser           setFirstName()             Sets the current record's "first_name" value
- * @method sfGuardUser           setLastName()              Sets the current record's "last_name" value
- * @method sfGuardUser           setEmailAddress()          Sets the current record's "email_address" value
- * @method sfGuardUser           setUsername()              Sets the current record's "username" value
- * @method sfGuardUser           setAlgorithm()             Sets the current record's "algorithm" value
- * @method sfGuardUser           setSalt()                  Sets the current record's "salt" value
- * @method sfGuardUser           setPassword()              Sets the current record's "password" value
- * @method sfGuardUser           setIsActive()              Sets the current record's "is_active" value
- * @method sfGuardUser           setIsSuperAdmin()          Sets the current record's "is_super_admin" value
- * @method sfGuardUser           setLastLogin()             Sets the current record's "last_login" value
- * @method sfGuardUser           setGroups()                Sets the current record's "Groups" collection
- * @method sfGuardUser           setPermissions()           Sets the current record's "Permissions" collection
- * @method sfGuardUser           setBlogAuthorItems()       Sets the current record's "BlogAuthorItems" collection
- * @method sfGuardUser           setBlogEditorItems()       Sets the current record's "BlogEditorItems" collection
- * @method sfGuardUser           setBlogItemEditors()       Sets the current record's "BlogItemEditors" collection
- * @method sfGuardUser           setCategories()            Sets the current record's "Categories" collection
- * @method sfGuardUser           setAPage()                 Sets the current record's "aPage" collection
- * @method sfGuardUser           setAAreaVersion()          Sets the current record's "aAreaVersion" collection
- * @method sfGuardUser           setAccesses()              Sets the current record's "Accesses" collection
- * @method sfGuardUser           setMediaItems()            Sets the current record's "MediaItems" collection
- * @method sfGuardUser           setCategoryUsers()         Sets the current record's "CategoryUsers" collection
- * @method sfGuardUser           setSfGuardUserPermission() Sets the current record's "sfGuardUserPermission" collection
- * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
- * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
- * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
+ * @method string                get()                      Returns the current record's "first_name" value
+ * @method string                get()                      Returns the current record's "last_name" value
+ * @method string                get()                      Returns the current record's "email_address" value
+ * @method string                get()                      Returns the current record's "username" value
+ * @method string                get()                      Returns the current record's "algorithm" value
+ * @method string                get()                      Returns the current record's "salt" value
+ * @method string                get()                      Returns the current record's "password" value
+ * @method boolean               get()                      Returns the current record's "is_active" value
+ * @method boolean               get()                      Returns the current record's "is_super_admin" value
+ * @method timestamp             get()                      Returns the current record's "last_login" value
+ * @method Doctrine_Collection   get()                      Returns the current record's "Groups" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "Permissions" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "sfGuardUserPermission" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "sfGuardUserGroup" collection
+ * @method sfGuardRememberKey    get()                      Returns the current record's "RememberKeys" value
+ * @method sfGuardForgotPassword get()                      Returns the current record's "ForgotPassword" value
+ * @method Doctrine_Collection   get()                      Returns the current record's "aPage" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "aAreaVersion" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "Accesses" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "MediaItems" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "Categories" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "CategoryUsers" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "BlogAuthorItems" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "BlogEditorItems" collection
+ * @method Doctrine_Collection   get()                      Returns the current record's "BlogItemEditors" collection
+ * @method sfGuardUser           set()                      Sets the current record's "first_name" value
+ * @method sfGuardUser           set()                      Sets the current record's "last_name" value
+ * @method sfGuardUser           set()                      Sets the current record's "email_address" value
+ * @method sfGuardUser           set()                      Sets the current record's "username" value
+ * @method sfGuardUser           set()                      Sets the current record's "algorithm" value
+ * @method sfGuardUser           set()                      Sets the current record's "salt" value
+ * @method sfGuardUser           set()                      Sets the current record's "password" value
+ * @method sfGuardUser           set()                      Sets the current record's "is_active" value
+ * @method sfGuardUser           set()                      Sets the current record's "is_super_admin" value
+ * @method sfGuardUser           set()                      Sets the current record's "last_login" value
+ * @method sfGuardUser           set()                      Sets the current record's "Groups" collection
+ * @method sfGuardUser           set()                      Sets the current record's "Permissions" collection
+ * @method sfGuardUser           set()                      Sets the current record's "sfGuardUserPermission" collection
+ * @method sfGuardUser           set()                      Sets the current record's "sfGuardUserGroup" collection
+ * @method sfGuardUser           set()                      Sets the current record's "RememberKeys" value
+ * @method sfGuardUser           set()                      Sets the current record's "ForgotPassword" value
+ * @method sfGuardUser           set()                      Sets the current record's "aPage" collection
+ * @method sfGuardUser           set()                      Sets the current record's "aAreaVersion" collection
+ * @method sfGuardUser           set()                      Sets the current record's "Accesses" collection
+ * @method sfGuardUser           set()                      Sets the current record's "MediaItems" collection
+ * @method sfGuardUser           set()                      Sets the current record's "Categories" collection
+ * @method sfGuardUser           set()                      Sets the current record's "CategoryUsers" collection
+ * @method sfGuardUser           set()                      Sets the current record's "BlogAuthorItems" collection
+ * @method sfGuardUser           set()                      Sets the current record's "BlogEditorItems" collection
+ * @method sfGuardUser           set()                      Sets the current record's "BlogItemEditors" collection
  * 
  * @package    symfony
  * @subpackage model
@@ -160,23 +160,21 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'local' => 'user_id',
              'foreign' => 'permission_id'));
 
-        $this->hasMany('aBlogItem as BlogAuthorItems', array(
-             'local' => 'id',
-             'foreign' => 'author_id'));
-
-        $this->hasMany('aBlogItem as BlogEditorItems', array(
-             'refClass' => 'aBlogEditor',
-             'local' => 'user_id',
-             'foreign' => 'blog_item_id'));
-
-        $this->hasMany('aBlogEditor as BlogItemEditors', array(
+        $this->hasMany('sfGuardUserPermission', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 
-        $this->hasMany('aCategory as Categories', array(
-             'refClass' => 'aCategoryUser',
-             'local' => 'user_id',
-             'foreign' => 'category_id'));
+        $this->hasMany('sfGuardUserGroup', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasOne('sfGuardRememberKey as RememberKeys', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasOne('sfGuardForgotPassword as ForgotPassword', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
 
         $this->hasMany('aPage', array(
              'local' => 'id',
@@ -194,23 +192,25 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'owner_id'));
 
+        $this->hasMany('aCategory as Categories', array(
+             'refClass' => 'aCategoryUser',
+             'local' => 'user_id',
+             'foreign' => 'category_id'));
+
         $this->hasMany('aCategoryUser as CategoryUsers', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 
-        $this->hasMany('sfGuardUserPermission', array(
+        $this->hasMany('aBlogItem as BlogAuthorItems', array(
              'local' => 'id',
-             'foreign' => 'user_id'));
+             'foreign' => 'author_id'));
 
-        $this->hasMany('sfGuardUserGroup', array(
-             'local' => 'id',
-             'foreign' => 'user_id'));
+        $this->hasMany('aBlogItem as BlogEditorItems', array(
+             'refClass' => 'aBlogEditor',
+             'local' => 'user_id',
+             'foreign' => 'blog_item_id'));
 
-        $this->hasOne('sfGuardRememberKey as RememberKeys', array(
-             'local' => 'id',
-             'foreign' => 'user_id'));
-
-        $this->hasOne('sfGuardForgotPassword as ForgotPassword', array(
+        $this->hasMany('aBlogEditor as BlogItemEditors', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 

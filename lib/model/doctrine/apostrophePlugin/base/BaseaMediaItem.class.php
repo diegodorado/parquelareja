@@ -20,46 +20,46 @@
  * @property boolean $view_is_secure
  * @property sfGuardUser $Owner
  * @property Doctrine_Collection $Slots
- * @property Doctrine_Collection $Categories
  * @property Doctrine_Collection $aSlotMediaItem
+ * @property Doctrine_Collection $Categories
  * @property Doctrine_Collection $aMediaItemToCategory
  * 
- * @method integer             getId()                   Returns the current record's "id" value
- * @method boolean             getLuceneDirty()          Returns the current record's "lucene_dirty" value
- * @method enum                getType()                 Returns the current record's "type" value
- * @method string              getServiceUrl()           Returns the current record's "service_url" value
- * @method string              getFormat()               Returns the current record's "format" value
- * @method integer             getWidth()                Returns the current record's "width" value
- * @method integer             getHeight()               Returns the current record's "height" value
- * @method string              getEmbed()                Returns the current record's "embed" value
- * @method string              getTitle()                Returns the current record's "title" value
- * @method string              getDescription()          Returns the current record's "description" value
- * @method string              getCredit()               Returns the current record's "credit" value
- * @method integer             getOwnerId()              Returns the current record's "owner_id" value
- * @method boolean             getViewIsSecure()         Returns the current record's "view_is_secure" value
- * @method sfGuardUser         getOwner()                Returns the current record's "Owner" value
- * @method Doctrine_Collection getSlots()                Returns the current record's "Slots" collection
- * @method Doctrine_Collection getCategories()           Returns the current record's "Categories" collection
- * @method Doctrine_Collection getASlotMediaItem()       Returns the current record's "aSlotMediaItem" collection
- * @method Doctrine_Collection getAMediaItemToCategory() Returns the current record's "aMediaItemToCategory" collection
- * @method aMediaItem          setId()                   Sets the current record's "id" value
- * @method aMediaItem          setLuceneDirty()          Sets the current record's "lucene_dirty" value
- * @method aMediaItem          setType()                 Sets the current record's "type" value
- * @method aMediaItem          setServiceUrl()           Sets the current record's "service_url" value
- * @method aMediaItem          setFormat()               Sets the current record's "format" value
- * @method aMediaItem          setWidth()                Sets the current record's "width" value
- * @method aMediaItem          setHeight()               Sets the current record's "height" value
- * @method aMediaItem          setEmbed()                Sets the current record's "embed" value
- * @method aMediaItem          setTitle()                Sets the current record's "title" value
- * @method aMediaItem          setDescription()          Sets the current record's "description" value
- * @method aMediaItem          setCredit()               Sets the current record's "credit" value
- * @method aMediaItem          setOwnerId()              Sets the current record's "owner_id" value
- * @method aMediaItem          setViewIsSecure()         Sets the current record's "view_is_secure" value
- * @method aMediaItem          setOwner()                Sets the current record's "Owner" value
- * @method aMediaItem          setSlots()                Sets the current record's "Slots" collection
- * @method aMediaItem          setCategories()           Sets the current record's "Categories" collection
- * @method aMediaItem          setASlotMediaItem()       Sets the current record's "aSlotMediaItem" collection
- * @method aMediaItem          setAMediaItemToCategory() Sets the current record's "aMediaItemToCategory" collection
+ * @method integer             get()                     Returns the current record's "id" value
+ * @method boolean             get()                     Returns the current record's "lucene_dirty" value
+ * @method enum                get()                     Returns the current record's "type" value
+ * @method string              get()                     Returns the current record's "service_url" value
+ * @method string              get()                     Returns the current record's "format" value
+ * @method integer             get()                     Returns the current record's "width" value
+ * @method integer             get()                     Returns the current record's "height" value
+ * @method string              get()                     Returns the current record's "embed" value
+ * @method string              get()                     Returns the current record's "title" value
+ * @method string              get()                     Returns the current record's "description" value
+ * @method string              get()                     Returns the current record's "credit" value
+ * @method integer             get()                     Returns the current record's "owner_id" value
+ * @method boolean             get()                     Returns the current record's "view_is_secure" value
+ * @method sfGuardUser         get()                     Returns the current record's "Owner" value
+ * @method Doctrine_Collection get()                     Returns the current record's "Slots" collection
+ * @method Doctrine_Collection get()                     Returns the current record's "aSlotMediaItem" collection
+ * @method Doctrine_Collection get()                     Returns the current record's "Categories" collection
+ * @method Doctrine_Collection get()                     Returns the current record's "aMediaItemToCategory" collection
+ * @method aMediaItem          set()                     Sets the current record's "id" value
+ * @method aMediaItem          set()                     Sets the current record's "lucene_dirty" value
+ * @method aMediaItem          set()                     Sets the current record's "type" value
+ * @method aMediaItem          set()                     Sets the current record's "service_url" value
+ * @method aMediaItem          set()                     Sets the current record's "format" value
+ * @method aMediaItem          set()                     Sets the current record's "width" value
+ * @method aMediaItem          set()                     Sets the current record's "height" value
+ * @method aMediaItem          set()                     Sets the current record's "embed" value
+ * @method aMediaItem          set()                     Sets the current record's "title" value
+ * @method aMediaItem          set()                     Sets the current record's "description" value
+ * @method aMediaItem          set()                     Sets the current record's "credit" value
+ * @method aMediaItem          set()                     Sets the current record's "owner_id" value
+ * @method aMediaItem          set()                     Sets the current record's "view_is_secure" value
+ * @method aMediaItem          set()                     Sets the current record's "Owner" value
+ * @method aMediaItem          set()                     Sets the current record's "Slots" collection
+ * @method aMediaItem          set()                     Sets the current record's "aSlotMediaItem" collection
+ * @method aMediaItem          set()                     Sets the current record's "Categories" collection
+ * @method aMediaItem          set()                     Sets the current record's "aMediaItemToCategory" collection
  * 
  * @package    symfony
  * @subpackage model
@@ -146,14 +146,14 @@ abstract class BaseaMediaItem extends sfDoctrineRecord
              'local' => 'media_item_id',
              'foreign' => 'slot_id'));
 
+        $this->hasMany('aSlotMediaItem', array(
+             'local' => 'id',
+             'foreign' => 'media_item_id'));
+
         $this->hasMany('aCategory as Categories', array(
              'refClass' => 'aMediaItemToCategory',
              'local' => 'media_item_id',
              'foreign' => 'category_id'));
-
-        $this->hasMany('aSlotMediaItem', array(
-             'local' => 'id',
-             'foreign' => 'media_item_id'));
 
         $this->hasMany('aMediaItemToCategory', array(
              'local' => 'id',

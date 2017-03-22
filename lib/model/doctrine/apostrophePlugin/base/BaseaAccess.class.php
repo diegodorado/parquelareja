@@ -11,16 +11,16 @@
  * @property sfGuardUser $User
  * @property aPage $Page
  * 
- * @method integer     getPageId()    Returns the current record's "page_id" value
- * @method string      getPrivilege() Returns the current record's "privilege" value
- * @method integer     getUserId()    Returns the current record's "user_id" value
- * @method sfGuardUser getUser()      Returns the current record's "User" value
- * @method aPage       getPage()      Returns the current record's "Page" value
- * @method aAccess     setPageId()    Sets the current record's "page_id" value
- * @method aAccess     setPrivilege() Sets the current record's "privilege" value
- * @method aAccess     setUserId()    Sets the current record's "user_id" value
- * @method aAccess     setUser()      Sets the current record's "User" value
- * @method aAccess     setPage()      Sets the current record's "Page" value
+ * @method integer     get()          Returns the current record's "page_id" value
+ * @method string      get()          Returns the current record's "privilege" value
+ * @method integer     get()          Returns the current record's "user_id" value
+ * @method sfGuardUser get()          Returns the current record's "User" value
+ * @method aPage       get()          Returns the current record's "Page" value
+ * @method aAccess     set()          Sets the current record's "page_id" value
+ * @method aAccess     set()          Sets the current record's "privilege" value
+ * @method aAccess     set()          Sets the current record's "user_id" value
+ * @method aAccess     set()          Sets the current record's "User" value
+ * @method aAccess     set()          Sets the current record's "Page" value
  * 
  * @package    symfony
  * @subpackage model

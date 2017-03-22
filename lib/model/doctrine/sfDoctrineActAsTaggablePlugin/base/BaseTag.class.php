@@ -12,18 +12,18 @@
  * @property string $triple_value
  * @property Doctrine_Collection $Tagging
  * 
- * @method string              getName()             Returns the current record's "name" value
- * @method boolean             getIsTriple()         Returns the current record's "is_triple" value
- * @method string              getTripleNamespace()  Returns the current record's "triple_namespace" value
- * @method string              getTripleKey()        Returns the current record's "triple_key" value
- * @method string              getTripleValue()      Returns the current record's "triple_value" value
- * @method Doctrine_Collection getTagging()          Returns the current record's "Tagging" collection
- * @method Tag                 setName()             Sets the current record's "name" value
- * @method Tag                 setIsTriple()         Sets the current record's "is_triple" value
- * @method Tag                 setTripleNamespace()  Sets the current record's "triple_namespace" value
- * @method Tag                 setTripleKey()        Sets the current record's "triple_key" value
- * @method Tag                 setTripleValue()      Sets the current record's "triple_value" value
- * @method Tag                 setTagging()          Sets the current record's "Tagging" collection
+ * @method string              get()                 Returns the current record's "name" value
+ * @method boolean             get()                 Returns the current record's "is_triple" value
+ * @method string              get()                 Returns the current record's "triple_namespace" value
+ * @method string              get()                 Returns the current record's "triple_key" value
+ * @method string              get()                 Returns the current record's "triple_value" value
+ * @method Doctrine_Collection get()                 Returns the current record's "Tagging" collection
+ * @method Tag                 set()                 Sets the current record's "name" value
+ * @method Tag                 set()                 Sets the current record's "is_triple" value
+ * @method Tag                 set()                 Sets the current record's "triple_namespace" value
+ * @method Tag                 set()                 Sets the current record's "triple_key" value
+ * @method Tag                 set()                 Sets the current record's "triple_value" value
+ * @method Tag                 set()                 Sets the current record's "Tagging" collection
  * 
  * @package    symfony
  * @subpackage model

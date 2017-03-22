@@ -10,14 +10,14 @@
  * @property string $slug
  * @property aPage $Page
  * 
- * @method integer   getId()      Returns the current record's "id" value
- * @method integer   getPageId()  Returns the current record's "page_id" value
- * @method string    getSlug()    Returns the current record's "slug" value
- * @method aPage     getPage()    Returns the current record's "Page" value
- * @method aRedirect setId()      Sets the current record's "id" value
- * @method aRedirect setPageId()  Sets the current record's "page_id" value
- * @method aRedirect setSlug()    Sets the current record's "slug" value
- * @method aRedirect setPage()    Sets the current record's "Page" value
+ * @method integer   get()        Returns the current record's "id" value
+ * @method integer   get()        Returns the current record's "page_id" value
+ * @method string    get()        Returns the current record's "slug" value
+ * @method aPage     get()        Returns the current record's "Page" value
+ * @method aRedirect set()        Sets the current record's "id" value
+ * @method aRedirect set()        Sets the current record's "page_id" value
+ * @method aRedirect set()        Sets the current record's "slug" value
+ * @method aRedirect set()        Sets the current record's "Page" value
  * 
  * @package    symfony
  * @subpackage model

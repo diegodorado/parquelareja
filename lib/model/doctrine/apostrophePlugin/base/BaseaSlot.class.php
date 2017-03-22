@@ -13,20 +13,20 @@
  * @property Doctrine_Collection $AreaVersionSlots
  * @property Doctrine_Collection $aSlotMediaItem
  * 
- * @method integer             getId()               Returns the current record's "id" value
- * @method string              getType()             Returns the current record's "type" value
- * @method string              getVariant()          Returns the current record's "variant" value
- * @method clob                getValue()            Returns the current record's "value" value
- * @method Doctrine_Collection getMediaItems()       Returns the current record's "MediaItems" collection
- * @method Doctrine_Collection getAreaVersionSlots() Returns the current record's "AreaVersionSlots" collection
- * @method Doctrine_Collection getASlotMediaItem()   Returns the current record's "aSlotMediaItem" collection
- * @method aSlot               setId()               Sets the current record's "id" value
- * @method aSlot               setType()             Sets the current record's "type" value
- * @method aSlot               setVariant()          Sets the current record's "variant" value
- * @method aSlot               setValue()            Sets the current record's "value" value
- * @method aSlot               setMediaItems()       Sets the current record's "MediaItems" collection
- * @method aSlot               setAreaVersionSlots() Sets the current record's "AreaVersionSlots" collection
- * @method aSlot               setASlotMediaItem()   Sets the current record's "aSlotMediaItem" collection
+ * @method integer             get()                 Returns the current record's "id" value
+ * @method string              get()                 Returns the current record's "type" value
+ * @method string              get()                 Returns the current record's "variant" value
+ * @method clob                get()                 Returns the current record's "value" value
+ * @method Doctrine_Collection get()                 Returns the current record's "MediaItems" collection
+ * @method Doctrine_Collection get()                 Returns the current record's "AreaVersionSlots" collection
+ * @method Doctrine_Collection get()                 Returns the current record's "aSlotMediaItem" collection
+ * @method aSlot               set()                 Sets the current record's "id" value
+ * @method aSlot               set()                 Sets the current record's "type" value
+ * @method aSlot               set()                 Sets the current record's "variant" value
+ * @method aSlot               set()                 Sets the current record's "value" value
+ * @method aSlot               set()                 Sets the current record's "MediaItems" collection
+ * @method aSlot               set()                 Sets the current record's "AreaVersionSlots" collection
+ * @method aSlot               set()                 Sets the current record's "aSlotMediaItem" collection
  * 
  * @package    symfony
  * @subpackage model
@@ -61,22 +61,6 @@ abstract class BaseaSlot extends sfDoctrineRecord
              ));
 
         $this->setSubClasses(array(
-             'aBlogSlot' => 
-             array(
-              'type' => 'aBlog',
-             ),
-             'aBlogSingleSlot' => 
-             array(
-              'type' => 'aBlogSingle',
-             ),
-             'aEventSlot' => 
-             array(
-              'type' => 'aEvent',
-             ),
-             'aEventSingleSlot' => 
-             array(
-              'type' => 'aEventSingle',
-             ),
              'aTextSlot' => 
              array(
               'type' => 'aText',
@@ -132,6 +116,38 @@ abstract class BaseaSlot extends sfDoctrineRecord
              'aAudioSlot' => 
              array(
               'type' => 'aAudio',
+             ),
+             'aBlogSlot' => 
+             array(
+              'type' => 'aBlog',
+             ),
+             'aBlogSingleSlot' => 
+             array(
+              'type' => 'aBlogSingle',
+             ),
+             'aEventSlot' => 
+             array(
+              'type' => 'aEvent',
+             ),
+             'aEventSingleSlot' => 
+             array(
+              'type' => 'aEventSingle',
+             ),
+             'aInsetImageSlot' => 
+             array(
+              'type' => 'aInsetImage',
+             ),
+             'aInsetAreaSlot' => 
+             array(
+              'type' => 'aInsetArea',
+             ),
+             'aBlogSlideshowSlot' => 
+             array(
+              'type' => 'aBlogSlideshow',
+             ),
+             'aMapSlot' => 
+             array(
+              'type' => 'aMap',
              ),
              'fParkSlot' => 
              array(

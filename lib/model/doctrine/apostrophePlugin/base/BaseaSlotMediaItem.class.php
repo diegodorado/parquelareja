@@ -10,14 +10,14 @@
  * @property aMediaItem $aMediaItem
  * @property aSlot $aSlot
  * 
- * @method integer        getMediaItemId()   Returns the current record's "media_item_id" value
- * @method integer        getSlotId()        Returns the current record's "slot_id" value
- * @method aMediaItem     getAMediaItem()    Returns the current record's "aMediaItem" value
- * @method aSlot          getASlot()         Returns the current record's "aSlot" value
- * @method aSlotMediaItem setMediaItemId()   Sets the current record's "media_item_id" value
- * @method aSlotMediaItem setSlotId()        Sets the current record's "slot_id" value
- * @method aSlotMediaItem setAMediaItem()    Sets the current record's "aMediaItem" value
- * @method aSlotMediaItem setASlot()         Sets the current record's "aSlot" value
+ * @method integer        get()              Returns the current record's "media_item_id" value
+ * @method integer        get()              Returns the current record's "slot_id" value
+ * @method aMediaItem     get()              Returns the current record's "aMediaItem" value
+ * @method aSlot          get()              Returns the current record's "aSlot" value
+ * @method aSlotMediaItem set()              Sets the current record's "media_item_id" value
+ * @method aSlotMediaItem set()              Sets the current record's "slot_id" value
+ * @method aSlotMediaItem set()              Sets the current record's "aMediaItem" value
+ * @method aSlotMediaItem set()              Sets the current record's "aSlot" value
  * 
  * @package    symfony
  * @subpackage model
