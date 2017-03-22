@@ -86,7 +86,7 @@ function larejaConstructor()
 				$ambito = $(this).parent().parent().parent();
 				if ($(this).attr('checked')){
 					$ambito.find('.area_desplegable').show();
-					initAmbito($ambito, true);
+					initAmbito($ambito, $('.responsible').size() == 0);
 				}
 			});
 
@@ -94,7 +94,7 @@ function larejaConstructor()
 				$ambito = $(this).parent().parent().parent();
 				if ($(this).attr('checked')){
 					$ambito.find('.area_desplegable').show();
-					initAmbito($ambito, true);
+					initAmbito($ambito, $('.responsible').size() == 0);
 				}
 				else{
 					if ($ambito.find('.responsible').size() > 0){
@@ -140,7 +140,7 @@ function larejaConstructor()
 
 			/*codigo js que es llamado en la vista reserva/templates/indexSuccess.php con <?php a_js_call('lareja.reservaInit()') ?> */
 
-			$('.alojamiento .new_guest').click(function(){				
+			$('.alojamiento .new_guest').click(function(){
 				$center_complete = false;
 				$ambito_name = $(this).parent().parent().parent().parent().find('.nombre_ambito').val();
 				$('.ambito.' + $ambito_name + ' .field.guest:last').clone().insertAfter('.ambito.' + $ambito_name + ' .field.guest:last');
@@ -160,7 +160,7 @@ function larejaConstructor()
 			init_solicitante_select();
 			$('.field.solicitante select').change();
 		}
-		
+
 		function check_full_house(){
 			$('.ambito').each(function(){
 				$ambito_name = $(this).find('.nombre_ambito').val();
@@ -170,7 +170,7 @@ function larejaConstructor()
 				}
 				else if ($ambito_name == 'cdt' && $('.ambito.' + $ambito_name + ' .field.guest').size() >= 15 ){
 					$center_complete = true;
-				}				
+				}
 				if ($center_complete){
 					$(this).find('.new_guest').hide();
 					$(this).find('.mover_responsable_box').hide();
@@ -273,13 +273,13 @@ function larejaConstructor()
 				$('.area.ambitos').show();
 			}
 			$('.superarea.alojamiento_taller').show();
-			
+
 			$responsable_cde = $responsable_cdt = "Mover a " + $('.area.general input.nombre').val() + " " + $('.area.general input.apellido').val();
 			$responsable_cde += " al centro de estudio";
 			$responsable_cdt += " al centro de trabajo";
 			$('.ambito.cde .mover_responsable').attr( 'value', $responsable_cde ) ;
 			$('.ambito.cdt .mover_responsable').attr( 'value', $responsable_cdt ) ;
-			
+
 			$('#form_reserva').slideDown(400);
 			$('#form_reserva h3').html($titulo);
 			init_alojamiento_validation();
@@ -290,8 +290,16 @@ function larejaConstructor()
 			var debo_acomodar_placeholder=!'placeholder' in document.createElement('input');			if(debo_acomodar_placeholder){
 				asignar_evento(window,'load',acomodar_formularios);
 			}
+			$ambito_name = $ambito.find('.nombre_ambito').val();
 			if ($setResponsible){
+				//alert($ambito_name + "setting responsible");
 				setResponsible($ambito);
+				$ambito.find('.guest.field:last').remove();
+
+				initGuests($ambito_name);
+				if ( $('.ambito.'+$ambito_name+' .field.guest').size() == 1 ){
+						$('.ambito.'+$ambito_name+' .field.guest a.remove_guest').hide();
+				}
 			}
 			checkForWorkshopLegend();
 			if ($ambito.find('.responsible').size() == 0){
@@ -304,22 +312,23 @@ function larejaConstructor()
 			initGuests($ambito.find('.nombre_ambito').val());
 		}
 
-        function initShifts($nombre){
-            $current_number = 0;
-            $('.horario input.day').removeClass('hasDatepicker');
-            $('.ambito.'+$nombre+' .field.horario').each(function(){
-                $currentHorario = $(this);
-                $currentHorario.find('.denominacion').html('Horario ' + ($current_number+1));
-                $currentHorario.find('.valor input.day').attr('name', $nombre + '[shifts][' + $current_number + '][day]');
-                $currentHorario.find('.valor input.day').attr('id', $nombre + '_' + ($current_number+1) + '_day' );
-                $currentHorario.find('.valor input.day').datepicker({changeMonth: true,changeYear: true, yearRange:'-10:+10'});
-                $currentHorario.find('.valor select.hour.from').attr('name', $nombre + '[shifts][' + $current_number + '][hour_from]');
-                $currentHorario.find('.valor select.hour.to').attr('name', $nombre + '[shifts][' + $current_number + '][hour_to]');
-                $currentHorario.removeClass('numero_' + $current_number);
-                $currentHorario.addClass('numero_' + ($current_number+1));
-                $current_number++;
-            });
-			$('.ambito .remove_shift').unbind('click');
+    function initShifts($nombre){
+        $current_number = 0;
+        $('.horario input.day').removeClass('hasDatepicker');
+        $('.ambito.'+$nombre+' .field.horario').each(function(){
+            $currentHorario = $(this);
+            $currentHorario.find('.denominacion').html('Horario ' + ($current_number+1));
+            $currentHorario.find('.valor input.day').attr('name', $nombre + '[shifts][' + $current_number + '][day]');
+            $currentHorario.find('.valor input.day').attr('id', $nombre + '_' + ($current_number+1) + '_day' );
+            $currentHorario.find('.valor input.day').datepicker({changeMonth: true,changeYear: true, yearRange:'-10:+10'});
+            $currentHorario.find('.valor select.hour.from').attr('name', $nombre + '[shifts][' + $current_number + '][hour_from]');
+            $currentHorario.find('.valor select.hour.to').attr('name', $nombre + '[shifts][' + $current_number + '][hour_to]');
+            $currentHorario.removeClass('numero_' + $current_number);
+            $currentHorario.addClass('numero_' + ($current_number+1));
+            $current_number++;
+        });
+
+				$('.ambito .remove_shift').unbind('click');
             $('.ambito .remove_shift').click(function(){
                 $ambito = $(this).parent().parent().parent().parent().parent();
                 $(this).parent().parent().remove();
@@ -328,7 +337,7 @@ function larejaConstructor()
                     $('.ambito.'+$nombre+' .field.horario a.remove_shift').hide();
                 }
             });
-        }
+    }
 
 		function initGuests($ambito_name){
 			$current_number = 0;
@@ -338,27 +347,6 @@ function larejaConstructor()
 				$(this).find('.denominacion label').html('Alojado ' + ($current_number+1));
 				$(this).find('input.guest_name').attr('name','guests['+$ambito_name+']['+$current_number+'][name]');
 				$(this).find('input.guest_email').attr('name','guests['+$ambito_name+']['+$current_number+'][email]');
-				/*$(this).find('input.guest_from').attr('name','guests['+$ambito_name+']['+$current_number+'][from]');
-				$(this).find('input.guest_to').attr('name','guests['+$ambito_name+']['+$current_number+'][to]');
-				$(this).find('input.guest_from').attr('id',$ambito_name + '_' + $current_number + '_from');
-				$(this).find('input.guest_to').attr('id',$ambito_name + '_' + $current_number + '_to');
-				$(this).find('input.guest_from').datepicker({changeMonth: true,changeYear: true, yearRange:'-10:+10'});
-				$(this).find('input.guest_to').datepicker({changeMonth: true,changeYear: true, yearRange:'-10:+10'});
-
-				if ($(this).find('input.guest_from').val() != ""){
-					setMinDate($(this).find('input.guest_from'),$(this).find('input.guest_to'));
-				}
-
-				if ($(this).find('input.guest_to').val() != ""){
-					setMaxDate($(this).find('input.guest_to'),$(this).find('input.guest_from'));
-				}
-
-				$(this).find('input.guest_from').change(function(){
-					setMinDate($(this),$(this).parent().find('input.guest_to'));
-				});
-				$(this).find('input.guest_to').change(function(){
-					setMaxDate($(this),$(this).parent().find('input.guest_from'));
-				});*/
 				$current_number++;
 			});
 
@@ -373,13 +361,13 @@ function larejaConstructor()
 
 			$('.ambito.' + $ambito_name + ' .titulo_set label' ).html($titulo);
 			$('.remove_guest').unbind('click');
-            $('.remove_guest').click(function(){
-                $(this).parent().parent().remove();
-                initGuests($ambito_name);
-                if ( $('.ambito.'+$ambito_name+' .field.guest').size() == 1 ){
-                    $('.ambito.'+$ambito_name+' .field.guest a.remove_guest').hide();
-                }
-            });
+      $('.remove_guest').click(function(){
+          $(this).parent().parent().remove();
+          initGuests($ambito_name);
+          if ( $('.ambito.'+$ambito_name+' .field.guest').size() == 1 ){
+              $('.ambito.'+$ambito_name+' .field.guest a.remove_guest').hide();
+          }
+      });
 
 			$('.ambito.' + $ambito_name + ' .remove_guest').hide();
 			if ( $('.ambito.' + $ambito_name + ' .field.guest').size() > 1){
@@ -638,18 +626,15 @@ function larejaConstructor()
 					$all_ok = false;
 					$('.taller .field.actividad .error_message.required').show();
 				}
-				if ($('.taller .field.actividad input:checked').size() == 0){
-					$all_ok = false;
-					$('.taller .field.actividad .error_message.required').show();
-				}
-				$('.taller input.required').each(function(){
-					if ($(this).val() == ""){
+				$('.taller input.required.number').each(function(){
+					if (parseInt($(this).val()) < 1){
 						$all_ok = false;
 						$(this).parent().find('.error_message.required').show();
 					}
 				});
 			}
 			if ($all_ok){
+
 				$('#form_reserva .superarea.alojamiento_taller div:hidden input').removeAttr('name');
 				$('#form_reserva .superarea.alojamiento_taller div:hidden select').removeAttr('name');
 				$('#form_reserva .superarea.alojamiento_taller div:hidden textarea').removeAttr('name');

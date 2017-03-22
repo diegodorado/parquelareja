@@ -242,7 +242,7 @@
 								<option value="msg">Mundo sin Guerras y sin violencia</option>
 								<option value="ph">Partido Humanista</option>
 							</select>
-					   </div>					   
+					   </div>
 					</div>
 					<div class="field equipo particular">
 					   <div class="column denominacion">
@@ -413,7 +413,7 @@
 							<div class="field_set">
 								<div class="titulo_set">
 									<div class="column left">
-										
+
 									</div>
 									<div class="column">
 										<label>1 alojado </label>
@@ -537,7 +537,7 @@
 										<label>Cantidad de participantes (requerido)</label>
 								   </div>
 									<div class="column valor">
-										<input type="text" class="small required number" name="taller[cantidad]">
+										<input type="number" class="small required number" name="taller[cantidad]">
 										<div class="error_message required">
 											<label>Este dato es requerido!</label>
 										</div>
