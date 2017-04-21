@@ -154,7 +154,7 @@
 						<label>Horario</label>
 				   </div>
 				   <div class="column valor">
-						De <select class="input horario desde required" name="horario_desde" disabled>
+						De <select class="input horario desde required" name="horario_desde">
 							<?php for ($i=$horario_desde;$i<$horario_hasta+1;$i++) {
 							$hora = $i;
 							if ($i < 10){
@@ -163,7 +163,7 @@
 							<option><?php echo $hora; ?></option>
 							<?php } ?>
 						</select>
-						a <select class="input horario hasta required" name="horario_hasta" disabled>
+						a <select class="input horario hasta required" name="horario_hasta">
 							<?php for ($i=$horario_desde+1;$i<$horario_hasta+1;$i++) {
 							$hora = $i;
 							if ($i < 10){
