@@ -1,6 +1,6 @@
-﻿<div>
+﻿<!--<div>
 	<label>---IMPORTANTE: NO RESPONDER ESTE MAIL---</label>
-</div>
+</div>-->
 <br>
 <div>
 	<?php if (isset($guests)) { ?>
