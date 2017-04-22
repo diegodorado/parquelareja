@@ -87,7 +87,8 @@ class reservaActions extends aEngineActions
 			$mktimeForDateTo 	= mktime(0,0,0,(int)$dateToExploded[1],(int)$dateToExploded[0],(int)$dateToExploded[2]);
 
 			$difference = $mktimeForDateTo - $mktimeForDateFrom;
-			$days		= ($difference / $secondsInDay) + 1;
+			$nights		= ($difference / $secondsInDay);
+			$days 		= $nights+1;
 
 			$dates = array();
 			for ($i=0;$i<$days;$i++){
@@ -100,10 +101,22 @@ class reservaActions extends aEngineActions
 		}
 
 
-
     $groups = array();
 
 		$data['costo_total'] = 0;
+		$precio_taller = 0;
+		if (isset($data['taller'])){
+			if (isset($data['guests'])){
+				$precio_taller = 60;
+			}
+			else{
+				$precio_taller = 80;
+				$data['costo_total'] = $data["taller"]["cantidad"] * $precio_taller;
+			}
+		}
+		
+		$data['nights'] = $nights;
+		$data['precio_taller'] = $precio_taller;
 
 		if (isset($_POST['taller'])){
       $groups[] = 'reservas_taller';
@@ -112,11 +125,11 @@ class reservaActions extends aEngineActions
 		}
 		if (isset($_POST['guests']['cde'])){
       $groups[] = 'reservas_cde';
-			$data['costo_total'] 		+= count($data['guests']['cde']) * $data['costos']['cde'];
+			$data['costo_total'] 		+= count($data['guests']['cde']) * $nights * ($data['costos']['cde']+$precio_taller);
 		}
 		if (isset($_POST['guests']['cdt'])){
       $groups[] = 'reservas_cdt';
-			$data['costo_total'] 		+= count($data['guests']['cdt']) * $data['costos']['cdt'];
+			$data['costo_total'] 		+= count($data['guests']['cdt']) * $nights * ($data['costos']['cdt']+$precio_taller);
 		}
 		$mail = $this->getPartial('email', $data );
 
@@ -153,6 +166,8 @@ $groups[] = 'reservas_mu';
 		  ->setCharset('utf-8')
         ;
 
+		//echo $mail;
+		
         $this->getMailer()->send($message);
 
         $this->redirect('@reserva_sent');

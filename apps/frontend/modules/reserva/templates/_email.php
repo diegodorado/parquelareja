@@ -31,9 +31,6 @@
 	<?php } ?>
 	</fieldset>
 	Importe total de la reserva: <b>$ <?php echo $costo_total; ?></b>
-	<?php if(isset($taller)) { ?>
-		(NO incluye los costos del taller)
-	<?php }?>
 </div>
 <br>
 <?php if (isset($guests)) { ?>
@@ -58,7 +55,7 @@
 					<td>Centro de estudios</td>
 					<td><?php echo $guest['name']; ?></td>
 					<td><?php echo $guest['email']; ?></td>
-					<td>$ <?php echo $costos['cde']; ?></td>
+					<td>$ <?php echo $costos['cde']*$nights; ?></td>
 				</tr>
 			<?php } ?> 
 			</table>
@@ -97,7 +94,7 @@
 					<td>Centro de trabajo</td>
 					<td><?php echo $guest['name']; ?></td>
 					<td><?php echo $guest['email']; ?></td>
-					<td>$ <?php echo $costos['cdt']; ?></td>
+					<td>$ <?php echo $costos['cdt']*$nights; ?></td>
 				</tr>
 			<?php } ?> 
 			</table>

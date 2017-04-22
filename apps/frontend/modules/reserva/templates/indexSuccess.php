@@ -338,23 +338,27 @@
 						  <label>Fecha</label>
 					  </div>
 
-					  <div class="field  fecha desde">
+					  <div class="field fecha desde">
 							<div class="column denominacion">
 								<label>Ingreso (requerido)</label>
 							</div>
 							<div class="column valor">
-								<input type="text" class="input fecha desde required" name="fecha_desde" readonly>
+								<div class="datePicker desde">
+									<input type="text" class="input fecha desde required" name="fecha_desde" readonly>
+								</div>
 								<div class="error_message fecha required">
 									<label>Este dato es requerido!</label>
 								</div>
 							</div>
 					  </div>
-					  <div class="field  fecha hasta">
+					  <div class="field fecha hasta">
 						   <div class="column denominacion">
 								<label>Egreso (requerido)</label>
 						   </div>
 						   <div class="column valor">
-								<input type="text" class="input fecha hasta required" name="fecha_hasta" readonly>
+								<div class="datePicker hasta">
+									<input type="text" class="input fecha hasta required" name="fecha_hasta" readonly>
+								</div>
 								<div class="error_message fecha required">
 									<label>Este dato es requerido!</label>
 								</div>
@@ -370,7 +374,9 @@
 						<label>Fecha</label>
 					</div>
 					<div class="column valor">
-						<input type="text" class="input fecha unica required" name="fecha" readonly>
+						<div class="datePicker fecha">
+							<input type="text" class="input fecha unica required" name="fecha" readonly>
+						</div>
 						<div class="error_message fecha required">
 							<label>Este dato es requerido!</label>
 						</div>

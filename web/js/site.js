@@ -52,10 +52,41 @@ function larejaConstructor()
 			initGuests('cdt');
 
 			today = new Date();
-			$('.field.fecha input').datepicker({
+			/*$('.field.fecha input').datepicker({
 				changeMonth: true,
 				changeYear: true,
 				yearRange:'-10:+10',
+			});*/
+			$('.datePicker.desde').datepicker({
+				changeMonth: true,
+				changeYear: true,
+				yearRange:'-10:+10',
+				onSelect: function(date, obj){
+						$(this).find('.input').val(date);  //Updates value of of your input 
+						setMinDate($('.datePicker.desde'),$('.datePicker.hasta	'));
+						$('.warning_message.fecha').hide();
+						if (isPast($('.field.fecha.desde input'))){
+							$('.warning_message.fecha').show();
+							setSchedulesInWorkshopLegend();
+						}
+					}				
+			});
+			$('.datePicker.hasta').datepicker({
+				changeMonth: true,
+				changeYear: true,
+				yearRange:'-10:+10',
+				onSelect: function(date, obj){
+						$(this).find('.input').val(date);  //Updates value of of your input 
+						setMaxDate($('.datePicker.hasta'),$('.datePicker.desde'));
+					}				
+			});
+			$('.datePicker.fecha').datepicker({
+				changeMonth: true,
+				changeYear: true,
+				yearRange:'-10:+10',
+				onSelect: function(date, obj){
+						$(this).find('.input').val(date);  //Updates value of of your input 
+					}				
 			});
 			if ($('.field.fecha.desde input').val() != ""){
 				setMinDate($('.field.fecha.desde input'),$('.field.fecha.hasta input'));
@@ -70,6 +101,7 @@ function larejaConstructor()
 				setMaxDate($('.field.fecha.hasta input'),$('.field.fecha.desde input'));
 			}
 			$('.field.fecha.desde input').change(function(){
+				alert('it is indeed changing!');
 				setMinDate($(this),$('.field.fecha.hasta input'));
 				$('.warning_message.fecha').hide();
 				if (isPast($(this))){
@@ -78,6 +110,7 @@ function larejaConstructor()
 				setSchedulesInWorkshopLegend();
 			});
 			$('.field.fecha.hasta input').change(function(){
+				alert('it is indeed changing!');
 				setMaxDate($(this),$('.field.fecha.desde input'));
 			});
 
@@ -627,7 +660,7 @@ function larejaConstructor()
 					$('.taller .field.actividad .error_message.required').show();
 				}
 				$('.taller input.required.number').each(function(){
-					if (parseInt($(this).val()) < 1){
+					if (parseInt($(this).val()) < 1 || isNaN(parseInt($(this).val()))){
 						$all_ok = false;
 						$(this).parent().find('.error_message.required').show();
 					}
