@@ -10,8 +10,8 @@
 	<input type="hidden" id="remoteip" value="<?php echo $remoteip; ?>">
 	<div style="border: 1px dotted red; padding:10px; color: white; font-weight:bold; background-color: 	orange; margin:10px;">
 		<p>Estamos implementando el nuevo formulario de reservas!<br>
-			Si tenés algún problema para hacer la reserva o no recibiste el correo de confirmación escribinos a
-			reservas@parquelareja.org o comunicate al 11-3288-1734 (Eva)
+			Si tenés algún problema para hacer la reserva o no recibís el correo de confirmación <!--escribinos a
+			reservas@parquelareja.org o-->comunicate al 11-3288-1734 (Eva)
 		</p>
 	</div>
 	<div id="Opciones">
