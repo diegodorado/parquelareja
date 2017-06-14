@@ -9,26 +9,14 @@
 		Fecha: <?php echo $fecha; ?><br>
 	<?php } ?>	
 	<fieldset width="500">
-	<legend><b>Responsable</b></legend>
-	<?php echo $nombre . ' ' . $apellido; ?>
-	<br>
-	<?php 
-	if ($solicitante == 'maestro'){
-		echo 'Maestro';
-	}
-	else if ($solicitante == 'mensaje'){
-		echo 'Comunidad del mensaje "'.$comunidad.'"';
-	}
-	else{
-		echo $organismos[$organismo];
-		echo '<br>Equipo "' . $equipo_de_base . '"';
-	}
-	?><br>
-	<?php echo $email; ?><br>
-	<?php echo $telefono; ?><br>
-	<?php if (isset($comentario)) { ?>
-		<b>Comentarios:</b><br><?php echo $comentario; ?>
-	<?php } ?>
+		<legend><b>Responsable</b></legend>
+		<?php echo $nombre . ' ' . $apellido; ?><br>
+		<?php echo $solicitante; ?><br>
+		<?php echo $email; ?><br>
+		<?php echo $telefono; ?><br>
+		<?php if (isset($comentario)) { ?>
+			<b>Comentarios:</b><br><?php echo $comentario; ?>
+		<?php } ?>
 	</fieldset>
 	Importe total de la reserva: <b>$ <?php echo $costo_total; ?></b>
 </div>
