@@ -42,7 +42,7 @@ class reservaActions extends aEngineActions
 		'fuego' => 'Producci&oacute;n y Conservaci&oacute;n del Fuego',
 		'frio' => 'Trabajos en Fr&iacute;o',
 		'metales' => 'Metales',
-		'ceramica' => 'Cer&aacutemica;',
+		'ceramica' => 'Cer&aacute;mica',
 		'vidrio' => 'Vidrio',
 		'perfumeria' => 'Perfumer&iacute;a'
 	);
