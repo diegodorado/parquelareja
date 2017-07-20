@@ -59,7 +59,6 @@
                             <option value="ph">Partido Humanista</option>
                         </select>
                    </div>
-
                 </div>
 					<div class="field equipo particular">
 					   <div class="column denominacion">
@@ -196,7 +195,7 @@
 						<label>Actividad</label>
 				   </div>-->
 				   <div class="column valor">
-						<textarea cols="29" rows="5" class="input actividad required" name="actividad" placeholder="Actividad"></textarea>
+						<textarea cols="40" rows="1" class="input actividad required" name="actividad" maxlength="36" placeholder="Actividad (max. 36 caracteres)"></textarea>
 						<div class="error_message actividad required">
 							<label>Este dato es requerido!</label>
 						</div>
@@ -204,13 +203,8 @@
 			  </div>
 		  </div>
 	  </div>
-	  <!--<div class="columna_grande derecha">
-		<input class="helpButton1" type="button" value="como hacer esto">
-		<input class="helpButton2" value="como hacer aquello">
-		<input class="helpButton3" value="bla bla bla">
-		<input class="helpButton4" value="blu blu blu">
-	  </div>-->
 	<div class="form-row botones">
+		<input type="hidden" name="form-type" value="aviso">
 		<input id="aviso_uso_submit" class="boton_reserva" value="Avisar" name="enviar" type="button" />
 	</div>
 
@@ -585,6 +579,7 @@
 				</noscript>
 			  </div>-->
 			<div class="text_align_center">
+				<input type="hidden" name="form-type" value="reserva">
 				<input type="button" class="boton continuar" value="Reservar">
 			</div>
 		</div>
