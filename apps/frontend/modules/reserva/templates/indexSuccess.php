@@ -8,12 +8,6 @@
 <div class="center">
   <!--<form id="form_reserva" action="<?=url_for('@reserva_index') ?>" method="post">-->
 	<input type="hidden" id="remoteip" value="<?php echo $remoteip; ?>">
-	<div style="border: 1px dotted red; padding:10px; color: white; font-weight:bold; background-color: 	orange; margin:10px;">
-		<p>Estamos implementando el nuevo formulario de reservas!<br>
-			Si tenés algún problema para hacer la reserva o no recibís el correo de confirmación <!--escribinos a
-			reservas@parquelareja.org o-->comunicate al 11-3288-1734 (Eva)
-		</p>
-	</div>
 	<div id="Opciones">
 		<input type="button" class="opcion reserva" value="">
 		<input type="button" class="opcion aviso_uso" value="">

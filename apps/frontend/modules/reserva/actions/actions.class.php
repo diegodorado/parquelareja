@@ -20,7 +20,6 @@ class reservaActions extends aEngineActions
 
 
 
-
     $this->form = new ReservaForm;
     $this->titulo = "papadopulos";
 	$this->horario_desde 	= 10;
@@ -146,6 +145,24 @@ class reservaActions extends aEngineActions
 				$data['costo_total'] 		+= count($data['guests']['cdt']) * $nights * ($data['costos']['cdt']+$precio_taller);
 			}
 			$mail = $this->getPartial('email', $data );
+
+			#
+			# Acá se arma el mail que se envía a la persona que hizo la reserva
+			#
+			$mail_responsable = $this->getPartial('email_responsable', $data );
+			$message = Swift_Message::newInstance()
+			  ->setFrom(array('reservas@parquelareja.org' => 'Reservas Parque La Reja'))
+			  ->setTo($data['email'])
+			  ->setSubject("Hemos recibido su pedido de reserva")
+			  ->setBody($mail_responsable)
+			  ->setContentType("text/html")
+			  ->setCharset('utf-8')
+			;
+			$this->getMailer()->send($message);
+			#
+			# Acá se envió el mail que se envía a la persona que hizo la reserva	
+			#
+
 			
 		}
 		else if ($data['form-type'] == 'aviso'){
@@ -180,7 +197,7 @@ class reservaActions extends aEngineActions
         $message = Swift_Message::newInstance()
           ->setFrom(array('reservas@parquelareja.org' => 'Reservas Parque La Reja'))
           ->setTo($emails)
-          ->setSubject('')
+          ->setSubject($subject)
           ->setBody($mail)
           ->setContentType("text/html")
 		  ->setCharset('utf-8')
