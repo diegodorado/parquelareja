@@ -167,7 +167,7 @@ class reservaActions extends aEngineActions
 		}
 		else if ($data['form-type'] == 'aviso'){
 
-			$subject = 'Nuevo Aviso de usufructo de la multiusufructo de Parques de Estudio y Reflexion La Reja';
+			$subject = 'Nuevo Aviso de uso de la multiuso de Parques de Estudio y Reflexion La Reja';
 
 			$data['actividad'] = substr($data['actividad'],0,36);
 			$groups[] = 'reservas_mu';
