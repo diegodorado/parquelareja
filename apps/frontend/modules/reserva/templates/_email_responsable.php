@@ -1,5 +1,3 @@
 ﻿<div>
-	Por medio del presente le confirmamos que hemos recibido su pedido de reserva.<br>
-	Mantengase en órbita y más temprano que tarde recibirá la confirmación.
-	Besitos, la comisión.
+	Hola, hemos recibido tu pedido de reserva.<br><br>Recibirás un mail cuando la reserva sea confirmada.<br><br>Gracias.
 </div>

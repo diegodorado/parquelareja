@@ -31,3 +31,4 @@ error.log
 access.log
 .vagrant
 .sass-cache
+*.wftp*

@@ -637,8 +637,6 @@ function larejaConstructor()
 											$(this).parent().parent().css('background-color', '#FFB3B3');
 										}
 									}
-									if ($times > 1){
-									}
 								});
 							}
 						});

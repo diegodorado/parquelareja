@@ -47,24 +47,24 @@ class reservaActions extends aEngineActions
 	);
 
 	$costos = array(
-		'cde' => 200,
-		'cdt' => 200,
+		'cde' => 250,
+		'cdt' => 250,
 		'taller' => array(
 			'con_alojamiento' => array(
-				'fuego' => 60,
-				'frio'  => 60,
-				'ceramica' => 60,
-				'metales' => 60,
+				'fuego' => 75,
+				'frio'  => 75,
+				'ceramica' => 75,
+				'metales' => 75,
 				'vidrio' => 100,
-				'perfumeria' => 60
+				'perfumeria' => 75
 			),
 			'sin_alojamiento' => array(
-				'fuego' => 80,
-				'frio'  => 80,
-				'ceramica' => 80,
-				'metales' => 80,
+				'fuego' => 100,
+				'frio'  => 100,
+				'ceramica' => 100,
+				'metales' => 100,
 				'vidrio' => 100,
-				'perfumeria' => 80
+				'perfumeria' => 100
 			)
 		)
 	);

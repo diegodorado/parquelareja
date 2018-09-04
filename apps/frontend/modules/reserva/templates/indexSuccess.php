@@ -431,7 +431,7 @@
 										<!--<label class="guest_name">Nobre y apellido</label>-->
 										<input type="text" name="guests[cde][0][name]" class="guest_name required" placeholder="Nombre y apellido(s) (requerido)">
 										<!--<label class="guest_email">Email</label>-->
-										<input type="text" name="guests[cde][0][email]" class="guest_email email medium required" placeholder="Email (requerido)">
+										<input type="text" name="guests[cde][0][email]" class="guest_email email medium" placeholder="Email">
 										&nbsp;&nbsp;&nbsp;<a class="remove_guest">Eliminar alojado</a>
 										<div class="error_message email format">
 											<label>La dirección de mail no parece válida!</label>
@@ -475,7 +475,7 @@
 										<!--<label class="guest_name">Nombre y apellido</label>-->
 										<input type="text" name="guests[cdt][0][name]" class="guest_name required" placeholder="Nombre y apellido(s) (requerido)">
 										<!--<label class="guest_email">Email</label>-->
-										<input type="text" name="guests[cdt][0][email]" class="guest_email email medium required" placeholder="E-mail (requerido)">
+										<input type="text" name="guests[cdt][0][email]" class="guest_email email medium" placeholder="E-mail">
 										&nbsp;&nbsp;&nbsp;<a class="remove_guest">Eliminar alojado</a>
 										<div class="error_message email format">
 											<label>La dirección de mail no parece válida!</label>
