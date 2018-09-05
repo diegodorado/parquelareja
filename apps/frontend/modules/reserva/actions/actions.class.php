@@ -120,10 +120,10 @@ class reservaActions extends aEngineActions
 			$precio_taller = 0;
 			if (isset($data['taller'])){
 				if (isset($data['guests'])){
-					$precio_taller = 60;
+					$precio_taller = 75;
 				}
 				else{
-					$precio_taller = 80;
+					$precio_taller = 100;
 					$data['costo_total'] = $data["taller"]["cantidad"] * $precio_taller;
 				}
 			}
